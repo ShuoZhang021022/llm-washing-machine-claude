@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/llm-washing-machine-claude/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/llm-washing-machine-claude/literature_review.md",
+        "resources_catalog": "/workspaces/llm-washing-machine-claude/resources.md",
+        "papers_dir": "/workspaces/llm-washing-machine-claude/papers",
+        "datasets_dir": "/workspaces/llm-washing-machine-claude/datasets",
+        "code_dir": "/workspaces/llm-washing-machine-claude/code"
+      },
+      "log_file": "/workspaces/llm-washing-machine-claude/logs/resource_finder_claude.log",
+      "transcript_file": "/workspaces/llm-washing-machine-claude/logs/resource_finder_claude_transcript.jsonl",
+      "elapsed_time": 3306.2532665729523
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 1126.9266114234924,
+      "log_file": "/workspaces/llm-washing-machine-claude/logs/execution_claude.log",
+      "transcript_file": "/workspaces/llm-washing-machine-claude/logs/execution_claude_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/llm-washing-machine-claude"
+}

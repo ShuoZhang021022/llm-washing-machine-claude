@@ -1,48 +1,48 @@
-This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: references.bib
 Warning--empty journal in nanda2022transformerlens
-You've used 20 entries,
+You've used 18 entries,
             2773 wiz_defined-function locations,
-            679 strings with 8947 characters,
-and the built_in function-call counts, 10130 in all, are:
-= -- 791
-> -- 923
-< -- 2
-+ -- 308
-- -- 288
-* -- 891
-:= -- 1676
-add.period$ -- 61
-call.type$ -- 20
-change.case$ -- 155
-chr.to.int$ -- 20
-cite$ -- 41
-duplicate$ -- 402
-empty$ -- 630
-format.name$ -- 312
-if$ -- 2018
+            671 strings with 8352 characters,
+and the built_in function-call counts, 8704 in all, are:
+= -- 689
+> -- 755
+< -- 4
++ -- 252
+- -- 234
+* -- 741
+:= -- 1434
+add.period$ -- 55
+call.type$ -- 18
+change.case$ -- 131
+chr.to.int$ -- 18
+cite$ -- 37
+duplicate$ -- 360
+empty$ -- 566
+format.name$ -- 260
+if$ -- 1744
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 20
-newline$ -- 109
-num.names$ -- 80
-pop$ -- 313
+missing$ -- 18
+newline$ -- 99
+num.names$ -- 72
+pop$ -- 265
 preamble$ -- 1
-purify$ -- 135
+purify$ -- 113
 quote$ -- 0
-skip$ -- 342
+skip$ -- 304
 stack$ -- 0
-substring$ -- 40
-swap$ -- 20
+substring$ -- 36
+swap$ -- 18
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 220
+type$ -- 198
 warning$ -- 1
-while$ -- 60
+while$ -- 54
 width$ -- 0
-write$ -- 249
+write$ -- 225
 (There was 1 warning)

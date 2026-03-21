@@ -1,0 +1,47 @@
+[
+  {
+    "compound": "washing machine",
+    "components": [
+      "washing",
+      "machine"
+    ],
+    "category": "appliance",
+    "compositionality": "medium"
+  },
+  {
+    "compound": "coffee machine",
+    "components": [
+      "coffee",
+      "machine"
+    ],
+    "category": "appliance",
+    "compositionality": "high"
+  },
+  {
+    "compound": "sewing machine",
+    "components": [
+      "sewing",
+      "machine"
+    ],
+    "category": "appliance",
+    "compositionality": "high"
+  },
+  {
+    "compound": "slot machine",
+    "components": [
+      "slot",
+      "machine"
+    ],
+    "category": "gambling",
+    "compositionality": "medium"
+  },
+  {
+    "compound": "vending machine",
+    "components": [
+      "vending",
+      "machine"
+    ],
+    "category": "retail",
+    "compositionality": "high"
+  }
+]

@@ -12,14 +12,15 @@ Nlp
 
 ## HYPOTHESIS / RESEARCH QUESTION
 
-In large language models, specific compound concepts such as 'washing machine' may not be represented by a unique direction or nearly orthogonal direction in the residual stream; instead, the model may store the concept of 'washing' and rely on context to increase the likelihood of 'machine' following it.
+In large language models, there are too many referenceable concepts for each to have a unique or nearly orthogonal direction in the residual stream. This research investigates whether specific compound concepts like 'washing machine' are explicitly represented, or if only components such as 'washing' are stored and the presence of 'machine' increases the likelihood of the compound concept.
 
 
 ## BACKGROUND
 
 ### User-Provided Instructions and Context:
 
->>> There are too many referenceable things for each to have a direction, or even a 'nearly orthogonal' direction in the residual stream. Where is 'washing machine' stored in LLMs? Or is just 'washing' stored and then it's assumed that machine becomes more likely? <<<
+>>> There are too many referenceable things for each to have a direction, or even a 'nearly orthogonal' direction in the residual stream. Where is 'washing machine' stored in LLMs? Or is just 'washing' stored and then it's assumed that machine becomes more likely?
+ <<<
 
 (Note: Follow any specific instructions above with high priority)
 

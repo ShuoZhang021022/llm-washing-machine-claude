@@ -1,0 +1,13 @@
+PDF: papers/2502.14671_How_do_Transformer_Embeddings_Represent_Compositio.pdf
+Total pages: 23
+Pages per chunk: 3
+
+Chunks:
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_001.pdf: pages 1-3
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_002.pdf: pages 4-6
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_003.pdf: pages 7-9
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_004.pdf: pages 10-12
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_005.pdf: pages 13-15
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_006.pdf: pages 16-18
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_007.pdf: pages 19-21
+  2502.14671_How_do_Transformer_Embeddings_Represent_Compositio_chunk_008.pdf: pages 22-23

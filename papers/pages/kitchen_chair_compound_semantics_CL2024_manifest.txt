@@ -1,0 +1,16 @@
+PDF: papers/kitchen_chair_compound_semantics_CL2024.pdf
+Total pages: 33
+Pages per chunk: 3
+
+Chunks:
+  kitchen_chair_compound_semantics_CL2024_chunk_001.pdf: pages 1-3
+  kitchen_chair_compound_semantics_CL2024_chunk_002.pdf: pages 4-6
+  kitchen_chair_compound_semantics_CL2024_chunk_003.pdf: pages 7-9
+  kitchen_chair_compound_semantics_CL2024_chunk_004.pdf: pages 10-12
+  kitchen_chair_compound_semantics_CL2024_chunk_005.pdf: pages 13-15
+  kitchen_chair_compound_semantics_CL2024_chunk_006.pdf: pages 16-18
+  kitchen_chair_compound_semantics_CL2024_chunk_007.pdf: pages 19-21
+  kitchen_chair_compound_semantics_CL2024_chunk_008.pdf: pages 22-24
+  kitchen_chair_compound_semantics_CL2024_chunk_009.pdf: pages 25-27
+  kitchen_chair_compound_semantics_CL2024_chunk_010.pdf: pages 28-30
+  kitchen_chair_compound_semantics_CL2024_chunk_011.pdf: pages 31-33

@@ -7,7 +7,7 @@ RESEARCH TITLE:
 Where is Washing Machine stored in LLMs?
 
 RESEARCH HYPOTHESIS:
-In large language models, specific compound concepts such as 'washing machine' may not be represented by a unique direction or nearly orthogonal direction in the residual stream; instead, the model may store the concept of 'washing' and rely on context to increase the likelihood of 'machine' following it.
+In large language models, there are too many referenceable concepts for each to have a unique or nearly orthogonal direction in the residual stream. This research investigates whether specific compound concepts like 'washing machine' are explicitly represented, or if only components such as 'washing' are stored and the presence of 'machine' increases the likelihood of the compound concept.
 
 
 RESEARCH DOMAIN:
@@ -68,7 +68,7 @@ For example:
 ═══════════════════════════════════════════════════════════════════════════════
 
 You MUST create a fresh isolated environment for this project FIRST.
-DO NOT use the idea-explorer environment or any existing environment.
+DO NOT use the neurico environment or any existing environment.
 
 REQUIRED STEPS (at the START of your session):
 
@@ -92,7 +92,7 @@ REQUIRED STEPS (at the START of your session):
    EOF
 
    CRITICAL: This ensures uv won't search parent directories for pyproject.toml
-   and contaminate the idea-explorer environment!
+   and contaminate the neurico environment!
 
 3. Activate the environment:
    source .venv/bin/activate
@@ -117,7 +117,7 @@ REQUIRED STEPS (at the START of your session):
 
 WHY THIS MATTERS:
 - The experiment runner phase runs AFTER you and will use this same venv
-- Without an isolated environment, you could pollute the idea-explorer installation
+- Without an isolated environment, you could pollute the neurico installation
 - The pyproject.toml prevents uv from modifying parent directories
 - Dependencies you install will be documented automatically
 

@@ -1,0 +1,716 @@
+{
+  "washing machine": {
+    "compositionality": "medium",
+    "comp_numeric": 2,
+    "modifier": "washing",
+    "head": "machine",
+    "p_head_given_modifier": 0.4711132049560547,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 4220.721379926686,
+    "rank_after_modifier": 1,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " machine",
+        0.4711132049560547
+      ],
+      [
+        " of",
+        0.08367238193750381
+      ],
+      [
+        "-",
+        0.0823720172047615
+      ],
+      [
+        " machines",
+        0.0485592819750309
+      ],
+      [
+        " up",
+        0.03757043555378914
+      ]
+    ]
+  },
+  "coffee machine": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "coffee",
+    "head": "machine",
+    "p_head_given_modifier": 0.007175598759204149,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 64.28646613625156,
+    "rank_after_modifier": 18,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " is",
+        0.08224868774414062
+      ],
+      [
+        " shop",
+        0.06538235396146774
+      ],
+      [
+        " was",
+        0.05581457167863846
+      ],
+      [
+        "-",
+        0.03515789285302162
+      ],
+      [
+        " and",
+        0.030623262748122215
+      ]
+    ]
+  },
+  "sewing machine": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "sewing",
+    "head": "machine",
+    "p_head_given_modifier": 0.3740999400615692,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 3351.5757967226646,
+    "rank_after_modifier": 1,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " machine",
+        0.3740999400615692
+      ],
+      [
+        " machines",
+        0.06553381681442261
+      ],
+      [
+        " process",
+        0.03059813193976879
+      ],
+      [
+        " is",
+        0.02267061360180378
+      ],
+      [
+        " kit",
+        0.020883196964859962
+      ]
+    ]
+  },
+  "slot machine": {
+    "compositionality": "medium",
+    "comp_numeric": 2,
+    "modifier": "slot",
+    "head": "machine",
+    "p_head_given_modifier": 0.06243044137954712,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 559.3167330418886,
+    "rank_after_modifier": 2,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " is",
+        0.14649604260921478
+      ],
+      [
+        " machine",
+        0.06243044137954712
+      ],
+      [
+        " for",
+        0.05422540754079819
+      ],
+      [
+        " was",
+        0.04909820854663849
+      ],
+      [
+        " of",
+        0.033495545387268066
+      ]
+    ]
+  },
+  "vending machine": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "vending",
+    "head": "machine",
+    "p_head_given_modifier": 0.5416489243507385,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 4852.653611428076,
+    "rank_after_modifier": 1,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " machine",
+        0.5416489243507385
+      ],
+      [
+        " machines",
+        0.4060293138027191
+      ],
+      [
+        " system",
+        0.0018531547393649817
+      ],
+      [
+        "-",
+        0.0013671136694028974
+      ],
+      [
+        " and",
+        0.0013496935134753585
+      ]
+    ]
+  },
+  "time machine": {
+    "compositionality": "medium",
+    "comp_numeric": 2,
+    "modifier": "time",
+    "head": "machine",
+    "p_head_given_modifier": 0.0008315889863297343,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 7.45023781331044,
+    "rank_after_modifier": 88,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " has",
+        0.09188827127218246
+      ],
+      [
+        " to",
+        0.08728618919849396
+      ],
+      [
+        " is",
+        0.08044931292533875
+      ],
+      [
+        " of",
+        0.06245497986674309
+      ],
+      [
+        " for",
+        0.06112794950604439
+      ]
+    ]
+  },
+  "war machine": {
+    "compositionality": "low",
+    "comp_numeric": 1,
+    "modifier": "war",
+    "head": "machine",
+    "p_head_given_modifier": 0.0038745878264307976,
+    "p_head_baseline": 0.00011161911970702931,
+    "p_head_control": 0.0002033231285167858,
+    "priming_ratio": 34.71258182827966,
+    "rank_after_modifier": 28,
+    "rank_baseline": 1453,
+    "top5_after_modifier": [
+      [
+        " in",
+        0.14969569444656372
+      ],
+      [
+        " on",
+        0.12321972846984863
+      ],
+      [
+        " was",
+        0.06595584005117416
+      ],
+      [
+        " is",
+        0.061702974140644073
+      ],
+      [
+        " has",
+        0.055554844439029694
+      ]
+    ]
+  },
+  "dish washer": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "dish",
+    "head": "washer",
+    "p_head_given_modifier": 0.14080138504505157,
+    "p_head_baseline": 0.0014187470078468323,
+    "p_head_control": 0.0049284580163657665,
+    "priming_ratio": 99.24347629725713,
+    "rank_after_modifier": 2,
+    "rank_baseline": 44,
+    "top5_after_modifier": [
+      [
+        " is",
+        0.2529074549674988
+      ],
+      [
+        " was",
+        0.14080138504505157
+      ],
+      [
+        ",",
+        0.052744053304195404
+      ],
+      [
+        "washer",
+        0.03445310518145561
+      ],
+      [
+        " has",
+        0.0265689417719841
+      ]
+    ]
+  },
+  "vacuum cleaner": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "vacuum",
+    "head": "cleaner",
+    "p_head_given_modifier": 0.03571334481239319,
+    "p_head_baseline": 6.843242772447411e-06,
+    "p_head_control": 1.4065921050132602e-06,
+    "priming_ratio": 5218.775074908047,
+    "rank_after_modifier": 4,
+    "rank_baseline": 16443,
+    "top5_after_modifier": [
+      [
+        " of",
+        0.2240794599056244
+      ],
+      [
+        " is",
+        0.08364059776067734
+      ],
+      [
+        " was",
+        0.04141109809279442
+      ],
+      [
+        " cleaner",
+        0.03571334481239319
+      ],
+      [
+        "-",
+        0.03367960453033447
+      ]
+    ]
+  },
+  "ice cream": {
+    "compositionality": "medium",
+    "comp_numeric": 2,
+    "modifier": "ice",
+    "head": "cream",
+    "p_head_given_modifier": 0.07433291524648666,
+    "p_head_baseline": 1.9785960830631666e-05,
+    "p_head_control": 0.00013513687008526176,
+    "priming_ratio": 3756.8514303034526,
+    "rank_after_modifier": 3,
+    "rank_baseline": 7132,
+    "top5_after_modifier": [
+      [
+        " is",
+        0.08085354417562485
+      ],
+      [
+        "-",
+        0.0790899395942688
+      ],
+      [
+        " cream",
+        0.07433291524648666
+      ],
+      [
+        " was",
+        0.054609205573797226
+      ],
+      [
+        ",",
+        0.023399239405989647
+      ]
+    ]
+  },
+  "hot dog": {
+    "compositionality": "low",
+    "comp_numeric": 1,
+    "modifier": "hot",
+    "head": "dog",
+    "p_head_given_modifier": 0.030709732323884964,
+    "p_head_baseline": 0.00012703382526524365,
+    "p_head_control": 0.0005728225223720074,
+    "priming_ratio": 241.7445295358442,
+    "rank_after_modifier": 5,
+    "rank_baseline": 1256,
+    "top5_after_modifier": [
+      [
+        "-",
+        0.05018126219511032
+      ],
+      [
+        " spot",
+        0.031707294285297394
+      ],
+      [
+        " water",
+        0.031612422317266464
+      ],
+      [
+        " topic",
+        0.03151802346110344
+      ],
+      [
+        " dog",
+        0.030709732323884964
+      ]
+    ]
+  },
+  "fire truck": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "fire",
+    "head": "truck",
+    "p_head_given_modifier": 0.0015186009695753455,
+    "p_head_baseline": 6.063639011699706e-05,
+    "p_head_control": 0.0012888968922197819,
+    "priming_ratio": 25.044382863907735,
+    "rank_after_modifier": 73,
+    "rank_baseline": 2647,
+    "top5_after_modifier": [
+      [
+        " was",
+        0.156789630651474
+      ],
+      [
+        " started",
+        0.05294353514909744
+      ],
+      [
+        " broke",
+        0.05105888843536377
+      ],
+      [
+        ",",
+        0.03849080204963684
+      ],
+      [
+        " is",
+        0.03209788352251053
+      ]
+    ]
+  },
+  "school bus": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "school",
+    "head": "bus",
+    "p_head_given_modifier": 0.001975714461877942,
+    "p_head_baseline": 7.758441643090919e-05,
+    "p_head_control": 0.000509845616761595,
+    "priming_ratio": 25.465351842110767,
+    "rank_after_modifier": 44,
+    "rank_baseline": 2103,
+    "top5_after_modifier": [
+      [
+        "'s",
+        0.11743179708719254
+      ],
+      [
+        " has",
+        0.06814461201429367
+      ],
+      [
+        " is",
+        0.05908486247062683
+      ],
+      [
+        " was",
+        0.05298788100481033
+      ],
+      [
+        " district",
+        0.048564400523900986
+      ]
+    ]
+  },
+  "red herring": {
+    "compositionality": "very_low",
+    "comp_numeric": 0,
+    "modifier": "red",
+    "head": "herring",
+    "p_head_given_modifier": 0.0018716335762292147,
+    "p_head_baseline": 0.0004344778135418892,
+    "p_head_control": 0.0018716335762292147,
+    "priming_ratio": 4.307777101370368,
+    "rank_after_modifier": 67,
+    "rank_baseline": 288,
+    "top5_after_modifier": [
+      [
+        "-",
+        0.04495012387633324
+      ],
+      [
+        " line",
+        0.03452465683221817
+      ],
+      [
+        " and",
+        0.031977228820323944
+      ],
+      [
+        ",",
+        0.016911299899220467
+      ],
+      [
+        " light",
+        0.015229498967528343
+      ]
+    ]
+  },
+  "dark horse": {
+    "compositionality": "very_low",
+    "comp_numeric": 0,
+    "modifier": "dark",
+    "head": "horse",
+    "p_head_given_modifier": 0.009731327183544636,
+    "p_head_baseline": 6.742795812897384e-05,
+    "p_head_control": 0.0008753579459153116,
+    "priming_ratio": 144.3218429502328,
+    "rank_after_modifier": 8,
+    "rank_baseline": 2387,
+    "top5_after_modifier": [
+      [
+        " side",
+        0.20503893494606018
+      ],
+      [
+        ",",
+        0.03688834235072136
+      ],
+      [
+        "-",
+        0.029601771384477615
+      ],
+      [
+        " and",
+        0.026945190504193306
+      ],
+      [
+        " matter",
+        0.014679383486509323
+      ]
+    ]
+  },
+  "guinea pig": {
+    "compositionality": "low",
+    "comp_numeric": 1,
+    "modifier": "guinea",
+    "head": "pig",
+    "p_head_given_modifier": 0.6624394059181213,
+    "p_head_baseline": 2.362703889957629e-05,
+    "p_head_control": 0.00026352962595410645,
+    "priming_ratio": 28037.343517049907,
+    "rank_after_modifier": 1,
+    "rank_baseline": 6158,
+    "top5_after_modifier": [
+      [
+        " pig",
+        0.6624394059181213
+      ],
+      [
+        " pigs",
+        0.3010179400444031
+      ],
+      [
+        "-",
+        0.010882239788770676
+      ],
+      [
+        " worm",
+        0.004651282913982868
+      ],
+      [
+        " p",
+        0.0018575587309896946
+      ]
+    ]
+  },
+  "dead end": {
+    "compositionality": "low",
+    "comp_numeric": 1,
+    "modifier": "dead",
+    "head": "end",
+    "p_head_given_modifier": 0.009911660104990005,
+    "p_head_baseline": 0.001143074594438076,
+    "p_head_control": 0.0008475901558995247,
+    "priming_ratio": 8.671052749503612,
+    "rank_after_modifier": 12,
+    "rank_baseline": 62,
+    "top5_after_modifier": [
+      [
+        " were",
+        0.07534682005643845
+      ],
+      [
+        " are",
+        0.05300087481737137
+      ],
+      [
+        " body",
+        0.04446611553430557
+      ],
+      [
+        " man",
+        0.039506006985902786
+      ],
+      [
+        ",",
+        0.028246544301509857
+      ]
+    ]
+  },
+  "kitchen chair": {
+    "compositionality": "very_high",
+    "comp_numeric": 4,
+    "modifier": "kitchen",
+    "head": "chair",
+    "p_head_given_modifier": 0.0012238010531291366,
+    "p_head_baseline": 6.435434625018388e-05,
+    "p_head_control": 0.00010446358646731824,
+    "priming_ratio": 19.016602987022647,
+    "rank_after_modifier": 83,
+    "rank_baseline": 2491,
+    "top5_after_modifier": [
+      [
+        " is",
+        0.13773824274539948
+      ],
+      [
+        " was",
+        0.11332979053258896
+      ],
+      [
+        ",",
+        0.06963352859020233
+      ],
+      [
+        " and",
+        0.048730120062828064
+      ],
+      [
+        " sink",
+        0.027346698567271233
+      ]
+    ]
+  },
+  "office desk": {
+    "compositionality": "very_high",
+    "comp_numeric": 4,
+    "modifier": "office",
+    "head": "desk",
+    "p_head_given_modifier": 2.3285600036615506e-05,
+    "p_head_baseline": 1.738485661917366e-05,
+    "p_head_control": 2.560732355050277e-05,
+    "priming_ratio": 1.3394185840413517,
+    "rank_after_modifier": 1429,
+    "rank_baseline": 7925,
+    "top5_after_modifier": [
+      [
+        " of",
+        0.4191036522388458
+      ],
+      [
+        " is",
+        0.04516901820898056
+      ],
+      [
+        " said",
+        0.039004020392894745
+      ],
+      [
+        " was",
+        0.03744760900735855
+      ],
+      [
+        " has",
+        0.03517370671033859
+      ]
+    ]
+  },
+  "rain coat": {
+    "compositionality": "very_high",
+    "comp_numeric": 4,
+    "modifier": "rain",
+    "head": "coat",
+    "p_head_given_modifier": 5.725102892029099e-05,
+    "p_head_baseline": 1.4787883628741838e-05,
+    "p_head_control": 0.0005540067213587463,
+    "priming_ratio": 3.871482245709418,
+    "rank_after_modifier": 888,
+    "rank_baseline": 9030,
+    "top5_after_modifier": [
+      [
+        " was",
+        0.07613223046064377
+      ],
+      [
+        " is",
+        0.06945053488016129
+      ],
+      [
+        " has",
+        0.060541875660419464
+      ],
+      [
+        " had",
+        0.04282156750559807
+      ],
+      [
+        ",",
+        0.03829720988869667
+      ]
+    ]
+  },
+  "swimming pool": {
+    "compositionality": "high",
+    "comp_numeric": 3,
+    "modifier": "swimming",
+    "head": "pool",
+    "p_head_given_modifier": 0.3183616101741791,
+    "p_head_baseline": 7.9162789916154e-05,
+    "p_head_control": 9.595605661161244e-05,
+    "priming_ratio": 4021.6067487183655,
+    "rank_after_modifier": 1,
+    "rank_baseline": 2073,
+    "top5_after_modifier": [
+      [
+        " pool",
+        0.3183616101741791
+      ],
+      [
+        " team",
+        0.020067166537046432
+      ],
+      [
+        " is",
+        0.019750796258449554
+      ],
+      [
+        "-",
+        0.019354693591594696
+      ],
+      [
+        " and",
+        0.01880434900522232
+      ]
+    ]
+  }
+}

@@ -1,8 +1,8 @@
-Large language models must represent millions of compound concepts---``washing machine,'' ``hot dog,'' ``coffee table''---yet their residual streams have limited dimensionality.
+Large language models must represent millions of compound concepts---``washing machine,'' ``hot dog,'' ``red herring''---yet their residual streams have limited dimensionality.
 How do these multi-token concepts fit?
-We investigate whether compound nouns are stored as unique directions in the residual stream or are compositionally derived from their constituent words.
-Through four complementary experiments on \gpttwo (124M parameters), we find that compounds are primarily represented through composition: a linear combination of constituent word directions explains 93.7\% of the variance in compound representations ($\Rsq = 0.937$), and the dominant mechanism is next-token prediction boosting---seeing ``washing'' raises $P(\text{``machine''})$ by a median factor of $20\times$ compared to control contexts.
-A linear probe achieves 92.2\% accuracy at distinguishing compound from non-compound contexts, confirming that compounds carry contextual information beyond their parts, but this signal accounts for only ${\sim}6\%$ of the total representation.
-We find no evidence of token erasure in \gpttwo: constituent word identity is perfectly recoverable from the compound position at every layer.
-More idiomatic compounds (\eg ``hot dog,'' $\Rsq = 0.888$) require more unique representational capacity than transparent ones (\eg ``steel bridge,'' $\Rsq = 0.965$).
-Our findings challenge the assumption that multi-token concepts have dedicated directions and have direct implications for concept editing, representation steering, and sparse autoencoder-based interpretability.
+We investigate whether compound nouns are stored as dedicated directions in the residual stream or are constructed compositionally from their parts.
+Through three complementary experiments on \gpttwo (124M parameters), we examine 21 compound concepts spanning the compositionality spectrum from transparent (``kitchen chair'') to idiomatic (``red herring'').
+We find that compound representations are highly similar to their head nouns in the residual stream (mean cosine similarity 0.954), yet sparse autoencoder (SAE) decomposition reveals that 56.3\% of features active for compounds are unique to the compound context---invisible to cosine similarity.
+The degree of unique representation scales with idiomaticity: ``red herring'' activates 82.1\% unique features versus 46.9\% for ``kitchen chair'' (Mann-Whitney $p = 0.0005$, Cohen's $d = 2.54$).
+Most strikingly, next-token prediction serves as the dominant storage mechanism: after ``The washing,'' the model assigns 47.1\% probability to ``machine'' (a $4{,}221\times$ increase over baseline), effectively constructing the compound concept through sequential prediction rather than holistic representation.
+These findings reveal that LLMs manage the ``too many concepts, too few dimensions'' problem by constructing multi-token concepts sequentially, with implications for interpretability, concept editing, and SAE-based analysis.

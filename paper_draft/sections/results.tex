@@ -1,142 +1,136 @@
 \section{Results}
 \label{sec:results}
 
-\subsection{Next-Token Prediction Boosting}
+\subsection{Residual Stream Similarity: Compounds Are Modifications, Not New Directions}
 \label{sec:results_exp1}
 
-The primary mechanism for compound processing is next-token prediction boosting.
-\tabref{tab:next_token} shows that for strongly associated compounds, $\wtwo$ is the top prediction after $\wone$: ``washing'' yields $P(\text{``machine''}) = 0.827$ (rank 1), ``guinea'' yields $P(\text{``pig''}) = 0.833$ (rank 1), and ``swimming'' yields $P(\text{``pool''}) = 0.626$ (rank 1).
-The median boost ratio across all compounds is $20.2\times$ (95\% CI: $[4.7, 180.2]$), which is statistically significant (Wilcoxon signed-rank $W = 160$, $p = 2.1 \times 10^{-4}$, Cohen's $d = 0.63$).
+\tabref{tab:cosine} presents the cosine similarity between compound and component representations at the final layer (layer 11).
+The mean similarity between compound and head noun representations is $0.954 \pm 0.019$, and between compound and additive composition is $0.959 \pm 0.013$.
+Even the least compositional compound in our dataset, ``red herring,'' maintains a cosine similarity of 0.895 with its head noun alone.
 
 \begin{table}[t]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{@{}lccccr@{}}
+    \begin{tabular}{@{}lccccc@{}}
         \toprule
-        \textbf{Compound} & $P(\wtwo \mid \wone)$ & \textbf{Rank} & $P(\wtwo \mid \wone^{\text{ctrl}})$ & \textbf{Ctrl Rank} & \textbf{Boost} \\
+        \textbf{Compound} & \textbf{Comp.\ Level} & \textbf{vs.\ Head Alone} & \textbf{vs.\ Additive} & \textbf{vs.\ Modifier} \\
         \midrule
-        guinea pig & 0.833 & {\bf 1} & 0.0001 & 1755 & $7{,}233\times$ \\
-        washing machine & 0.827 & {\bf 1} & 0.0002 & 924 & $4{,}963\times$ \\
-        swimming pool & 0.626 & {\bf 1} & 0.0011 & 125 & $549\times$ \\
-        parking lot & 0.322 & {\bf 1} & 0.0116 & 14 & $28\times$ \\
-        living room & 0.261 & 2 & 0.0016 & 98 & $160\times$ \\
-        driving license & 0.036 & 118 & 0.0002 & 1325 & $221\times$ \\
-        hot dog & 0.097 & 4 & 0.0022 & 142 & $45\times$ \\
-        coffee table & 0.063 & 4 & 0.0091 & 14 & $7\times$ \\
-        chocolate cake & 0.036 & 5 & 0.0003 & 978 & $140\times$ \\
+        school bus & high & {\bf 0.983} & 0.966 & 0.823 \\
+        swimming pool & high & 0.961 & 0.965 & 0.810 \\
+        coffee machine & high & 0.957 & 0.967 & 0.844 \\
+        kitchen chair & very\_high & 0.956 & 0.968 & 0.831 \\
+        washing machine & medium & 0.951 & 0.954 & 0.812 \\
+        guinea pig & low & 0.942 & 0.938 & 0.760 \\
+        ice cream & medium & 0.937 & 0.943 & 0.762 \\
+        hot dog & low & 0.936 & 0.943 & 0.761 \\
+        dark horse & very\_low & 0.936 & 0.947 & 0.777 \\
+        red herring & very\_low & 0.895 & 0.925 & 0.748 \\
         \midrule
-        snowman & 0.004 & 63 & 0.043 & 7 & $0.1\times$ \\
-        sunflower & 0.0001 & 1673 & 0.0004 & 706 & $0.3\times$ \\
+        \textbf{Mean (all 21)} & --- & $0.954$ {\scriptsize $\pm 0.019$} & $0.959$ {\scriptsize $\pm 0.013$} & --- \\
         \bottomrule
     \end{tabular}
     }
-    \caption{Next-token prediction results for selected compounds. The boost ratio (\eqref{eq:boost}) measures how much more likely $\wtwo$ is after $\wone$ compared to a control word. Strong compounds show boost ratios of $28$--$7{,}233\times$, while single-token compounds (snowman, sunflower) show ratios below 1.}
-    \label{tab:next_token}
+    \caption{Cosine similarity between compound representations and component representations at layer 11. All compounds maintain high similarity ($>0.89$) with their head nouns, indicating that compound representations are modifications of existing component directions rather than new directions. Best per-row result in \textbf{bold} when noteworthy.}
+    \label{tab:cosine}
 \end{table}
 
-Two compounds---snowman and sunflower---show boost ratios below 1, meaning the control word actually predicts $\wtwo$ better.
-This is expected: these compounds are written as single words in standard English (``snowman,'' ``sunflower''), so the model's training data does not contain ``snow'' and ``man'' as adjacent tokens in compound contexts.
+{\bf Compositionality predicts residual stream similarity.}
+There is a significant positive correlation between compositionality and similarity with the additive composition baseline (Spearman $\rho = 0.602$, $p = 0.004$): transparent compounds like ``kitchen chair'' (0.968) are closer to the additive baseline than idiomatic compounds like ``red herring'' (0.925).
+However, even the most idiomatic compounds show very high cosine similarity, suggesting that residual stream geometry provides a limited window into compound-specific processing.
 
-\subsection{Compound Directions Are 93.7\% Reconstructable}
+\subsection{SAE Features Reveal Hidden Compound-Specific Computation}
 \label{sec:results_exp2}
 
-\tabref{tab:reconstruction} presents the linear reconstruction results at the final layer.
-The mean $\Rsq$ across all 15 tested compounds is $0.937 \pm 0.020$ ($t = 176.3$, $p = 7.9 \times 10^{-25}$ vs.\ the null of $\Rsq = 0$).
-The mean cosine similarity between compound and $\wtwo$ directions is 0.959, and between compound and $\wone$ directions is 0.926.
-The mean residual norm ratio is 0.253, indicating that only ${\sim}25\%$ of the compound representation's norm is not explained by constituents.
+Despite high cosine similarity at the residual stream level, SAE decomposition reveals that a majority of features active for compounds are not shared with either component alone.
+\tabref{tab:sae} presents the SAE feature analysis at layer 11.
+The mean fraction of unique-to-compound features is $0.563 \pm 0.131$, and the mean Jaccard similarity between compound and head feature sets is only $0.255 \pm 0.091$.
 
 \begin{table}[t]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{@{}lccccl@{}}
-        \toprule
-        \textbf{Compound} & $\Rsq$ & $\cos(\compound, \wone)$ & $\cos(\compound, \wtwo)$ & \textbf{Residual} & \textbf{Comp.} \\
-        \midrule
-        steel bridge & {\bf 0.965} & 0.924 & 0.982 & 0.188 & 5 \\
-        garden hose & 0.962 & 0.933 & 0.979 & 0.196 & 5 \\
-        door handle & 0.958 & 0.949 & 0.976 & 0.206 & 5 \\
-        mountain cabin & 0.956 & 0.937 & 0.975 & 0.209 & 5 \\
-        chocolate cake & 0.953 & 0.944 & 0.975 & 0.216 & 5 \\
-        coffee table & 0.938 & 0.934 & 0.962 & 0.249 & 5 \\
-        swimming pool & 0.924 & 0.932 & 0.957 & 0.276 & 4 \\
-        washing machine & 0.917 & 0.907 & 0.951 & 0.288 & 4 \\
-        hot dog & 0.888 & 0.897 & 0.934 & 0.335 & 1 \\
-        \midrule
-        \textbf{Mean} & $0.937$ & $0.926$ & $0.959$ & $0.253$ & --- \\
-        \bottomrule
-    \end{tabular}
-    }
-    \caption{Linear reconstruction of compound directions from constituent directions at the final layer.
-    $\Rsq$ measures the fraction of variance explained by the linear model in \eqref{eq:reconstruction}.
-    Residual is the normalized reconstruction error.
-    Comp.\ is the compositionality rating (1=idiomatic, 5=transparent).
-    More compositional compounds have higher $\Rsq$.
-    }
-    \label{tab:reconstruction}
-\end{table}
-
-{\bf Compositionality predicts reconstruction quality.}
-There is a significant positive correlation between compositionality rating and $\Rsq$ (Spearman $\rho = 0.669$, $p = 0.006$): transparent compounds like ``steel bridge'' ($\Rsq = 0.965$) are better reconstructed than idiomatic ones like ``hot dog'' ($\Rsq = 0.888$).
-This is exactly what the compositional hypothesis predicts---idiomatic compounds require more unique information beyond their constituents.
-
-{\bf U-shaped $\Rsq$ across layers.}
-$\Rsq$ starts high at layer 0 (0.940), drops to a minimum at layers 4--5 (${\sim}0.800$), and recovers to 0.937 at layer 11.
-This suggests that intermediate layers perform the most compound-specific processing, potentially encoding compound-specific semantics, before later layers restore more compositional representations for next-token prediction.
-
-\subsection{No Token Erasure in \gpttwo}
-\label{sec:results_exp3}
-
-\para{Probe 1 results (token erasure).}
-The token identity probe achieves \emph{perfect accuracy} (1.000) at every layer from 0 to 11.
-The identity of $\wone$ is fully recoverable from the hidden state at the $\wtwo$ position throughout the network.
-This stands in contrast to \citet{feucht2024token}, who found that token identity accuracy drops from ${\sim}100\%$ at layer 0 to ${\sim}20\%$ by layer 9 in \llamatwo for named entities.
-
-\para{Probe 2 results (compound detection).}
-The compound-vs-control probe shows that compound-specific information emerges early and peaks in later layers (\tabref{tab:probing}).
-Accuracy is 70.6\% at layer 0, rises above 90\% by layer 2, and peaks at 92.2\% at layer 8.
-The slight decrease to 85.1\% at layer 11 may reflect the model optimizing late-layer representations for next-token prediction rather than maintaining compound-specific information.
-
-\begin{table}[t]
-    \centering
     \begin{tabular}{@{}lcccccc@{}}
         \toprule
-        \textbf{Layer} & 0 & 2 & 4 & 7 & 8 & 11 \\
+        \textbf{Compound} & \textbf{Comp.} & \textbf{Unique (\%)} & \textbf{Head Overlap (\%)} & \textbf{Mod.\ Overlap (\%)} & \textbf{Jaccard w/ Head} \\
         \midrule
-        Token erasure (Probe 1) & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
-        Compound detection (Probe 2) & 0.706 & 0.902 & 0.894 & 0.918 & {\bf 0.922} & 0.851 \\
+        red herring & very\_low & {\bf 82.1} & 14.3 & 7.1 & 0.079 \\
+        dark horse & very\_low & 78.3 & 19.3 & 13.3 & 0.147 \\
+        hot dog & low & 66.7 & 23.5 & 15.7 & 0.152 \\
+        guinea pig & low & 61.7 & 31.7 & 18.3 & 0.209 \\
+        washing machine & medium & 57.9 & 35.1 & 24.6 & 0.256 \\
+        coffee machine & high & 54.7 & 34.4 & 20.3 & 0.265 \\
+        swimming pool & high & 53.7 & 33.3 & 20.4 & 0.231 \\
+        school bus & high & 48.9 & 46.7 & 28.9 & 0.333 \\
+        kitchen chair & very\_high & 46.9 & 34.7 & 32.7 & 0.205 \\
+        dish washer & high & 21.5 & {\bf 69.2} & 27.7 & {\bf 0.479} \\
+        \midrule
+        \textbf{Mean (all 21)} & --- & $56.3$ {\scriptsize $\pm 13.1$} & --- & --- & $0.255$ {\scriptsize $\pm 0.091$} \\
         \bottomrule
     \end{tabular}
-    \caption{Probing accuracy at selected layers. Probe 1 tests whether $\wone$ identity can be recovered from the $\wtwo$ position (perfect accuracy = no erasure). Probe 2 tests whether compound versus control context can be distinguished. Peak compound detection accuracy is {\bf 92.2\%} at layer 8.}
-    \label{tab:probing}
+    }
+    \caption{SAE feature decomposition at layer 11. ``Unique'' is the fraction of compound features not shared with either component alone. ``Head/Mod.\ Overlap'' is the fraction of compound features also active for the head/modifier in isolation. Idiomatic compounds activate substantially more unique features than transparent ones. Best (most extreme) values in \textbf{bold}.}
+    \label{tab:sae}
 \end{table}
 
-\subsection{Attention Patterns}
-\label{sec:results_exp4}
+{\bf Compositionality strongly predicts unique feature fraction.}
+Low-compositionality compounds (very\_low and low) have significantly more unique SAE features (mean 71.2\%) than high-compositionality compounds (mean 48.2\%).
+A Mann-Whitney U test confirms this difference is statistically significant ($p = 0.0005$), with a very large effect size (Cohen's $d = 2.54$).
+This makes linguistic sense: idioms like ``red herring'' require more specialized representation because their meaning cannot be derived from their components.
 
-Compound contexts show significantly more attention from $\wtwo$ to $\wone$ in layer 0 ($p = 0.011$), but this pattern reverses in later layers (7--8), where control contexts show more attention from $\wtwo$ to the preceding word ($p < 0.001$).
-This suggests that the model uses early-layer attention to establish the compound relationship, then shifts to different processing in later layers once the compound context has been encoded into the residual stream.
+{\bf ``Dish washer'' is an informative outlier.}
+With only 21.5\% unique features and 69.2\% overlap with ``washer'' alone, ``dish washer'' is the most compositional compound by SAE metrics---the model treats it almost identically to ``washer.''
+This is semantically reasonable: a dishwasher \emph{is} a type of washer, so minimal additional representation is needed.
 
-\subsection{Validation on \gptmed}
-\label{sec:validation}
+{\bf Cosine similarity versus SAE decomposition.}
+The contrast between these two analysis levels is striking.
+``Red herring'' has 0.895 cosine similarity with ``herring'' alone (seemingly very similar), yet only 14.3\% feature overlap.
+This demonstrates that cosine similarity measures overall direction alignment while SAE decomposition captures fine-grained feature-level differences invisible to coarser geometric measures.
 
-Key findings replicate on \gptmed (355M parameters, 24 layers).
-\tabref{tab:validation} shows that the larger model produces similar or stronger next-token prediction boosting and comparable $\Rsq$ values.
-The pattern of compositional storage is robust to a $2.9\times$ increase in model size.
+\subsection{Next-Token Priming: The Primary Storage Mechanism}
+\label{sec:results_exp3}
+
+\tabref{tab:priming} presents the next-token prediction priming results.
+The variation across compounds is enormous, spanning five orders of magnitude from $1.3\times$ (``office desk'') to $28{,}037\times$ (``guinea pig'').
 
 \begin{table}[t]
     \centering
-    \begin{tabular}{@{}lcccc@{}}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}lccccc@{}}
         \toprule
-        \multirow{2}{*}{\textbf{Compound}} & \multicolumn{2}{c}{\textbf{Boost}} & \multicolumn{2}{c}{$\Rsq$} \\
-        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-        & \gpttwo & \gptmed & \gpttwo & \gptmed \\
+        \textbf{Compound} & $P(\text{head} \mid \text{mod})$ & $P(\text{head} \mid \text{baseline})$ & \textbf{Priming Ratio} & \textbf{Rank} \\
         \midrule
-        washing machine & $4{,}963\times$ & $25{,}303\times$ & 0.917 & 0.899 \\
-        swimming pool & $549\times$ & $615\times$ & 0.924 & 0.932 \\
-        hot dog & $45\times$ & $116\times$ & 0.888 & 0.897 \\
-        coffee table & $7\times$ & $4\times$ & 0.938 & 0.923 \\
+        guinea pig & 0.6624 & 0.000024 & ${\bf 28{,}037}\times$ & {\bf 1} \\
+        vending machine & 0.5416 & 0.000112 & $4{,}853\times$ & {\bf 1} \\
+        washing machine & 0.4711 & 0.000112 & $4{,}221\times$ & {\bf 1} \\
+        swimming pool & 0.3184 & 0.000079 & $4{,}022\times$ & {\bf 1} \\
+        sewing machine & 0.3741 & 0.000112 & $3{,}352\times$ & {\bf 1} \\
+        ice cream & 0.0743 & 0.000020 & $3{,}757\times$ & 3 \\
+        slot machine & 0.0624 & 0.000112 & $559\times$ & 2 \\
+        hot dog & 0.0307 & 0.000127 & $242\times$ & 5 \\
+        dark horse & 0.0097 & 0.000067 & $144\times$ & 8 \\
+        kitchen chair & 0.0012 & 0.000064 & $19\times$ & 83 \\
+        red herring & 0.0019 & 0.000434 & $4.3\times$ & 67 \\
+        rain coat & 0.0001 & 0.000015 & $3.9\times$ & 888 \\
+        office desk & 0.0000 & 0.000017 & $1.3\times$ & 1429 \\
         \bottomrule
     \end{tabular}
-    \caption{Validation on \gptmed. Next-token prediction boost ratios and $\Rsq$ reconstruction scores are comparable or stronger than \gpttwo, confirming that compositional storage is robust to model scale.}
-    \label{tab:validation}
+    }
+    \caption{Next-token prediction priming results. The priming ratio (\eqref{eq:priming}) measures how much more likely the head noun is after the modifier compared to baseline. ``Frozen'' compounds like ``guinea pig'' and ``washing machine'' show extreme priming ($>4{,}000\times$), while loosely associated compounds like ``office desk'' show minimal priming ($1.3\times$). Rank indicates the head noun's position among all 50,257 vocabulary predictions.}
+    \label{tab:priming}
 \end{table}
+
+{\bf Three regimes of compound priming.}
+The data naturally cluster into three groups:
+\begin{enumerate}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item \emph{Extreme priming} ($>1{,}000\times$): washing machine, vending machine, sewing machine, swimming pool, guinea pig. These are ``frozen'' compounds where the modifier almost exclusively precedes its head in natural text. The head noun is the \#1 prediction.
+    \item \emph{Moderate priming} ($10$--$1{,}000\times$): hot dog, slot machine, dark horse, ice cream. The modifier has other common continuations, but the compound is still strongly predicted.
+    \item \emph{Minimal priming} ($<10\times$): red herring ($4.3\times$), rain coat ($3.9\times$), office desk ($1.3\times$). These modifiers have many common continuations and the compound is either rare or not strongly associated.
+\end{enumerate}
+
+{\bf ``Washing machine'' is constructed through prediction.}
+After ``The washing,'' GPT-2 produces the following top-5 predictions: \texttt{machine} (47.1\%), \texttt{of} (8.4\%), \texttt{-} (8.2\%), \texttt{machines} (4.9\%), \texttt{up} (3.8\%).
+The model assigns nearly half its probability mass to ``machine,'' effectively constructing the compound concept through its transition probabilities.
+This is the primary mechanism by which GPT-2 ``stores'' the concept of a washing machine: not as a dedicated direction, but as an overwhelming statistical association.
+
+{\bf ``Guinea pig'' is the most frozen compound.}
+Despite being rated as low compositionality (the meaning of ``guinea pig'' is opaque), ``guinea'' predicts ``pig'' with 66.2\% probability and a $28{,}037\times$ priming ratio.
+This dissociation between semantic compositionality and statistical predictability reveals that priming reflects co-occurrence frequency, not semantic transparency.

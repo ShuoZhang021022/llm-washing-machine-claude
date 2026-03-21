@@ -1,0 +1,16 @@
+PDF: papers/2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L.pdf
+Total pages: 32
+Pages per chunk: 3
+
+Chunks:
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_001.pdf: pages 1-3
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_002.pdf: pages 4-6
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_003.pdf: pages 7-9
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_004.pdf: pages 10-12
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_005.pdf: pages 13-15
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_006.pdf: pages 16-18
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_007.pdf: pages 19-21
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_008.pdf: pages 22-24
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_009.pdf: pages 25-27
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_010.pdf: pages 28-30
+  2412.03120_Evaluating_Synthetic_Activations_composed_of_SAE_L_chunk_011.pdf: pages 31-32

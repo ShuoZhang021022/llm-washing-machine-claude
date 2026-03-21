@@ -1,0 +1,10 @@
+PDF: papers/2010.03058_Assessing_Phrasal_Representation_and_Composition_i.pdf
+Total pages: 13
+Pages per chunk: 3
+
+Chunks:
+  2010.03058_Assessing_Phrasal_Representation_and_Composition_i_chunk_001.pdf: pages 1-3
+  2010.03058_Assessing_Phrasal_Representation_and_Composition_i_chunk_002.pdf: pages 4-6
+  2010.03058_Assessing_Phrasal_Representation_and_Composition_i_chunk_003.pdf: pages 7-9
+  2010.03058_Assessing_Phrasal_Representation_and_Composition_i_chunk_004.pdf: pages 10-12
+  2010.03058_Assessing_Phrasal_Representation_and_Composition_i_chunk_005.pdf: page 13

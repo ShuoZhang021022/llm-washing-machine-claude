@@ -1,91 +1,80 @@
 \section{Methodology}
 \label{sec:methodology}
 
-We conduct four experiments on \gpttwo~\citep{radford2019language} (124M parameters, 12 layers, $\dmodel = 768$), accessing internal activations via \transformerlens~\citep{nanda2022transformerlens}.
-We validate key findings on \gptmed (355M parameters, 24 layers, $\dmodel = 1024$).
+We conduct three experiments on \gpttwo~\citep{radford2019language} (124M parameters, 12 layers, 768 dimensions), accessing internal activations via \transformerlens~\citep{nanda2022transformerlens} and using pre-trained SAEs (24,576 features per layer) from the GPT-2 Small SAE suite.
+All experiments run on a single NVIDIA RTX A6000 (48GB) in approximately 3 minutes total.
 
 \subsection{Dataset Construction}
 \label{sec:dataset}
 
-We construct a dataset of 19 compound nouns spanning the compositionality spectrum, each paired with a control phrase that preserves the second word ($\wtwo$) but replaces the first word ($\wone$) with a non-compound modifier.
+We construct a dataset of 21 compound concepts spanning the compositionality spectrum, with ratings from \emph{very\_low} (fully idiomatic, \eg ``red herring'') to \emph{very\_high} (fully transparent, \eg ``kitchen chair'').
 \tabref{tab:compounds} shows representative examples.
-Compositionality ratings range from 1 (fully idiomatic, \eg ``hot dog'') to 5 (fully transparent, \eg ``coffee table'').
 
 \begin{table}[t]
     \centering
-    \resizebox{\textwidth}{!}{%
     \begin{tabular}{@{}llllc@{}}
         \toprule
-        \textbf{Compound} & \textbf{$\wone$} & \textbf{$\wtwo$} & \textbf{Control} & \textbf{Comp.} \\
+        \textbf{Compound} & \textbf{Modifier} & \textbf{Head} & \textbf{Category} & \textbf{Comp.} \\
         \midrule
-        washing machine & washing & machine & red machine & 4 \\
-        hot dog & hot & dog & big dog & 1 \\
-        coffee table & coffee & table & wooden table & 5 \\
-        swimming pool & swimming & pool & deep pool & 4 \\
-        parking lot & parking & lot & large lot & 4 \\
-        living room & living & room & large room & 4 \\
-        shooting star & shooting & star & bright star & 3 \\
-        chocolate cake & chocolate & cake & large cake & 5 \\
-        steel bridge & steel & bridge & old bridge & 5 \\
+        washing machine & washing & machine & appliance & medium \\
+        hot dog & hot & dog & food & low \\
+        red herring & red & herring & idiom & very\_low \\
+        kitchen chair & kitchen & chair & furniture & very\_high \\
+        swimming pool & swimming & pool & structure & high \\
+        guinea pig & guinea & pig & animal & low \\
+        dark horse & dark & horse & idiom & very\_low \\
+        coffee machine & coffee & machine & appliance & high \\
+        school bus & school & bus & vehicle & high \\
+        ice cream & ice & cream & food & medium \\
         \bottomrule
     \end{tabular}
-    }
-    \caption{Representative compounds from our dataset with compositionality ratings (1=idiomatic, 5=transparent). Full dataset contains 19 compounds. All compounds tokenize as exactly two tokens in \gpttwo's BPE vocabulary.}
+    \caption{Representative compounds from our dataset with compositionality ratings. Full dataset contains 21 compounds spanning appliances, food, vehicles, idioms, furniture, and clothing categories.}
     \label{tab:compounds}
 \end{table}
 
-All compounds are verified to tokenize as exactly two tokens in \gpttwo's BPE vocabulary.
-Two potential compounds were excluded: ``blueberry'' (``berry'' is multi-token) and ``guinea pig'' from direction analysis (``guinea'' is multi-token in some contexts).
-Each compound is embedded in 8 diverse sentence templates (\eg ``The \{compound\} was,'' ``She bought a \{compound\} for'') to ensure context diversity.
-For isolation baselines, each constituent word appears in 4 templates without its compound partner.
+Each compound is processed in the minimal context ``The [compound]'' to isolate the compound representation from richer contextual effects.
+For component baselines, we process ``The [modifier]'' and ``The [head]'' separately.
 
-\subsection{Experiment 1: Next-Token Prediction Analysis}
+\para{Tokenization considerations.}
+GPT-2's \BPE tokenizer handles these compounds variably: ``washing machine'' splits cleanly into two tokens (\texttt{washing}, \texttt{\textvisiblespace machine}), but ``coffee machine'' becomes three tokens (\texttt{co}, \texttt{ffee}, \texttt{\textvisiblespace machine}) and ``red herring'' splits the head noun (\texttt{red}, \texttt{\textvisiblespace her}, \texttt{ring}).
+For multi-token components, the model must already perform compositional processing just to represent the component word, adding complexity to the analysis.
+We extract representations at the last token position for all conditions.
+
+\subsection{Experiment 1: Residual Stream Cosine Similarity}
 \label{sec:exp1}
 
-For each compound $(\wone, \wtwo)$, we measure how strongly $\wone$ predicts $\wtwo$ compared to a control word.
-Specifically, we compute:
-\begin{equation}
-    \text{Boost} = \frac{P(\wtwo \mid \text{context} + \wone)}{P(\wtwo \mid \text{context} + \wone^{\text{ctrl}})}
-    \label{eq:boost}
-\end{equation}
-where $\wone^{\text{ctrl}}$ is the control word (\eg ``red'' for ``washing machine'').
-We average probabilities across 8 sentence templates and also record the rank of $\wtwo$ among all vocabulary predictions.
+For each compound concept, we measure how the compound representation relates to its components in the residual stream at every layer.
+Specifically, at each layer $\ell$, we compute three cosine similarities:
+\begin{align}
+    \cossim_{\text{head}} &= \frac{\vh^{(\ell)}_{\compound} \cdot \vh^{(\ell)}_{\text{head}}}{\|\vh^{(\ell)}_{\compound}\| \|\vh^{(\ell)}_{\text{head}}\|} \label{eq:cos_head} \\
+    \cossim_{\text{add}} &= \frac{\vh^{(\ell)}_{\compound} \cdot \bar{\vh}^{(\ell)}_{\text{avg}}}{\|\vh^{(\ell)}_{\compound}\| \|\bar{\vh}^{(\ell)}_{\text{avg}}\|} \label{eq:cos_add} \\
+    \cossim_{\text{mod}} &= \frac{\vh^{(\ell)}_{\compound} \cdot \vh^{(\ell)}_{\text{mod}}}{\|\vh^{(\ell)}_{\compound}\| \|\vh^{(\ell)}_{\text{mod}}\|} \label{eq:cos_mod}
+\end{align}
+where $\vh^{(\ell)}_{\compound}$ is the hidden state at the last token of the compound, $\vh^{(\ell)}_{\text{head}}$ and $\vh^{(\ell)}_{\text{mod}}$ are the hidden states for the head noun and modifier processed in isolation, and $\bar{\vh}^{(\ell)}_{\text{avg}} = \frac{1}{2}(\vh^{(\ell)}_{\text{mod}} + \vh^{(\ell)}_{\text{head}})$ is the additive composition baseline.
 
-\subsection{Experiment 2: Residual Stream Direction Analysis}
+\subsection{Experiment 2: SAE Feature Decomposition}
 \label{sec:exp2}
 
-We test whether the compound direction can be linearly reconstructed from constituent directions.
-At each layer $\ell$, we collect:
-\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
-    \item $\vh^{(\ell)}_{\text{compound}}$: the mean hidden state at the $\wtwo$ position across 8 compound contexts.
-    \item $\vh^{(\ell)}_{\wone}$: the mean hidden state for $\wone$ in isolation (4 contexts).
-    \item $\vh^{(\ell)}_{\wtwo}$: the mean hidden state for $\wtwo$ in isolation (4 contexts).
-\end{itemize}
+We use pre-trained SAEs at layers 1, 6, and 11 to decompose residual stream activations into sparse feature sets.
+Each SAE has 24,576 features per layer.
+For each compound and its components, we:
+\begin{enumerate}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item Encode the residual stream activation through the SAE encoder.
+    \item Identify active features (activation $> 0$).
+    \item Compute the fraction of compound features that are \emph{unique to the compound context}---not shared with either the head or modifier processed alone.
+    \item Compute Jaccard similarity $J = |F_{\compound} \cap F_{\text{head}}| / |F_{\compound} \cup F_{\text{head}}|$ between compound and head feature sets.
+\end{enumerate}
 
-We fit the linear reconstruction:
-\begin{equation}
-    \vh^{(\ell)}_{\text{compound}} = \alpha \cdot \vh^{(\ell)}_{\wone} + \beta \cdot \vh^{(\ell)}_{\wtwo}
-    \label{eq:reconstruction}
-\end{equation}
-using ordinary least squares, and report the coefficient of determination $\Rsq$.
-We also compute cosine similarities between compound and constituent directions, and the residual norm ratio $\|\vh_{\text{compound}} - \hat{\vh}_{\text{compound}}\| / \|\vh_{\text{compound}}\|$, which measures the fraction of the compound representation that is unique (\ie not explained by constituents).
+This decomposition tests whether the subtle modifications that cosine similarity misses correspond to genuine differences in feature activation patterns.
 
-\subsection{Experiment 3: Layer-wise Probing}
+\subsection{Experiment 3: Next-Token Prediction Priming}
 \label{sec:exp3}
 
-We train two linear probes (logistic regression, $C = 1.0$, 5-fold cross-validation) on hidden states at the $\wtwo$ position:
-
-\para{Probe 1 (Token erasure).}
-Predicts the identity of $\wone$ from the hidden state at the $\wtwo$ position.
-If the model erases constituent information to form compound representations, probe accuracy should decrease in intermediate layers.
-
-\para{Probe 2 (Compound detection).}
-Classifies whether the context is a compound (\eg ``washing machine'') or a control phrase (\eg ``red machine'').
-This measures how much compound-specific information is present at each layer.
-We use 120 compound samples and 136 control samples.
-
-\subsection{Experiment 4: Attention Pattern Analysis}
-\label{sec:exp4}
-
-We extract attention weights at the $\wtwo$ position and compare how much $\wtwo$ attends to $\wone$ in compound contexts versus how much $\wtwo$ attends to the preceding word in control contexts.
-We analyze this across all layers and attention heads.
+For each compound ``modifier head,'' we measure how strongly the modifier primes the head noun in the model's next-token predictions:
+\begin{equation}
+    \text{Priming Ratio} = \frac{P(\text{head} \mid \text{``The modifier''})}{P(\text{head} \mid \text{``The''})}
+    \label{eq:priming}
+\end{equation}
+where the numerator is the probability of the head noun after seeing the modifier in context, and the denominator is its baseline probability after seeing only ``The.''
+We also record the rank of the head noun among all 50,257 vocabulary predictions.
+This experiment directly tests whether the model ``stores'' compound concepts primarily through transition probabilities rather than dedicated feature directions.

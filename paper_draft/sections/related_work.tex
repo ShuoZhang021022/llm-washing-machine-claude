@@ -1,35 +1,32 @@
 \section{Related Work}
 \label{sec:related_work}
 
-\para{Linear representations in LLMs.}
-The linear representation hypothesis posits that concepts correspond to directions in a model's activation space.
-\citet{park2024linear} formalized three variants---subspace, measurement, and intervention---and tested 27 single-token concepts in \llamatwo, finding strong linear structure for 26 of 27.
-The only failure was the compositional relation ``thing$\to$part,'' hinting that compositional concepts may not follow the same pattern.
-\citet{gurnee2023language} showed that LLMs develop linear representations of space and time, while \citet{merullo2023language} demonstrated that LLMs implement Word2Vec-style vector arithmetic for relational tasks.
-Unlike these studies, which focus on single-token concepts or simple relations, we directly test whether \emph{multi-token} compound nouns have independent directions or are compositionally derived from their parts.
-
-\para{Superposition and polysemanticity.}
+\para{Superposition and the dimensionality bottleneck.}
 \citet{elhage2022superposition} established that neural networks store more features than they have dimensions by packing sparse features as nearly-orthogonal directions---the superposition hypothesis.
 \citet{scherlis2022polysemanticity} showed that polysemanticity emerges naturally from capacity constraints.
-These results imply that compound concepts like ``washing machine,'' being relatively sparse in training data, are almost certainly stored in superposition with other concepts rather than in dedicated neurons.
-Our work tests a complementary question: whether compound concepts have \emph{any} dedicated direction (even in superposition) or are entirely derived from constituent directions.
+These results imply that compound concepts, being relatively sparse in training data compared to their constituent words, are likely stored in superposition with related concepts.
+Our work tests a more specific question: whether compound concepts have \emph{any} dedicated direction (even in superposition) or are entirely derived from constituent directions augmented by next-token prediction.
 
-\para{Sparse autoencoders and feature discovery.}
-Sparse autoencoders (SAEs) decompose polysemantic activations into interpretable features~\citep{cunningham2023sparse,gao2024scaling,rajamanoharan2024gated}.
-Pre-trained SAEs are now available for multiple model families~\citep{lieberum2024gemma,he2024llama}.
+\para{Linear representations in LLMs.}
+The linear representation hypothesis posits that concepts correspond to directions in a model's activation space.
+\citet{park2024linear} formalized three variants and tested 27 single-token concepts in Llama-2, finding strong linear structure for most.
+\citet{gurnee2023language} showed that LLMs develop linear representations of space and time.
+\citet{merullo2023language} demonstrated that LLMs implement Word2Vec-style vector arithmetic for relational tasks, suggesting that compositional operations are possible within the residual stream.
+Unlike these studies, which focus on single-token concepts or binary relations, we directly test whether \emph{multi-token} compound concepts have independent directions or are compositionally derived from their parts.
+
+\para{Sparse autoencoders and feature decomposition.}
+Sparse autoencoders (SAEs) decompose polysemantic activations into more interpretable features~\citep{cunningham2023sparse,gao2024scaling,rajamanoharan2024gated}.
 However, \citet{chanin2024absorption} identified the feature absorption problem: when features form hierarchies, SAEs absorb parent features into child features, creating unreliable classifiers.
-\citet{chanin2025feature} further showed that narrow SAEs merge correlated features.
-These findings suggest that SAE features for compounds may be unreliable---motivating our direct analysis of residual stream directions rather than relying on SAE decompositions.
+\citet{minegishi2025rethinking} showed that SAEs can separate different word senses for polysemous words, with sense disambiguation concentrated in deeper layers.
+\citet{giglemiani2024evaluating} demonstrated that arbitrary combinations of SAE latents do not produce realistic activations, suggesting significant geometric structure beyond simple addition.
+We use SAE feature analysis not as ground truth but as a complementary lens: the finding that 56\% of compound features are unique provides evidence of compound-specific computation that cosine similarity misses, while acknowledging that SAE artifacts may affect exact percentages.
 
-\para{Multi-token concept processing.}
-\citet{feucht2024token} showed that at the last token position of multi-token entities, information about preceding tokens is rapidly erased in layers 1--9 of \llamatwo, suggesting an ``implicit vocabulary'' of multi-token items.
-We apply a similar probing methodology to compound nouns in \gpttwo and find a strikingly different result: no token erasure occurs, suggesting that compound nouns and named entities may be processed differently, or that model scale plays a role.
-\citet{geva2022transformer} showed that feed-forward layers build next-token predictions by promoting concepts in the vocabulary space, which is consistent with our finding that FFN layers gradually increase $P(\text{``machine''})$ after processing ``washing.''
+\para{Compound noun semantics in transformers.}
+\citet{ormerod2024kitchen} used representational similarity analysis to compare transformer representations of compound nouns with human judgments in BERT-family models, finding that compounds processed together have different representations than constituents processed separately.
+\citet{miletic2023systematic} tested 41,496 BERT configuration combinations for predicting compound compositionality, finding that early layers and surrounding context are most informative.
+\citet{nedumpozhimana2024semantics} surveyed multiword expression processing in transformers, confirming that these models encode MWE semantics but with heavy dependence on extraction method and layer choice.
+Building on these findings, we extend compound analysis to autoregressive models and introduce SAE feature decomposition and next-token priming as new analytical tools, providing a more fine-grained picture than residual stream geometry alone.
 
-\para{Compositionality and idiomaticity.}
-\citet{ormerod2024kitchen} used representational similarity analysis to compare transformer representations of compound nouns with human judgments, finding that compounds processed together have different representations than constituents processed separately in BERT-family models.
-Our work extends this to autoregressive models and directly quantifies the compositional versus unique components of compound representations.
-\citet{aljaafari2024interpreting} found that no specific layer integrates tokens into unified semantic representations based on constituent parts, with information distributed across layers---consistent with our U-shaped $\Rsq$ pattern across layers.
-\citet{garcia2021probing} tested whether BERT captures idiomatic versus compositional meanings and found that contextualized models fail to accurately distinguish them, prioritizing lexical overlap.
-\citet{dankers2022can} showed that transformers tend to over-generate compositional translations of idioms, suggesting a bias toward compositional processing.
-Building on these findings, we provide the first quantitative decomposition of compound representations into compositional and unique components in autoregressive LLMs.
+\para{Combinatorial interpretability.}
+\citet{adler2025combinatorial} proposed feature channel coding as an alternative to SAE-based analysis, where compound features are encoded via overlapping neuron groups in MLP weight matrices.
+This framework predicts that compound concepts should be represented through intersecting feature channels rather than dedicated directions---consistent with our finding that compounds are contextual modifications of component representations rather than independent directions.

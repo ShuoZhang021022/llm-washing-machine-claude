@@ -25,15 +25,19 @@ Guide for writing academic papers from experiment results using a two-stage proc
    - **Figure layouts**: Look at `figures/*.tex` files
    - **Macro usage**: Look at `commands/*.tex` files
 
-3. **Copy command templates**: Use files from `templates/paper_writing/commands/` as your starting point:
+3. **Verify command templates**: Command templates are pre-copied to `paper_draft/commands/`:
    - `math.tex` - Math notation macros
    - `general.tex` - Formatting macros (`\para{}`, colors, etc.)
-   - `macros.tex` - Template for project-specific terms
+   - `macros.tex` - Template for project-specific terms (customize for your paper)
 
 4. **CRITICAL**: Reference example papers for **FORMATTING and LANGUAGE STYLE only**
    - Do NOT copy content, phrasing, or narrative structure
    - The example papers are in different research domains
    - Focus only on HOW things are formatted, not WHAT is written
+
+5. **Set paper author**: Read `.neurico/idea.yaml` to find `idea.metadata.author`:
+   - If `metadata.author` exists: use `<author name> and NeuriCo`
+   - If no `metadata.author`: use `NeuriCo`
 
 ## Two-Stage Writing Process
 
@@ -170,11 +174,10 @@ Style files (.sty, .bst) are copied to the `paper_draft/` directory. The exact p
 
 \title{Clear Title That Conveys Main Contribution}
 
-\author{
-  Author One \\
-  Affiliation \\
-  \texttt{email@example.com}
-}
+% Set author based on .neurico/idea.yaml metadata.author:
+%   If metadata.author exists: \author{<author name> and NeuriCo}
+%   If no metadata.author:     \author{NeuriCo}
+\author{NeuriCo}
 
 \begin{document}
 \maketitle

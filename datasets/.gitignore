@@ -5,6 +5,7 @@
 !.gitignore
 !README.md
 !**/README.md
-!compound_nouns_test.jsonl
-!dataset_search_results.md
-!DOWNLOAD_SUMMARY.md
+!**/samples.json
+!**/compounds.json
+!compound_concepts/
+!compound_concepts/**

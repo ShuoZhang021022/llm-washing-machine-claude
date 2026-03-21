@@ -16,107 +16,91 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\citation{park2024linear}
 \citation{elhage2022superposition}
+\citation{elhage2022superposition}
+\citation{chanin2024absorption}
+\citation{ormerod2024kitchen,miletic2023systematic}
 \citation{park2024linear}
-\citation{feucht2024token}
-\citation{ormerod2024kitchen}
+\citation{merullo2023language}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\citation{elhage2022superposition}
+\citation{scherlis2022polysemanticity}
 \citation{park2024linear}
 \citation{gurnee2023language}
 \citation{merullo2023language}
-\citation{elhage2022superposition}
-\citation{scherlis2022polysemanticity}
 \citation{cunningham2023sparse,gao2024scaling,rajamanoharan2024gated}
-\citation{lieberum2024gemma,he2024llama}
 \citation{chanin2024absorption}
-\citation{chanin2025feature}
+\citation{minegishi2025rethinking}
+\citation{giglemiani2024evaluating}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
 \newlabel{sec:related_work}{{2}{2}{Related Work}{section.2}{}}
-\citation{feucht2024token}
-\citation{geva2022transformer}
 \citation{ormerod2024kitchen}
-\citation{aljaafari2024interpreting}
-\citation{garcia2021probing}
-\citation{dankers2022can}
+\citation{miletic2023systematic}
+\citation{nedumpozhimana2024semantics}
+\citation{adler2025combinatorial}
 \citation{radford2019language}
 \citation{nanda2022transformerlens}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Representative compounds from our dataset with compositionality ratings (1=idiomatic, 5=transparent). Full dataset contains 19 compounds. All compounds tokenize as exactly two tokens in \textsc  {GPT-2}\xspace  's BPE vocabulary.\relax }}{3}{table.caption.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Representative compounds from our dataset with compositionality ratings. Full dataset contains 21 compounds spanning appliances, food, vehicles, idioms, furniture, and clothing categories.\relax }}{3}{table.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:compounds}{{1}{3}{Representative compounds from our dataset with compositionality ratings (1=idiomatic, 5=transparent). Full dataset contains 19 compounds. All compounds tokenize as exactly two tokens in \gpttwo 's BPE vocabulary.\relax }{table.caption.2}{}}
+\newlabel{tab:compounds}{{1}{3}{Representative compounds from our dataset with compositionality ratings. Full dataset contains 21 compounds spanning appliances, food, vehicles, idioms, furniture, and clothing categories.\relax }{table.caption.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
 \newlabel{sec:methodology}{{3}{3}{Methodology}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Dataset Construction}{3}{subsection.3.1}\protected@file@percent }
 \newlabel{sec:dataset}{{3.1}{3}{Dataset Construction}{subsection.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Experiment 1: Next-Token Prediction Analysis}{4}{subsection.3.2}\protected@file@percent }
-\newlabel{sec:exp1}{{3.2}{4}{Experiment 1: Next-Token Prediction Analysis}{subsection.3.2}{}}
-\newlabel{eq:boost}{{1}{4}{Experiment 1: Next-Token Prediction Analysis}{equation.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Experiment 2: Residual Stream Direction Analysis}{4}{subsection.3.3}\protected@file@percent }
-\newlabel{sec:exp2}{{3.3}{4}{Experiment 2: Residual Stream Direction Analysis}{subsection.3.3}{}}
-\newlabel{eq:reconstruction}{{2}{4}{Experiment 2: Residual Stream Direction Analysis}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Experiment 3: Layer-wise Probing}{4}{subsection.3.4}\protected@file@percent }
-\newlabel{sec:exp3}{{3.4}{4}{Experiment 3: Layer-wise Probing}{subsection.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Experiment 4: Attention Pattern Analysis}{4}{subsection.3.5}\protected@file@percent }
-\newlabel{sec:exp4}{{3.5}{4}{Experiment 4: Attention Pattern Analysis}{subsection.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Experiment 1: Residual Stream Cosine Similarity}{4}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:exp1}{{3.2}{4}{Experiment 1: Residual Stream Cosine Similarity}{subsection.3.2}{}}
+\newlabel{eq:cos_head}{{1}{4}{Experiment 1: Residual Stream Cosine Similarity}{equation.3.1}{}}
+\newlabel{eq:cos_add}{{2}{4}{Experiment 1: Residual Stream Cosine Similarity}{equation.3.2}{}}
+\newlabel{eq:cos_mod}{{3}{4}{Experiment 1: Residual Stream Cosine Similarity}{equation.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Experiment 2: SAE Feature Decomposition}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:exp2}{{3.3}{4}{Experiment 2: SAE Feature Decomposition}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Experiment 3: Next-Token Prediction Priming}{4}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:exp3}{{3.4}{4}{Experiment 3: Next-Token Prediction Priming}{subsection.3.4}{}}
+\newlabel{eq:priming}{{4}{4}{Experiment 3: Next-Token Prediction Priming}{equation.3.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}{section.4}\protected@file@percent }
 \newlabel{sec:results}{{4}{4}{Results}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Next-Token Prediction Boosting}{4}{subsection.4.1}\protected@file@percent }
-\newlabel{sec:results_exp1}{{4.1}{4}{Next-Token Prediction Boosting}{subsection.4.1}{}}
-\citation{feucht2024token}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Next-token prediction results for selected compounds. The boost ratio (equation\nobreakspace  {}\ref  {eq:boost}) measures how much more likely $w_2$ is after $w_1$ compared to a control word. Strong compounds show boost ratios of $28$--$7{,}233\times $, while single-token compounds (snowman, sunflower) show ratios below 1.\relax }}{5}{table.caption.3}\protected@file@percent }
-\newlabel{tab:next_token}{{2}{5}{Next-token prediction results for selected compounds. The boost ratio (\eqref {eq:boost}) measures how much more likely $\wtwo $ is after $\wone $ compared to a control word. Strong compounds show boost ratios of $28$--$7{,}233\times $, while single-token compounds (snowman, sunflower) show ratios below 1.\relax }{table.caption.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Compound Directions Are 93.7\% Reconstructable}{5}{subsection.4.2}\protected@file@percent }
-\newlabel{sec:results_exp2}{{4.2}{5}{Compound Directions Are 93.7\% Reconstructable}{subsection.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}No Token Erasure in \textsc  {GPT-2}\xspace  }{5}{subsection.4.3}\protected@file@percent }
-\newlabel{sec:results_exp3}{{4.3}{5}{No Token Erasure in \gpttwo }{subsection.4.3}{}}
-\citation{aljaafari2024interpreting}
-\citation{dankers2022can}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Linear reconstruction of compound directions from constituent directions at the final layer. $R^2$ measures the fraction of variance explained by the linear model in equation\nobreakspace  {}\ref  {eq:reconstruction}. Residual is the normalized reconstruction error. Comp.\ is the compositionality rating (1=idiomatic, 5=transparent). More compositional compounds have higher $R^2$. \relax }}{6}{table.caption.4}\protected@file@percent }
-\newlabel{tab:reconstruction}{{3}{6}{Linear reconstruction of compound directions from constituent directions at the final layer. $\Rsq $ measures the fraction of variance explained by the linear model in \eqref {eq:reconstruction}. Residual is the normalized reconstruction error. Comp.\ is the compositionality rating (1=idiomatic, 5=transparent). More compositional compounds have higher $\Rsq $. \relax }{table.caption.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Probing accuracy at selected layers. Probe 1 tests whether $w_1$ identity can be recovered from the $w_2$ position (perfect accuracy = no erasure). Probe 2 tests whether compound versus control context can be distinguished. Peak compound detection accuracy is {\bf  92.2\%} at layer 8.\relax }}{6}{table.caption.5}\protected@file@percent }
-\newlabel{tab:probing}{{4}{6}{Probing accuracy at selected layers. Probe 1 tests whether $\wone $ identity can be recovered from the $\wtwo $ position (perfect accuracy = no erasure). Probe 2 tests whether compound versus control context can be distinguished. Peak compound detection accuracy is {\bf 92.2\%} at layer 8.\relax }{table.caption.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Attention Patterns}{6}{subsection.4.4}\protected@file@percent }
-\newlabel{sec:results_exp4}{{4.4}{6}{Attention Patterns}{subsection.4.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Validation on \textsc  {GPT-2-Medium}\xspace  }{6}{subsection.4.5}\protected@file@percent }
-\newlabel{sec:validation}{{4.5}{6}{Validation on \gptmed }{subsection.4.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{6}{section.5}\protected@file@percent }
-\newlabel{sec:discussion}{{5}{6}{Discussion}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Compound Concepts Are Compositionally Derived}{6}{subsection.5.1}\protected@file@percent }
-\citation{feucht2024token}
-\citation{feucht2024token}
-\citation{geva2022transformer}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Residual Stream Similarity: Compounds Are Modifications, Not New Directions}{4}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:results_exp1}{{4.1}{4}{Residual Stream Similarity: Compounds Are Modifications, Not New Directions}{subsection.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Cosine similarity between compound representations and component representations at layer 11. All compounds maintain high similarity ($>0.89$) with their head nouns, indicating that compound representations are modifications of existing component directions rather than new directions. Best per-row result in \textbf  {bold} when noteworthy.\relax }}{5}{table.caption.3}\protected@file@percent }
+\newlabel{tab:cosine}{{2}{5}{Cosine similarity between compound representations and component representations at layer 11. All compounds maintain high similarity ($>0.89$) with their head nouns, indicating that compound representations are modifications of existing component directions rather than new directions. Best per-row result in \textbf {bold} when noteworthy.\relax }{table.caption.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces SAE feature decomposition at layer 11. ``Unique'' is the fraction of compound features not shared with either component alone. ``Head/Mod.\ Overlap'' is the fraction of compound features also active for the head/modifier in isolation. Idiomatic compounds activate substantially more unique features than transparent ones. Best (most extreme) values in \textbf  {bold}.\relax }}{5}{table.caption.4}\protected@file@percent }
+\newlabel{tab:sae}{{3}{5}{SAE feature decomposition at layer 11. ``Unique'' is the fraction of compound features not shared with either component alone. ``Head/Mod.\ Overlap'' is the fraction of compound features also active for the head/modifier in isolation. Idiomatic compounds activate substantially more unique features than transparent ones. Best (most extreme) values in \textbf {bold}.\relax }{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}SAE Features Reveal Hidden Compound-Specific Computation}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:results_exp2}{{4.2}{5}{SAE Features Reveal Hidden Compound-Specific Computation}{subsection.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Next-token prediction priming results. The priming ratio (equation\nobreakspace  {}\ref  {eq:priming}) measures how much more likely the head noun is after the modifier compared to baseline. ``Frozen'' compounds like ``guinea pig'' and ``washing machine'' show extreme priming ($>4{,}000\times $), while loosely associated compounds like ``office desk'' show minimal priming ($1.3\times $). Rank indicates the head noun's position among all 50,257 vocabulary predictions.\relax }}{6}{table.caption.5}\protected@file@percent }
+\newlabel{tab:priming}{{4}{6}{Next-token prediction priming results. The priming ratio (\eqref {eq:priming}) measures how much more likely the head noun is after the modifier compared to baseline. ``Frozen'' compounds like ``guinea pig'' and ``washing machine'' show extreme priming ($>4{,}000\times $), while loosely associated compounds like ``office desk'' show minimal priming ($1.3\times $). Rank indicates the head noun's position among all 50,257 vocabulary predictions.\relax }{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Next-Token Priming: The Primary Storage Mechanism}{6}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:results_exp3}{{4.3}{6}{Next-Token Priming: The Primary Storage Mechanism}{subsection.4.3}{}}
 \citation{chanin2024absorption}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Validation on \textsc  {GPT-2-Medium}\xspace  . Next-token prediction boost ratios and $R^2$ reconstruction scores are comparable or stronger than \textsc  {GPT-2}\xspace  , confirming that compositional storage is robust to model scale.\relax }}{7}{table.caption.6}\protected@file@percent }
-\newlabel{tab:validation}{{5}{7}{Validation on \gptmed . Next-token prediction boost ratios and $\Rsq $ reconstruction scores are comparable or stronger than \gpttwo , confirming that compositional storage is robust to model scale.\relax }{table.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{7}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{7}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Three Levels Tell Three Stories}{7}{subsection.5.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The Role of Compositionality}{7}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}No Token Erasure: A Model-Scale Effect?}{7}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}The U-Shaped $R^2$ Pattern}{7}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Implications}{7}{subsection.5.5}\protected@file@percent }
-\citation{park2024linear}
-\citation{feucht2024token}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Implications}{7}{subsection.5.3}\protected@file@percent }
+\citation{chanin2024absorption}
+\citation{reddy2011empirical}
 \bibstyle{plainnat}
 \bibdata{references}
-\bibcite{aljaafari2024interpreting}{{1}{2024}{{Aljaafari et~al.}}{{Aljaafari, Belinkov, and Barez}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Limitations}{8}{subsection.5.6}\protected@file@percent }
+\bibcite{adler2025combinatorial}{{1}{2025}{{Adler et~al.}}{{Adler, Bhaskar, Ganesh, and Chen}}}
+\bibcite{chanin2024absorption}{{2}{2024}{{Chanin et~al.}}{{Chanin, Barez, Karvonen, and Nanda}}}
+\bibcite{cunningham2023sparse}{{3}{2023}{{Cunningham et~al.}}{{Cunningham, Ewart, Riggs, Huben, and Sharkey}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Limitations}{8}{subsection.5.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}\protected@file@percent }
 \newlabel{sec:conclusion}{{6}{8}{Conclusion}{section.6}{}}
-\bibcite{chanin2024absorption}{{2}{2024}{{Chanin et~al.}}{{Chanin, Barez, Karvonen, and Nanda}}}
-\bibcite{chanin2025feature}{{3}{2025}{{Chanin et~al.}}{{Chanin, Barez, and Karvonen}}}
-\bibcite{cunningham2023sparse}{{4}{2023}{{Cunningham et~al.}}{{Cunningham, Ewart, Riggs, Huben, and Sharkey}}}
-\bibcite{dankers2022can}{{5}{2022}{{Dankers et~al.}}{{Dankers, Lucas, and Titov}}}
-\bibcite{elhage2022superposition}{{6}{2022}{{Elhage et~al.}}{{Elhage, Hume, Olsson, Schiefer, Henighan, Kravec, Hatfield-Dodds, Lasenby, Drain, Chen, et~al.}}}
-\bibcite{feucht2024token}{{7}{2024}{{Feucht et~al.}}{{Feucht, Torn{\'e}, and Bau}}}
-\bibcite{gao2024scaling}{{8}{2024}{{Gao et~al.}}{{Gao, la~Tour, Tillman, Goh, Troll, Radford, Sutskever, Leike, and Wu}}}
-\bibcite{garcia2021probing}{{9}{2021}{{Garcia et~al.}}{{Garcia, Kramer~Vieira, Scarton, Idiart, and Villavicencio}}}
-\bibcite{geva2022transformer}{{10}{2022}{{Geva et~al.}}{{Geva, Caciularu, Wang, and Goldberg}}}
-\bibcite{gurnee2023language}{{11}{2023}{{Gurnee and Tegmark}}{{}}}
-\bibcite{he2024llama}{{12}{2024}{{He et~al.}}{{He, Ge, Chen, and Liu}}}
-\bibcite{lieberum2024gemma}{{13}{2024}{{Lieberum et~al.}}{{Lieberum, Rajamanoharan, Conmy, Smith, Sonnerat, Varma, Kram{\'a}r, Dragan, Shah, and Nanda}}}
-\bibcite{merullo2023language}{{14}{2023}{{Merullo et~al.}}{{Merullo, Eickhoff, and Pavlick}}}
-\bibcite{nanda2022transformerlens}{{15}{2022}{{Nanda and Bloom}}{{}}}
-\bibcite{ormerod2024kitchen}{{16}{2024}{{Ormerod et~al.}}{{Ormerod, Maldonado, and Klinger}}}
-\bibcite{park2024linear}{{17}{2024}{{Park et~al.}}{{Park, Choe, and Veitch}}}
-\bibcite{radford2019language}{{18}{2019}{{Radford et~al.}}{{Radford, Wu, Child, Luan, Amodei, and Sutskever}}}
-\bibcite{rajamanoharan2024gated}{{19}{2024}{{Rajamanoharan et~al.}}{{Rajamanoharan, Conmy, Smith, Lieberum, Varma, Kram{\'a}r, Shah, and Nanda}}}
-\bibcite{scherlis2022polysemanticity}{{20}{2022}{{Scherlis et~al.}}{{Scherlis, Sachan, Jermyn, Benton, and Shlegeris}}}
+\bibcite{elhage2022superposition}{{4}{2022}{{Elhage et~al.}}{{Elhage, Hume, Olsson, Schiefer, Henighan, Kravec, Hatfield-Dodds, Lasenby, Drain, Chen, et~al.}}}
+\bibcite{gao2024scaling}{{5}{2024}{{Gao et~al.}}{{Gao, la~Tour, Tillman, Goh, Troll, Radford, Sutskever, Leike, and Wu}}}
+\bibcite{giglemiani2024evaluating}{{6}{2024}{{Giglemiani et~al.}}{{Giglemiani, Marks, and Nanda}}}
+\bibcite{gurnee2023language}{{7}{2023}{{Gurnee and Tegmark}}{{}}}
+\bibcite{merullo2023language}{{8}{2023}{{Merullo et~al.}}{{Merullo, Eickhoff, and Pavlick}}}
+\bibcite{miletic2023systematic}{{9}{2023}{{Mileti{\'c} and Schulte~im Walde}}{{}}}
+\bibcite{minegishi2025rethinking}{{10}{2025}{{Minegishi et~al.}}{{Minegishi, Noji, and Oseki}}}
+\bibcite{nanda2022transformerlens}{{11}{2022}{{Nanda and Bloom}}{{}}}
+\bibcite{nedumpozhimana2024semantics}{{12}{2024}{{Nedumpozhimana and Kelleher}}{{}}}
+\bibcite{ormerod2024kitchen}{{13}{2024}{{Ormerod et~al.}}{{Ormerod, Maldonado, and Klinger}}}
+\bibcite{park2024linear}{{14}{2024}{{Park et~al.}}{{Park, Choe, and Veitch}}}
+\bibcite{radford2019language}{{15}{2019}{{Radford et~al.}}{{Radford, Wu, Child, Luan, Amodei, and Sutskever}}}
+\bibcite{rajamanoharan2024gated}{{16}{2024}{{Rajamanoharan et~al.}}{{Rajamanoharan, Conmy, Smith, Lieberum, Varma, Kram{\'a}r, Shah, and Nanda}}}
+\bibcite{reddy2011empirical}{{17}{2011}{{Reddy et~al.}}{{Reddy, McCarthy, and Manandhar}}}
+\bibcite{scherlis2022polysemanticity}{{18}{2022}{{Scherlis et~al.}}{{Scherlis, Sachan, Jermyn, Benton, and Shlegeris}}}
+\gdef \@abspage@last{9}

@@ -1,0 +1,30 @@
+{
+  "experiment_1": {
+    "mean_cosine_head_L11": 0.9538686275482178,
+    "std_cosine_head_L11": 0.019431937792909082,
+    "mean_cosine_additive_L11": 0.9594113713219052,
+    "std_cosine_additive_L11": 0.013202452507939097
+  },
+  "experiment_2": {
+    "mean_unique_fraction": 0.5630865207945249,
+    "std_unique_fraction": 0.13064631107199534,
+    "mean_jaccard_head": 0.25465821839299,
+    "std_jaccard_head": 0.09105159948644537
+  },
+  "experiment_3": {
+    "mean_priming_ratio": 2604.681880715902,
+    "median_priming_ratio": 99.24347629725713,
+    "mean_rank_after_modifier": 131.38095238095238,
+    "median_rank_after_modifier": 8.0
+  },
+  "washing_machine_specific": {
+    "p_machine_given_washing": 0.4711132049560547,
+    "p_machine_baseline": 0.00011161911970702931,
+    "priming_ratio": 4220.721379926686,
+    "rank_after_modifier": 1,
+    "sae_unique_fraction": 0.5789473684210527,
+    "sae_head_overlap": 0.3508771929824561,
+    "cosine_vs_head_L11": 0.9505722522735596,
+    "cosine_vs_additive_L11": 0.9541184902191162
+  }
+}

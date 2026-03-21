@@ -1,0 +1,12 @@
+PDF: papers/2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve.pdf
+Total pages: 19
+Pages per chunk: 3
+
+Chunks:
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_001.pdf: pages 1-3
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_002.pdf: pages 4-6
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_003.pdf: pages 7-9
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_004.pdf: pages 10-12
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_005.pdf: pages 13-15
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_006.pdf: pages 16-18
+  2305.16130_Language_Models_Implement_Simple_Word2Vec-style_Ve_chunk_007.pdf: page 19

@@ -1,11 +1,11 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-We investigated how compound nouns are represented in the residual stream of autoregressive language models.
-Through four experiments on \gpttwo (validated on \gptmed), we find that compound concepts like ``washing machine'' are not stored as unique directions.
-Instead, the model uses compositional mechanisms: the compound direction is 93.7\% reconstructable from constituent word directions, and the dominant processing mechanism is next-token prediction boosting (median $20\times$ boost).
-We observe no token erasure in \gpttwo---constituent identity is perfectly recoverable at every layer---and the small unique component (${\sim}6\%$) of compound representations, while sufficient to distinguish compound from non-compound contexts (92.2\% probe accuracy), does not constitute a dedicated compound direction.
+We investigated how compound concepts like ``washing machine'' are represented in the residual stream of \gpttwo, examining 21 compounds across the compositionality spectrum.
+Our three experiments reveal that compound concepts are not stored as dedicated directions.
+Instead, the model uses three complementary mechanisms: (1) contextual modification of head noun representations (cosine similarity 0.954), (2) compound-specific SAE features that capture fine-grained differences invisible to geometric measures (56.3\% unique features), and (3) massive next-token prediction priming that constructs compounds sequentially ($4{,}221\times$ for ``washing machine'').
 
-These findings have direct implications for mechanistic interpretability, concept editing, and the linear representation hypothesis.
-Multi-token compound concepts are best understood not as points in activation space but as contextual modulations of constituent representations.
-Future work should extend this analysis to larger models where token erasure has been observed, use natural corpus contexts, and test whether the compositional storage pattern holds across languages and for longer multi-word expressions.
+The key takeaway is that LLMs solve the ``too many concepts, too few dimensions'' bottleneck for compound concepts by distributing representation across time steps rather than packing more features into the same vector space.
+This is a distinct strategy from superposition: where superposition handles single-token features, sequential construction handles multi-token concepts.
+
+Future work should extend this analysis to larger models where dedicated compound directions may emerge, test with richer natural contexts, apply causal interventions to establish whether compound-specific SAE features are functionally necessary, and explore whether the sequential construction pattern holds across languages with different compounding productivity.

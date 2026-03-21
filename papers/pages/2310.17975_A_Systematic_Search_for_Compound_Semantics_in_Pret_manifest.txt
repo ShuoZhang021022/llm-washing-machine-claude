@@ -1,0 +1,9 @@
+PDF: papers/2310.17975_A_Systematic_Search_for_Compound_Semantics_in_Pret.pdf
+Total pages: 11
+Pages per chunk: 3
+
+Chunks:
+  2310.17975_A_Systematic_Search_for_Compound_Semantics_in_Pret_chunk_001.pdf: pages 1-3
+  2310.17975_A_Systematic_Search_for_Compound_Semantics_in_Pret_chunk_002.pdf: pages 4-6
+  2310.17975_A_Systematic_Search_for_Compound_Semantics_in_Pret_chunk_003.pdf: pages 7-9
+  2310.17975_A_Systematic_Search_for_Compound_Semantics_in_Pret_chunk_004.pdf: pages 10-11

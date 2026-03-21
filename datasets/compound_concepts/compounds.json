@@ -1,0 +1,218 @@
+{
+  "target_compounds": [
+    {
+      "compound": "washing machine",
+      "components": [
+        "washing",
+        "machine"
+      ],
+      "category": "appliance",
+      "compositionality": "medium"
+    },
+    {
+      "compound": "coffee machine",
+      "components": [
+        "coffee",
+        "machine"
+      ],
+      "category": "appliance",
+      "compositionality": "high"
+    },
+    {
+      "compound": "sewing machine",
+      "components": [
+        "sewing",
+        "machine"
+      ],
+      "category": "appliance",
+      "compositionality": "high"
+    },
+    {
+      "compound": "slot machine",
+      "components": [
+        "slot",
+        "machine"
+      ],
+      "category": "gambling",
+      "compositionality": "medium"
+    },
+    {
+      "compound": "vending machine",
+      "components": [
+        "vending",
+        "machine"
+      ],
+      "category": "retail",
+      "compositionality": "high"
+    },
+    {
+      "compound": "time machine",
+      "components": [
+        "time",
+        "machine"
+      ],
+      "category": "fiction",
+      "compositionality": "medium"
+    },
+    {
+      "compound": "war machine",
+      "components": [
+        "war",
+        "machine"
+      ],
+      "category": "military",
+      "compositionality": "low"
+    },
+    {
+      "compound": "dish washer",
+      "components": [
+        "dish",
+        "washer"
+      ],
+      "category": "appliance",
+      "compositionality": "high"
+    },
+    {
+      "compound": "vacuum cleaner",
+      "components": [
+        "vacuum",
+        "cleaner"
+      ],
+      "category": "appliance",
+      "compositionality": "high"
+    },
+    {
+      "compound": "ice cream",
+      "components": [
+        "ice",
+        "cream"
+      ],
+      "category": "food",
+      "compositionality": "medium"
+    },
+    {
+      "compound": "hot dog",
+      "components": [
+        "hot",
+        "dog"
+      ],
+      "category": "food",
+      "compositionality": "low"
+    },
+    {
+      "compound": "fire truck",
+      "components": [
+        "fire",
+        "truck"
+      ],
+      "category": "vehicle",
+      "compositionality": "high"
+    },
+    {
+      "compound": "school bus",
+      "components": [
+        "school",
+        "bus"
+      ],
+      "category": "vehicle",
+      "compositionality": "high"
+    },
+    {
+      "compound": "red herring",
+      "components": [
+        "red",
+        "herring"
+      ],
+      "category": "idiom",
+      "compositionality": "very_low"
+    },
+    {
+      "compound": "dark horse",
+      "components": [
+        "dark",
+        "horse"
+      ],
+      "category": "idiom",
+      "compositionality": "very_low"
+    },
+    {
+      "compound": "guinea pig",
+      "components": [
+        "guinea",
+        "pig"
+      ],
+      "category": "animal_or_idiom",
+      "compositionality": "low"
+    },
+    {
+      "compound": "dead end",
+      "components": [
+        "dead",
+        "end"
+      ],
+      "category": "idiom",
+      "compositionality": "low"
+    },
+    {
+      "compound": "kitchen chair",
+      "components": [
+        "kitchen",
+        "chair"
+      ],
+      "category": "furniture",
+      "compositionality": "very_high"
+    },
+    {
+      "compound": "office desk",
+      "components": [
+        "office",
+        "desk"
+      ],
+      "category": "furniture",
+      "compositionality": "very_high"
+    },
+    {
+      "compound": "rain coat",
+      "components": [
+        "rain",
+        "coat"
+      ],
+      "category": "clothing",
+      "compositionality": "very_high"
+    },
+    {
+      "compound": "swimming pool",
+      "components": [
+        "swimming",
+        "pool"
+      ],
+      "category": "structure",
+      "compositionality": "high"
+    }
+  ],
+  "test_sentences": {
+    "washing machine": [
+      "I need to put the clothes in the washing machine.",
+      "The washing machine broke down and flooded the kitchen.",
+      "She bought a new washing machine last week.",
+      "The hotel has a washing machine for guests to use."
+    ],
+    "coffee machine": [
+      "The office coffee machine is broken again.",
+      "He got a new coffee machine for his birthday."
+    ],
+    "hot dog": [
+      "I ordered a hot dog at the baseball game.",
+      "The hot dog vendor was on the corner."
+    ],
+    "red herring": [
+      "The detective realized it was just a red herring.",
+      "Don't be distracted by that red herring in the argument."
+    ]
+  },
+  "metadata": {
+    "description": "Custom dataset for studying compound concept representation in LLMs",
+    "research_question": "Are compound concepts like 'washing machine' stored as dedicated features or composed from components?",
+    "compositionality_scale": "very_low (idiomatic) -> low -> medium -> high -> very_high (transparent)"
+  }
+}

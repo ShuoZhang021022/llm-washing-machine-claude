@@ -1,0 +1,533 @@
+[
+  {
+    "title": "Sparse Autoencoders Find Highly Interpretable Features in Language Models",
+    "year": 2023,
+    "authors": "Hoagy Cunningham, Aidan Ewart, L. Smith, R. Huben, Lee Sharkey",
+    "url": "https://www.semanticscholar.org/paper/edb548fe7574d99454b352ffdb61bca93c3072ba",
+    "relevance": 3,
+    "abstract": "One of the roadblocks to a better understanding of neural networks' internals is \\textit{polysemanticity}, where neurons appear to activate in multiple, semantically distinct contexts. Polysemanticity prevents us from identifying concise, human-understandable explanations for what neural networks are doing internally. One hypothesised cause of polysemanticity is \\textit{superposition}, where neural networks represent more features than they have neurons by assigning features to an overcomplete set of directions in activation space, rather than to individual neurons. Here, we attempt to identify those directions, using sparse autoencoders to reconstruct the internal activations of a language model. These autoencoders learn sets of sparsely activating features that are more interpretable and monosemantic than directions identified by alternative approaches, where interpretability is measured by automated methods. Moreover, we show that with our learned set of features, we can pinpoint the features that are causally responsible for counterfactual behaviour on the indirect object identification task \\citep{wang2022interpretability} to a finer degree than previous decompositions. This work indicates that it is possible to resolve superposition in language models using a scalable, unsupervised method. Our method may serve as a foundation for future mechanistic interpretability work, which we hope will enable greater model transparency and steerability.",
+    "citations": 948
+  },
+  {
+    "title": "Toy Models of Superposition",
+    "year": 2022,
+    "authors": "Nelson Elhage, Tristan Hume, Catherine Olsson, Nicholas Schiefer, T. Henighan, Shauna Kravec, Zac Hatfield-Dodds, R. Lasenby, Dawn Drain, Carol Chen, R. Grosse, Sam McCandlish, Jared Kaplan, Dario Amodei, M. Wattenberg, Chris Olah",
+    "url": "https://www.semanticscholar.org/paper/9d125f45b1d2dea01f05281470bc08e12b6c7cba",
+    "relevance": 3,
+    "abstract": "Neural networks often pack many unrelated concepts into a single neuron - a puzzling phenomenon known as 'polysemanticity' which makes interpretability much more challenging. This paper provides a toy model where polysemanticity can be fully understood, arising as a result of models storing additional sparse features in\"superposition.\"We demonstrate the existence of a phase change, a surprising connection to the geometry of uniform polytopes, and evidence of a link to adversarial examples. We also discuss potential implications for mechanistic interpretability.",
+    "citations": 664
+  },
+  {
+    "title": "The Linear Representation Hypothesis and the Geometry of Large Language Models",
+    "year": 2023,
+    "authors": "Kiho Park, Yo Joong Choe, Victor Veitch",
+    "url": "https://api.semanticscholar.org/CorpusId:265042984",
+    "relevance": 3,
+    "abstract": "Informally, the 'linear representation hypothesis' is the idea that high-level concepts are represented linearly as directions in some representation space. In this paper, we address two closely related questions: What does\"linear representation\"actually mean? And, how do we make sense of geometric notions (e.g., cosine similarity or projection) in the representation space? To answer these, we use the language of counterfactuals to give two formalizations of\"linear representation\", one in the output (word) representation space, and one in the input (sentence) space. We then prove these connect to linear probing and model steering, respectively. To make sense of geometric notions, we use the formalization to identify a particular (non-Euclidean) inner product that respects language structure in a sense we make precise. Using this causal inner product, we show how to unify all notions of linear representation. In particular, this allows the construction of probes and steering vectors using counterfactual pairs. Experiments with LLaMA-2 demonstrate the existence of linear representations of concepts, the connection to interpretation and control, and the fundamental role of the choice of inner product.",
+    "citations": 352
+  },
+  {
+    "title": "Scaling and evaluating sparse autoencoders",
+    "year": 2024,
+    "authors": "Leo Gao, Tom Dupr'e la Tour, Henk Tillman, Gabriel Goh, Rajan Troll, Alec Radford, I. Sutskever, Jan Leike, Jeffrey Wu",
+    "url": "https://api.semanticscholar.org/CorpusId:270286001",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders provide a promising unsupervised approach for extracting interpretable features from a language model by reconstructing activations from a sparse bottleneck layer. Since language models learn many concepts, autoencoders need to be very large to recover all relevant features. However, studying the properties of autoencoder scaling is difficult due to the need to balance reconstruction and sparsity objectives and the presence of dead latents. We propose using k-sparse autoencoders [Makhzani and Frey, 2013] to directly control sparsity, simplifying tuning and improving the reconstruction-sparsity frontier. Additionally, we find modifications that result in few dead latents, even at the largest scales we tried. Using these techniques, we find clean scaling laws with respect to autoencoder size and sparsity. We also introduce several new metrics for evaluating feature quality based on the recovery of hypothesized features, the explainability of activation patterns, and the sparsity of downstream effects. These metrics all generally improve with autoencoder size. To demonstrate the scalability of our approach, we train a 16 million latent autoencoder on GPT-4 activations for 40 billion tokens. We release training code and autoencoders for open-source models, as well as a visualizer.",
+    "citations": 313
+  },
+  {
+    "title": "Finding Neurons in a Haystack: Case Studies with Sparse Probing",
+    "year": 2023,
+    "authors": "Wes Gurnee, Neel Nanda, Matthew Pauly, Katherine Harvey, Dmitrii Troitskii, D. Bertsimas",
+    "url": "https://www.semanticscholar.org/paper/12910786da7a34c9ee26798fd81b0ed7b0e38789",
+    "relevance": 3,
+    "abstract": "Despite rapid adoption and deployment of large language models (LLMs), the internal computations of these models remain opaque and poorly understood. In this work, we seek to understand how high-level human-interpretable features are represented within the internal neuron activations of LLMs. We train $k$-sparse linear classifiers (probes) on these internal activations to predict the presence of features in the input; by varying the value of $k$ we study the sparsity of learned representations and how this varies with model scale. With $k=1$, we localize individual neurons which are highly relevant for a particular feature, and perform a number of case studies to illustrate general properties of LLMs. In particular, we show that early layers make use of sparse combinations of neurons to represent many features in superposition, that middle layers have seemingly dedicated neurons to represent higher-level contextual features, and that increasing scale causes representational sparsity to increase on average, but there are multiple types of scaling dynamics. In all, we probe for over 100 unique features comprising 10 different categories in 7 different models spanning 70 million to 6.9 billion parameters.",
+    "citations": 311
+  },
+  {
+    "title": "Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models",
+    "year": 2024,
+    "authors": "Samuel Marks, Can Rager, Eric J. Michaud, Yonatan Belinkov, David Bau, Aaron Mueller",
+    "url": "https://api.semanticscholar.org/CorpusId:268732732",
+    "relevance": 3,
+    "abstract": "We introduce methods for discovering and applying sparse feature circuits. These are causally implicated subnetworks of human-interpretable features for explaining language model behaviors. Circuits identified in prior work consist of polysemantic and difficult-to-interpret units like attention heads or neurons, rendering them unsuitable for many downstream applications. In contrast, sparse feature circuits enable detailed understanding of unanticipated mechanisms. Because they are based on fine-grained units, sparse feature circuits are useful for downstream tasks: We introduce SHIFT, where we improve the generalization of a classifier by ablating features that a human judges to be task-irrelevant. Finally, we demonstrate an entirely unsupervised and scalable interpretability pipeline by discovering thousands of sparse feature circuits for automatically discovered model behaviors.",
+    "citations": 260
+  },
+  {
+    "title": "An Empirical Study on Compositionality in Compound Nouns",
+    "year": 2011,
+    "authors": "Siva Reddy, Diana McCarthy, S. Manandhar",
+    "url": "https://www.semanticscholar.org/paper/de17bdef43b2a7ac75447c494b9f791d951a6b27",
+    "relevance": 3,
+    "abstract": "",
+    "citations": 164
+  },
+  {
+    "title": "Measuring Compositionality in Representation Learning",
+    "year": 2019,
+    "authors": "Jacob Andreas",
+    "url": "https://api.semanticscholar.org/CorpusId:67749672",
+    "relevance": 3,
+    "abstract": "Many machine learning algorithms represent input data with vector embeddings or discrete codes. When inputs exhibit compositional structure (e.g. objects built from parts or procedures from subroutines), it is natural to ask whether this compositional structure is reflected in the the inputs' learned representations. While the assessment of compositionality in languages has received significant attention in linguistics and adjacent fields, the machine learning literature lacks general-purpose tools for producing graded measurements of compositional structure in more general (e.g. vector-valued) representation spaces. We describe a procedure for evaluating compositionality by measuring how well the true representation-producing model can be approximated by a model that explicitly composes a collection of inferred representational primitives. We use the procedure to provide formal and empirical characterizations of compositional structure in a variety of settings, exploring the relationship between compositionality and learning dynamics, human judgments, representational similarity, and generalization.",
+    "citations": 159
+  },
+  {
+    "title": "Improving Dictionary Learning with Gated Sparse Autoencoders",
+    "year": 2024,
+    "authors": "Senthooran Rajamanoharan, Arthur Conmy, Lewis Smith, Tom Lieberum, Vikrant Varma, J'anos Kram'ar, Rohin Shah, Neel Nanda",
+    "url": "https://www.semanticscholar.org/paper/bbf218fd97d3c18801eb6eb09345bb38e7bcc871",
+    "relevance": 3,
+    "abstract": "Recent work has found that sparse autoencoders (SAEs) are an effective technique for unsupervised discovery of interpretable features in language models' (LMs) activations, by finding sparse, linear reconstructions of LM activations. We introduce the Gated Sparse Autoencoder (Gated SAE), which achieves a Pareto improvement over training with prevailing methods. In SAEs, the L1 penalty used to encourage sparsity introduces many undesirable biases, such as shrinkage -- systematic underestimation of feature activations. The key insight of Gated SAEs is to separate the functionality of (a) determining which directions to use and (b) estimating the magnitudes of those directions: this enables us to apply the L1 penalty only to the former, limiting the scope of undesirable side effects. Through training SAEs on LMs of up to 7B parameters we find that, in typical hyper-parameter ranges, Gated SAEs solve shrinkage, are similarly interpretable, and require half as many firing features to achieve comparable reconstruction fidelity.",
+    "citations": 142
+  },
+  {
+    "title": "A Word Embedding Approach to Predicting the Compositionality of Multiword Expressions",
+    "year": 2015,
+    "authors": "Bahar Salehi, Paul Cook, Timothy Baldwin",
+    "url": "https://www.semanticscholar.org/paper/275a6dd72ca2dbeb81150b634ea967fc6e7bbb94",
+    "relevance": 3,
+    "abstract": "This paper presents the first attempt to use word embeddings to predict the compositionality of multiword expressions. We consider both single- and multi-prototype word embeddings. Experimental results show that, in combination with a back-off method based on string similarity, word embeddings outperform a method using count-based distributional similarity. Our best results are competitive with, or superior to, state-of-the-art methods over three standard compositionality datasets, which include two types of multiword expressions and two languages.",
+    "citations": 109
+  },
+  {
+    "title": "Still a Pain in the Neck: Evaluating Text Representations on Lexical Composition",
+    "year": 2019,
+    "authors": "Vered Shwartz, Ido Dagan",
+    "url": "https://www.semanticscholar.org/paper/a5ec883e080d858b5df60f1b5d711d514459b1e4",
+    "relevance": 3,
+    "abstract": "Building meaningful phrase representations is challenging because phrase meanings are not simply the sum of their constituent meanings. Lexical composition can shift the meanings of the constituent words and introduce implicit information. We tested a broad range of textual representations for their capacity to address these issues. We found that, as expected, contextualized word representations perform better than static word embeddings, more so on detecting meaning shift than in recovering implicit information, in which their performance is still far from that of humans. Our evaluation suite, consisting of six tasks related to lexical composition effects, can serve future research aiming to improve representations.",
+    "citations": 86
+  },
+  {
+    "title": "Language Models Implement Simple Word2Vec-style Vector Arithmetic",
+    "year": 2023,
+    "authors": "Jack Merullo, Carsten Eickhoff, Ellie Pavlick",
+    "url": "https://www.semanticscholar.org/paper/95a0c8feccc01f2799c961ca850f75f9b054de6c",
+    "relevance": 3,
+    "abstract": "A primary criticism towards language models (LMs) is their inscrutability. This paper presents evidence that, despite their size and complexity, LMs sometimes exploit a simple vector arithmetic style mechanism to solve some relational tasks using regularities encoded in the hidden space of the model (e.g., Poland:Warsaw::China:Beijing). We investigate a range of language model sizes (from 124M parameters to 176B parameters) in an in-context learning setting, and find that for a variety of tasks (involving capital cities, uppercasing, and past-tensing) a key part of the mechanism reduces to a simple additive update typically applied by the feedforward (FFN) networks. We further show that this mechanism is specific to tasks that require retrieval from pretraining memory, rather than retrieval from local context. Our results contribute to a growing body of work on the interpretability of LMs, and offer reason to be optimistic that, despite the massive and non-linear nature of the models, the strategies they ultimately use to solve tasks can sometimes reduce to familiar and even intuitive algorithms.",
+    "citations": 86
+  },
+  {
+    "title": "A is for Absorption: Studying Feature Splitting and Absorption in Sparse Autoencoders",
+    "year": 2024,
+    "authors": "David Chanin, James Wilken-Smith, Tom'avs Dulka, Hardik Bhatnagar, Joseph Bloom",
+    "url": "https://api.semanticscholar.org/CorpusId:272827216",
+    "relevance": 3,
+    "abstract": "Sparse Autoencoders (SAEs) aim to decompose the activation space of large language models (LLMs) into human-interpretable latent directions or features. As we increase the number of features in the SAE, hierarchical features tend to split into finer features (\"math\"may split into\"algebra\",\"geometry\", etc.), a phenomenon referred to as feature splitting. However, we show that sparse decomposition and splitting of hierarchical features is not robust. Specifically, we show that seemingly monosemantic features fail to fire where they should, and instead get\"absorbed\"into their children features. We coin this phenomenon feature absorption, and show that it is caused by optimizing for sparsity in SAEs whenever the underlying features form a hierarchy. We introduce a metric to detect absorption in SAEs, and validate our findings empirically on hundreds of LLM SAEs. Our investigation suggests that varying SAE sizes or sparsity is insufficient to solve this issue. We discuss the implications of feature absorption in SAEs and some potential approaches to solve the fundamental theoretical issues before SAEs can be used for interpreting LLMs robustly and at scale.",
+    "citations": 80
+  },
+  {
+    "title": "Assessing Phrasal Representation and Composition in Transformers",
+    "year": 2020,
+    "authors": "Lang-Chi Yu, Allyson Ettinger",
+    "url": "https://www.semanticscholar.org/paper/a129bed0b735918da1c797a27ebb43a541971c64",
+    "relevance": 3,
+    "abstract": "Deep transformer models have pushed performance on NLP tasks to new limits, suggesting sophisticated treatment of complex linguistic inputs, such as phrases. However, we have limited understanding of how these models handle representation of phrases, and whether this reflects sophisticated composition of phrase meaning like that done by humans. In this paper, we present systematic analysis of phrasal representations in state-of-the-art pre-trained transformers. We use tests leveraging human judgments of phrase similarity and meaning shift, and compare results before and after control of word overlap, to tease apart lexical effects versus composition effects. We find that phrase representation in these models relies heavily on word content, with little evidence of nuanced composition. We also identify variations in phrase representation quality across models, layers, and representation types, and make corresponding recommendations for usage of representations from these models.",
+    "citations": 72
+  },
+  {
+    "title": "Probing for idiomaticity in vector space models",
+    "year": 2021,
+    "authors": "Marcos Garcia, Tiago Kramer Vieira, Carolina Scarton, M. Idiart, Aline Villavicencio",
+    "url": "https://api.semanticscholar.org/CorpusId:233189591",
+    "relevance": 3,
+    "abstract": "Contextualised word representation models have been successfully used for capturing different word usages and they may be an attractive alternative for representing idiomaticity in language. In this paper, we propose probing measures to assess if some of the expected linguistic properties of noun compounds, especially those related to idiomatic meanings, and their dependence on context and sensitivity to lexical choice, are readily available in some standard and widely used representations. For that, we constructed the Noun Compound Senses Dataset, which contains noun compounds and their paraphrases, in context neutral and context informative naturalistic sentences, in two languages: English and Portuguese. Results obtained using four types of probing measures with models like ELMo, BERT and some of its variants, indicate that idiomaticity is not yet accurately represented by contextualised models",
+    "citations": 61
+  },
+  {
+    "title": "RAVEL: Evaluating Interpretability Methods on Disentangling Language Model Representations",
+    "year": 2024,
+    "authors": "Jing Huang, Zhengxuan Wu, Christopher Potts, Mor Geva, Atticus Geiger",
+    "url": "https://api.semanticscholar.org/CorpusId:268032000",
+    "relevance": 3,
+    "abstract": "Individual neurons participate in the representation of multiple high-level concepts. To what extent can different interpretability methods successfully disentangle these roles? To help address this question, we introduce RAVEL (Resolving Attribute-Value Entanglements in Language Models), a dataset that enables tightly controlled, quantitative comparisons between a variety of existing interpretability methods. We use the resulting conceptual framework to define the new method of Multi-task Distributed Alignment Search (MDAS), which allows us to find distributed representations satisfying multiple causal criteria. With Llama2-7B as the target language model, MDAS achieves state-of-the-art results on RAVEL, demonstrating the importance of going beyond neuron-level analyses to identify features distributed across activations. We release our benchmark at https://github.com/explanare/ravel.",
+    "citations": 58
+  },
+  {
+    "title": "SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability",
+    "year": 2025,
+    "authors": "Adam Karvonen, Can Rager, Johnny Lin, Curt Tigges, Joseph Bloom, David Chanin, Yeu-Tong Lau, Eoin Farrell, C. McDougall, Kola Ayonrinde, Matthew Wearden, Arthur Conmy, Samuel Marks, Neel Nanda",
+    "url": "https://api.semanticscholar.org/CorpusId:276937927",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders (SAEs) are a popular technique for interpreting language model activations, and there is extensive recent work on improving SAE effectiveness. However, most prior work evaluates progress using unsupervised proxy metrics with unclear practical relevance. We introduce SAEBench, a comprehensive evaluation suite that measures SAE performance across eight diverse metrics, spanning interpretability, feature disentanglement and practical applications like unlearning. To enable systematic comparison, we open-source a suite of over 200 SAEs across eight recently proposed SAE architectures and training algorithms. Our evaluation reveals that gains on proxy metrics do not reliably translate to better practical performance. For instance, while Matryoshka SAEs slightly underperform on existing proxy metrics, they substantially outperform other architectures on feature disentanglement metrics; moreover, this advantage grows with SAE scale. By providing a standardized framework for measuring progress in SAE development, SAEBench enables researchers to study scaling trends and make nuanced comparisons between different SAE architectures and training methodologies. Our interactive interface enables researchers to flexibly visualize relationships between metrics across hundreds of open-source SAEs at: www.neuronpedia.org/sae-bench",
+    "citations": 56
+  },
+  {
+    "title": "Polysemanticity and Capacity in Neural Networks",
+    "year": 2022,
+    "authors": "Adam Scherlis, Kshitij Sachan, A. Jermyn, Joe Benton, Buck Shlegeris",
+    "url": "https://www.semanticscholar.org/paper/02cf0e7a782b6c0f04863f9c9ee5b4e77394deb6",
+    "relevance": 3,
+    "abstract": "Individual neurons in neural networks often represent a mixture of unrelated features. This phenomenon, called polysemanticity, can make interpreting neural networks more difficult and so we aim to understand its causes. We propose doing so through the lens of feature \\emph{capacity}, which is the fractional dimension each feature consumes in the embedding space. We show that in a toy model the optimal capacity allocation tends to monosemantically represent the most important features, polysemantically represent less important features (in proportion to their impact on the loss), and entirely ignore the least important features. Polysemanticity is more prevalent when the inputs have higher kurtosis or sparsity and more prevalent in some architectures than others. Given an optimal allocation of capacity, we go on to study the geometry of the embedding space. We find a block-semi-orthogonal structure, with differing block sizes in different models, highlighting the impact of model architecture on the interpretability of its neurons.",
+    "citations": 54
+  },
+  {
+    "title": "Can Transformer be Too Compositional? Analysing Idiom Processing in Neural Machine Translation",
+    "year": 2022,
+    "authors": "Verna Dankers, Christopher Lucas, Ivan Titov",
+    "url": "https://www.semanticscholar.org/paper/ce975a743822a1bc89ef6bf182388f41866225b5",
+    "relevance": 3,
+    "abstract": "Unlike literal expressions, idioms\u2019 meanings do not directly follow from their parts, posing a challenge for neural machine translation (NMT). NMT models are often unable to translate idioms accurately and over-generate compositional, literal translations. In this work, we investigate whether the non-compositionality of idioms is reflected in the mechanics of the dominant NMT model, Transformer, by analysing the hidden states and attention patterns for models with English as source language and one of seven European languages as target language.When Transformer emits a non-literal translation - i.e. identifies the expression as idiomatic - the encoder processes idioms more strongly as single lexical units compared to literal expressions. This manifests in idioms\u2019 parts being grouped through attention and in reduced interaction between idioms and their context.In the decoder\u2019s cross-attention, figurative inputs result in reduced attention on source-side tokens. These results suggest that Transformer\u2019s tendency to process idioms as compositional expressions contributes to literal translations of idioms.",
+    "citations": 43
+  },
+  {
+    "title": "How Well Do Embedding Models Capture Non-compositionality? A View from Multiword Expressions",
+    "year": 2019,
+    "authors": "N. Nandakumar, Timothy Baldwin, Bahar Salehi",
+    "url": "https://api.semanticscholar.org/CorpusId:199372263",
+    "relevance": 3,
+    "abstract": "In this paper, we apply various embedding methods on multiword expressions to study how well they capture the nuances of non-compositional data. Our results from a pool of word-, character-, and document-level embbedings suggest that Word2vec performs the best, followed by FastText and Infersent. Moreover, we find that recently-proposed contextualised embedding models such as Bert and ELMo are not adept at handling non-compositionality in multiword expressions.",
+    "citations": 26
+  },
+  {
+    "title": "Mathematical Models of Computation in Superposition",
+    "year": 2024,
+    "authors": "Kaarel H\u00e4nni, Jake Mendel, Dmitry Vaintrob, Lawrence Chan",
+    "url": "https://www.semanticscholar.org/paper/18228c8d1623dc848f0c73f7c7fa9751785f9d29",
+    "relevance": 3,
+    "abstract": "Superposition -- when a neural network represents more ``features'' than it has dimensions -- seems to pose a serious challenge to mechanistically interpreting current AI systems. Existing theory work studies \\emph{representational} superposition, where superposition is only used when passing information through bottlenecks. In this work, we present mathematical models of \\emph{computation} in superposition, where superposition is actively helpful for efficiently accomplishing the task. We first construct a task of efficiently emulating a circuit that takes the AND of the $\\binom{m}{2}$ pairs of each of $m$ features. We construct a 1-layer MLP that uses superposition to perform this task up to $\\varepsilon$-error, where the network only requires $\\tilde{O}(m^{\\frac{2}{3}})$ neurons, even when the input features are \\emph{themselves in superposition}. We generalize this construction to arbitrary sparse boolean circuits of low depth, and then construct ``error correction'' layers that allow deep fully-connected networks of width $d$ to emulate circuits of width $\\tilde{O}(d^{1.5})$ and \\emph{any} polynomial depth. We conclude by providing some potential applications of our work for interpreting neural networks that implement computation in superposition.",
+    "citations": 23
+  },
+  {
+    "title": "Understanding polysemanticity in neural networks through coding theory",
+    "year": 2024,
+    "authors": "Simon Marshall, Jan H. Kirchner",
+    "url": "https://www.semanticscholar.org/paper/73a5986b29d7518abde0f65d29f7031b2b911292",
+    "relevance": 3,
+    "abstract": "Despite substantial efforts, neural network interpretability remains an elusive goal, with previous research failing to provide succinct explanations of most single neurons' impact on the network output. This limitation is due to the polysemantic nature of most neurons, whereby a given neuron is involved in multiple unrelated network states, complicating the interpretation of that neuron. In this paper, we apply tools developed in neuroscience and information theory to propose both a novel practical approach to network interpretability and theoretical insights into polysemanticity and the density of codes. We infer levels of redundancy in the network's code by inspecting the eigenspectrum of the activation's covariance matrix. Furthermore, we show how random projections can reveal whether a network exhibits a smooth or non-differentiable code and hence how interpretable the code is. This same framework explains the advantages of polysemantic neurons to learning performance and explains trends found in recent results by Elhage et al.~(2022). Our approach advances the pursuit of interpretability in neural networks, providing insights into their underlying structure and suggesting new avenues for circuit-level interpretability.",
+    "citations": 15
+  },
+  {
+    "title": "Rethinking Evaluation of Sparse Autoencoders through the Representation of Polysemous Words",
+    "year": 2025,
+    "authors": "Gouki Minegishi, Hiroki Furuta, Yusuke Iwasawa, Yutaka Matsuo",
+    "url": "https://www.semanticscholar.org/paper/7471d03a0a72a56b57326792763d9eb9539831d9",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders (SAEs) have gained a lot of attention as a promising tool to improve the interpretability of large language models (LLMs) by mapping the complex superposition of polysemantic neurons into monosemantic features and composing a sparse dictionary of words. However, traditional performance metrics like Mean Squared Error and L0 sparsity ignore the evaluation of the semantic representational power of SAEs -- whether they can acquire interpretable monosemantic features while preserving the semantic relationship of words. For instance, it is not obvious whether a learned sparse feature could distinguish different meanings in one word. In this paper, we propose a suite of evaluations for SAEs to analyze the quality of monosemantic features by focusing on polysemous words. Our findings reveal that SAEs developed to improve the MSE-L0 Pareto frontier may confuse interpretability, which does not necessarily enhance the extraction of monosemantic features. The analysis of SAEs with polysemous words can also figure out the internal mechanism of LLMs; deeper layers and the Attention module contribute to distinguishing polysemy in a word. Our semantics focused evaluation offers new insights into the polysemy and the existing SAE objective and contributes to the development of more practical SAEs.",
+    "citations": 10
+  },
+  {
+    "title": "Towards Combinatorial Interpretability of Neural Computation",
+    "year": 2025,
+    "authors": "Micah Adler, Dan Alistarh, N. Shavit",
+    "url": "https://www.semanticscholar.org/paper/82642b3045357adf0b49575d95ca91e1a01494cf",
+    "relevance": 3,
+    "abstract": "We introduce combinatorial interpretability, a methodology for understanding neural computation by analyzing the combinatorial structures in the sign-based categorization of a network's weights and biases. We demonstrate its power through feature channel coding, a theory that explains how neural networks compute Boolean expressions and potentially underlies other categories of neural network computation. According to this theory, features are computed via feature channels: unique cross-neuron encodings shared among the inputs the feature operates on. Because different feature channels share neurons, the neurons are polysemantic and the channels interfere with one another, making the computation appear inscrutable. We show how to decipher these computations by analyzing a network's feature channel coding, offering complete mechanistic interpretations of several small neural networks that were trained with gradient descent. Crucially, this is achieved via static combinatorial analysis of the weight matrices, without examining activations or training new autoencoding networks. Feature channel coding reframes the superposition hypothesis, shifting the focus from neuron activation directionality in high-dimensional space to the combinatorial structure of codes. It also allows us for the first time to exactly quantify and explain the relationship between a network's parameter size and its computational capacity (i.e. the set of features it can compute with low error), a relationship that is implicitly at the core of many modern scaling laws. Though our initial studies of feature channel coding are restricted to Boolean functions, we believe they provide a rich, controlled, and informative research space, and that the path we propose for combinatorial interpretation of neural computation can provide a basis for understanding both artificial and biological neural circuits.",
+    "citations": 7
+  },
+  {
+    "title": "Evaluating Synthetic Activations composed of SAE Latents in GPT-2",
+    "year": 2024,
+    "authors": "Giorgi Giglemiani, N. Petrova, Chatrik Singh Mangat, Jett Janiak, Stefan Heimersheim",
+    "url": "https://api.semanticscholar.org/CorpusId:272827041",
+    "relevance": 3,
+    "abstract": "Sparse Auto-Encoders (SAEs) are commonly employed in mechanistic interpretability to decompose the residual stream into monosemantic SAE latents. Recent work demonstrates that perturbing a model's activations at an early layer results in a step-function-like change in the model's final layer activations. Furthermore, the model's sensitivity to this perturbation differs between model-generated (real) activations and random activations. In our study, we assess model sensitivity in order to compare real activations to synthetic activations composed of SAE latents. Our findings indicate that synthetic activations closely resemble real activations when we control for the sparsity and cosine similarity of the constituent SAE latents. This suggests that real activations cannot be explained by a simple\"bag of SAE latents\"lacking internal structure, and instead suggests that SAE latents possess significant geometric and statistical properties. Notably, we observe that our synthetic activations exhibit less pronounced activation plateaus compared to those typically surrounding real activations.",
+    "citations": 3
+  },
+  {
+    "title": "Do VLMs Have Bad Eyes? Diagnosing Compositional Failures via Mechanistic Interpretability",
+    "year": 2025,
+    "authors": "Ashwath Vaithinathan Aravindan, Abha Jha, Mihir Kulkarni",
+    "url": "https://api.semanticscholar.org/CorpusId:280711446",
+    "relevance": 3,
+    "abstract": "Vision-Language Models (VLMs) have shown remarkable performance in integrating visual and textual information for tasks such as image captioning and visual question answering. However, these models struggle with compositional generalization and object binding, which limit their ability to handle novel combinations of objects and their attributes. Our work explores the root causes of these failures using mechanistic interpretability techniques. We show evidence that individual neurons in the MLP layers of CLIP's vision encoder represent multiple features, and this \u201csuper-position\u201d directly hinders its compositional feature representation which consequently affects compositional reasoning and object binding capabilities. We hope this study will serve as an initial step toward uncovering the mechanistic roots of compositional failures in VLMs. The code and supporting results can be found here.",
+    "citations": 2
+  },
+  {
+    "title": "Unsupervised Compositionality Prediction of Nominal Compounds",
+    "year": 2019,
+    "authors": "S. Cordeiro, Aline Villavicencio, M. Idiart, Carlos Ramisch",
+    "url": "https://www.semanticscholar.org/paper/459a0666a7bbba93a3633c465d1a0b04fd5d18dd",
+    "relevance": 3,
+    "abstract": "Nominal compounds such as red wine and nut case display a continuum of compositionality, with varying contributions from the components of the compound to its semantics. This article proposes a framework for compound compositionality prediction using distributional semantic models, evaluating to what extent they capture idiomaticity compared to human judgments. For evaluation, we introduce data sets containing human judgments in three languages: English, French, and Portuguese. The results obtained reveal a high agreement between the models and human predictions, suggesting that they are able to incorporate information about idiomaticity. We also present an in-depth evaluation of various factors that can affect prediction, such as model and corpus parameters and compositionality operations. General crosslingual analyses reveal the impact of morphological variation and corpus size in the ability of the model to predict compositionality, and of a uniform combination of the components for best results.",
+    "citations": 68
+  },
+  {
+    "title": "Learning Multi-Level Features with Matryoshka Sparse Autoencoders",
+    "year": 2025,
+    "authors": "Bart Bussmann, Noa Nabeshima, Adam Karvonen, Neel Nanda",
+    "url": "https://api.semanticscholar.org/CorpusId:277271553",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders (SAEs) have emerged as a powerful tool for interpreting neural networks by extracting the concepts represented in their activations. However, choosing the size of the SAE dictionary (i.e. number of learned concepts) creates a tension: as dictionary size increases to capture more relevant concepts, sparsity incentivizes features to be split or absorbed into more specific features, leaving high-level features missing or warped. We introduce Matryoshka SAEs, a novel variant that addresses these issues by simultaneously training multiple nested dictionaries of increasing size, forcing the smaller dictionaries to independently reconstruct the inputs without using the larger dictionaries. This organizes features hierarchically - the smaller dictionaries learn general concepts, while the larger dictionaries learn more specific concepts, without incentive to absorb the high-level features. We train Matryoshka SAEs on Gemma-2-2B and TinyStories and find superior performance on sparse probing and targeted concept erasure tasks, more disentangled concept representations, and reduced feature absorption. While there is a minor tradeoff with reconstruction performance, we believe Matryoshka SAEs are a superior alternative for practical tasks, as they enable training arbitrarily large SAEs while retaining interpretable features at different levels of abstraction.",
+    "citations": 56
+  },
+  {
+    "title": "Learning Semantic Composition to Detect Non-compositionality of Multiword Expressions",
+    "year": 2015,
+    "authors": "Majid Yazdani, Meghdad Farahmand, James Henderson",
+    "url": "https://www.semanticscholar.org/paper/bc1d37fc9f71e4bad936f46564bef4bde3e40da1",
+    "relevance": 3,
+    "abstract": "Non-compositionality of multiword expressions is an intriguing problem that can be the source of error in a variety of NLP tasks such as language generation, machine translation and word sense disambiguation. We present methods of non-compositionality detection for English noun compounds using the unsupervised learning of a semantic composition function. Compounds which are not well modeled by the learned semantic composition function are considered noncompositional. We explore a range of distributional vector-space models for semantic composition, empirically evaluate these models, and propose additional methods which improve results further. We show that a complex function such as polynomial projection can learn semantic composition and identify non-compositionality in an unsupervised way, beating all other baselines ranging from simple to complex. We show that enforcing sparsity is a useful regularizer in learning complex composition functions. We show further improvements by training a decomposition function in addition to the composition function. Finally, we propose an EM algorithm over latent compositionality annotations that also improves the performance.",
+    "citations": 47
+  },
+  {
+    "title": "Predicting the Compositionality of Nominal Compounds: Giving Word Embeddings a Hard Time",
+    "year": 2016,
+    "authors": "S. Cordeiro, Carlos Ramisch, M. Idiart, Aline Villavicencio",
+    "url": "https://www.semanticscholar.org/paper/43fb77798308826742692ab4e1e293fe552162e6",
+    "relevance": 3,
+    "abstract": "Distributional semantic models (DSMs) are often evaluated on artificial similarity datasets containing single words or fully compositional phrases. We present a large-scale multilingual evaluation of DSMs for predicting the degree of semantic compositionality of nominal compounds on 4 datasets for English and French. We build a total of 816 DSMs and perform 2,856 evaluations using word2vec, GloVe, and PPMI-based models. In addition to the DSMs, we compare the impact of different parameters, such as level of corpus preprocessing, context window size and number of dimensions. The results obtained have a high correlation with human judgments, being comparable to or outperforming the state of the art for some datasets (Spearman's \u03c1=.82 for the Reddy dataset).",
+    "citations": 44
+  },
+  {
+    "title": "Assessing the Representations of Idiomaticity in Vector Models with a Noun Compound Dataset Labeled at Type and Token Levels",
+    "year": 2021,
+    "authors": "Marcos Garc\u00eda, Tiago Kramer Vieira, Carolina Scarton, M. Idiart, Aline Villavicencio",
+    "url": "https://www.semanticscholar.org/paper/b460b6c2591b7f0a5a2629d7007be074ee31a78f",
+    "relevance": 3,
+    "abstract": "Accurate assessment of the ability of embedding models to capture idiomaticity may require evaluation at token rather than type level, to account for degrees of idiomaticity and possible ambiguity between literal and idiomatic usages. However, most existing resources with annotation of idiomaticity include ratings only at type level. This paper presents the Noun Compound Type and Token Idiomaticity (NCTTI) dataset, with human annotations for 280 noun compounds in English and 180 in Portuguese at both type and token level. We compiled 8,725 and 5,091 token level annotations for English and Portuguese, respectively, which are strongly correlated with the corresponding scores obtained at type level. The NCTTI dataset is used to explore how vector space models reflect the variability of idiomaticity across sentences. Several experiments using state-of-the-art contextualised models suggest that their representations are not capturing the noun compounds idiomaticity as human annotators. This new multilingual resource also contains suggestions for paraphrases of the noun compounds both at type and token levels, with uses for lexical substitution or disambiguation in context.",
+    "citations": 32
+  },
+  {
+    "title": "On the Compositionality and Semantic Interpretation of English Noun Compounds",
+    "year": 2016,
+    "authors": "C. Dima",
+    "url": "https://www.semanticscholar.org/paper/f4cbc86ecddebbd905826b61bad87fa7893d5031",
+    "relevance": 3,
+    "abstract": "In this paper we present a study covering the creation of compositional distributional representations for English noun compounds (e.g. computer science ) using two compositional models proposed in the literature. The compositional representations are \ufb01rst evaluated based on their similarity to the corresponding corpus-learned representations and then on the task of automatic classi\ufb01cation of semantic relations for English noun compounds. Our experiments show that compositional models are able to build meaningful representations for more than half of the test set compounds. However, using pre-trained compositional models does not lead to the expected performance gains for the semantic relation classi\ufb01cation task. Models using compositional representations have a similar performance as a basic classi\ufb01cation model, despite the advantage of being pre-trained on a large set of compounds.",
+    "citations": 16
+  },
+  {
+    "title": "Semantics of Multiword Expressions in Transformer-Based Models: A Survey",
+    "year": 2024,
+    "authors": "Filip Miletic, Sabine Schulte im Walde",
+    "url": "https://www.semanticscholar.org/paper/1cc3920e7ac0c1596efa43986df25e3da77a01c9",
+    "relevance": 3,
+    "abstract": "Multiword expressions (MWEs) are composed of multiple words and exhibit variable degrees of compositionality. As such, their meanings are notoriously difficult to model, and it is unclear to what extent this issue affects transformer architectures. Addressing this gap, we provide the first in-depth survey of MWE processing with transformer models. We overall find that they capture MWE semantics inconsistently, as shown by reliance on surface patterns and memorized information. MWE meaning is also strongly localized, predominantly in early layers of the architecture. Representations benefit from specific linguistic properties, such as lower semantic idiosyncrasy and ambiguity of target expressions. Our findings overall question the ability of transformer models to robustly capture fine-grained semantics. Furthermore, we highlight the need for more directly comparable evaluation setups.",
+    "citations": 15
+  },
+  {
+    "title": "A Systematic Search for Compound Semantics in Pretrained BERT Architectures",
+    "year": 2023,
+    "authors": "Filip Miletic, Sabine Schulte im Walde",
+    "url": "https://api.semanticscholar.org/CorpusId:258378347",
+    "relevance": 3,
+    "abstract": "To date, transformer-based models such as BERT have been less successful in predicting compositionality of noun compounds than static word embeddings. This is likely related to a suboptimal use of the encoded information, reflecting an incomplete grasp of how the models represent the meanings of complex linguistic structures. This paper investigates variants of semantic knowledge derived from pretrained BERT when predicting the degrees of compositionality for 280 English noun compounds associated with human compositionality ratings. Our performance strongly improves on earlier unsupervised implementations of pretrained BERT and highlights beneficial decisions in data preprocessing, embedding computation, and compositionality estimation. The distinct linguistic roles of heads and modifiers are reflected by differences in BERT-derived representations, with empirical properties such as frequency, productivity, and ambiguity affecting model performance. The most relevant representational information is concentrated in the initial layers of the model architecture.",
+    "citations": 15
+  },
+  {
+    "title": "A Psycholinguistic Analysis of BERT\u2019s Representations of Compounds",
+    "year": 2023,
+    "authors": "Lars Buijtelaar, Sandro Pezzelle",
+    "url": "https://www.semanticscholar.org/paper/64a060831e7c0ed222b4ac50ec37bc68ba9a552a",
+    "relevance": 3,
+    "abstract": "This work studies the semantic representations learned by BERT for compounds, that is, expressions such as sunlight or bodyguard. We build on recent studies that explore semantic information in Transformers at the word level and test whether BERT aligns with human semantic intuitions when dealing with expressions (e.g., sunlight) whose overall meaning depends\u2014to a various extent\u2014on the semantics of the constituent words (sun, light). We leverage a dataset that includes human judgments on two psycholinguistic measures of compound semantic analysis: lexeme meaning dominance (LMD; quantifying the weight of each constituent toward the compound meaning) and semantic transparency (ST; evaluating the extent to which the compound meaning is recoverable from the constituents\u2019 semantics). We show that BERT-based measures moderately align with human intuitions, especially when using contextualized representations, and that LMD is overall more predictable than ST. Contrary to the results reported for \u2018standard\u2019 words, higher, more contextualized layers are the best at representing compound meaning. These findings shed new light on the abilities of BERT in dealing with fine-grained semantic phenomena. Moreover, they can provide insights into how speakers represent compounds.",
+    "citations": 14
+  },
+  {
+    "title": "CAOSS and transcendence: Modeling role-dependent constituent meanings in compounds",
+    "year": 2021,
+    "authors": "F. G\u00fcnther, M. Marelli",
+    "url": "https://api.semanticscholar.org/CorpusId:240525725",
+    "relevance": 3,
+    "abstract": "Many theories on the role of semantics in morphological representation and processing focus on the interplay between the lexicalized meaning of the complex word on the one hand, and the individual constituent meanings on the other hand. However, the constituent meaning representations at play do not necessarily correspond to the free-word meanings of the constituents: Role-dependent constituent meanings can be subject to sometimes substantial semantic shift from their corresponding free-word meanings (such as -bill in hornbill and razorbill, or step- in stepmother and stepson). While this phenomenon is extremely difficult to operationalize using the standard psycholinguistic toolkit, we demonstrate how these as-constituent meanings can be represented in a quantitative manner using a data-driven computational model. After a qualitative exploration, we validate the model against a large database of human ratings of the meaning retention of constituents in compounds. With this model at hand, we then proceed to investigate the internal semantic structure of compounds, focussing on differences in semantic shift and semantic transparency between the two constituents.",
+    "citations": 14
+  },
+  {
+    "title": "Reverse-engineering Language: A Study on the Semantic Compositionality of German Compounds",
+    "year": 2015,
+    "authors": "C. Dima",
+    "url": "https://www.semanticscholar.org/paper/f64a276170521b695c59261347f02d4698889929",
+    "relevance": 3,
+    "abstract": "In this paper we analyze the performance of different composition models on a large dataset of German compound nouns. Given a vector space model for the German language, we try to reconstruct the observed representation (the corpusestimated vector) of a compound by composing the observed representations of its two immediate constituents. We explore the composition models proposed in the literature and also present a new, simple model that achieves the best performance on our dataset.",
+    "citations": 13
+  },
+  {
+    "title": "Group-SAE: Efficient Training of Sparse Autoencoders for Large Language Models via Layer Groups",
+    "year": 2024,
+    "authors": "Davide Ghilardi, Federico Belotti, Marco Molinari",
+    "url": "https://api.semanticscholar.org/CorpusId:273662212",
+    "relevance": 3,
+    "abstract": "SAEs have recently been employed as a promising unsupervised approach for understanding the representations of layers of Large Language Models (LLMs). However, with the growth in model size and complexity, training SAEs is computationally intensive, as typically one SAE is trained for each model layer. To address such limitation, we propose \\textit{Group-SAE}, a novel strategy to train SAEs. Our method considers the similarity of the residual stream representations between contiguous layers to group similar layers and train a single SAE per group. To balance the trade-off between efficiency and performance, we further introduce \\textit{AMAD} (Average Maximum Angular Distance), an empirical metric that guides the selection of an optimal number of groups based on representational similarity across layers. Experiments on models from the Pythia family show that our approach significantly accelerates training with minimal impact on reconstruction quality and comparable downstream task performance and interpretability over baseline SAEs trained layer by layer. This method provides an efficient and scalable strategy for training SAEs in modern LLMs.",
+    "citations": 10
+  },
+  {
+    "title": "No Word is an Island\u2014A Transformation Weighting Model for Semantic Composition",
+    "year": 2019,
+    "authors": "C. Dima, D. Kok, Neele Witte, E. Hinrichs",
+    "url": "https://api.semanticscholar.org/CorpusId:195886443",
+    "relevance": 3,
+    "abstract": "Composition models of distributional semantics are used to construct phrase representations from the representations of their words. Composition models are typically situated on two ends of a spectrum. They either have a small number of parameters but compose all phrases in the same way, or they perform word-specific compositions at the cost of a far larger number of parameters. In this paper we propose transformation weighting (TransWeight), a composition model that consistently outperforms existing models on nominal compounds, adjective-noun phrases, and adverb-adjective phrases in English, German, and Dutch. TransWeight drastically reduces the number of parameters needed compared with the best model in the literature by composing similar words in the same way.",
+    "citations": 9
+  },
+  {
+    "title": "Variants of Vector Space Reductions for Predicting the Compositionality of English Noun Compounds",
+    "year": 2020,
+    "authors": "Pegah Alipoor, Sabine Schulte im Walde",
+    "url": "https://www.semanticscholar.org/paper/c138d411951df7ef11c33390ddef15654f22aa4c",
+    "relevance": 3,
+    "abstract": "Predicting the degree of compositionality of noun compounds such as \u201csnowball\u201d and \u201cbutterfly\u201d is a crucial ingredient for lexicography and Natural Language Processing applications, to know whether the compound should be treated as a whole, or through its constituents, and what it means. Computational approaches for an automatic prediction typically represent and compare compounds and their constituents within a vector space and use distributional similarity as a proxy to predict the semantic relatedness between the compounds and their constituents as the compound\u2019s degree of compositionality. This paper provides a systematic evaluation of vector-space reduction variants across kinds, exploring reductions based on part-of-speech next to and also in combination with Principal Components Analysis using Singular Value and word2vec embeddings. We show that word2vec and nouns only dimensionality reductions are the most successful and stable vector space variants for our task.",
+    "citations": 9
+  },
+  {
+    "title": "A Systematic Comparison of English Noun Compound Representations",
+    "year": 2019,
+    "authors": "Vered Shwartz",
+    "url": "https://www.semanticscholar.org/paper/fca558b1698310dc589e14e3c6a64e345cbf3e63",
+    "relevance": 3,
+    "abstract": "Building meaningful representations of noun compounds is not trivial since many of them scarcely appear in the corpus. To that end, composition functions approximate the distributional representation of a noun compound by combining its constituent distributional vectors. In the more general case, phrase embeddings have been trained by minimizing the distance between the vectors representing paraphrases. We compare various types of noun compound representations, including distributional, compositional, and paraphrase-based representations, through a series of tasks and analyses, and with an extensive number of underlying word embeddings. We find that indeed, in most cases, composition functions produce higher quality representations than distributional ones, and they improve with computational power. No single function performs best in all scenarios, suggesting that a joint training objective may produce improved representations.",
+    "citations": 8
+  },
+  {
+    "title": "On the Compositionality Prediction of Noun Phrases using Poincar\u00e9 Embeddings",
+    "year": 2019,
+    "authors": "Abhik Jana, D. Puzyrev, Alexander Panchenko, Pawan Goyal, Chris Biemann, Animesh Mukherjee",
+    "url": "https://www.semanticscholar.org/paper/d5357e312f1478c9f448054ec505bf5c64722c32",
+    "relevance": 3,
+    "abstract": "The compositionality degree of multiword expressions indicates to what extent the meaning of a phrase can be derived from the meaning of its constituents and their grammatical relations. Prediction of (non)-compositionality is a task that has been frequently addressed with distributional semantic models. We introduce a novel technique to blend hierarchical information with distributional information for predicting compositionality. In particular, we use hypernymy information of the multiword and its constituents encoded in the form of the recently introduced Poincar\u00e9 embeddings in addition to the distributional information to detect compositionality for noun phrases. Using a weighted average of the distributional similarity and a Poincar\u00e9 similarity function, we obtain consistent and substantial, statistically significant improvement across three gold standard datasets over state-of-the-art models based on distributional information only. Unlike traditional approaches that solely use an unsupervised setting, we have also framed the problem as a supervised task, obtaining comparable improvements. Further, we publicly release our Poincar\u00e9 embeddings, which are trained on the output of handcrafted lexical-syntactic patterns on a large corpus.",
+    "citations": 8
+  },
+  {
+    "title": "A Comparative Study of Embedding Models in Predicting the Compositionality of Multiword Expressions",
+    "year": 2018,
+    "authors": "N. Nandakumar, Bahar Salehi, Timothy Baldwin",
+    "url": "https://www.semanticscholar.org/paper/38796d1d19fb0929b3e0e2f9bcf960f3f419256b",
+    "relevance": 3,
+    "abstract": "",
+    "citations": 8
+  },
+  {
+    "title": "How Is a \u201cKitchen Chair\u201d like a \u201cFarm Horse\u201d? Exploring the Representation of Noun-Noun Compound Semantics in Transformer-based Language Models",
+    "year": 2023,
+    "authors": "Mark Ormerod, Barry Devereux, Jes\u00fas Mart\u00ednez del Rinc\u00f3n",
+    "url": "https://api.semanticscholar.org/CorpusId:265230959",
+    "relevance": 3,
+    "abstract": "Despite the success of Transformer-based language models in a wide variety of natural language processing tasks, our understanding of how these models process a given input in order to represent task-relevant information remains incomplete. In this work, we focus on semantic composition and examine how Transformer-based language models represent semantic information related to the meaning of English noun-noun compounds. We probe Transformer-based language models for their knowledge of the thematic relations that link the head nouns and modifier words of compounds (e.g., KITCHEN CHAIR: a chair located in a kitchen). Firstly, using a dataset featuring groups of compounds with shared lexical or semantic features, we find that token representations of six Transformer-based language models distinguish between pairs of compounds based on whether they use the same thematic relation. Secondly, we utilize fine-grained vector representations of compound semantics derived from human annotations, and find that token vectors from several models elicit a strong signal of the semantic relations used in the compounds. In a novel \u201ccompositional probe\u201d setting, where we compare the semantic relation signal in mean-pooled token vectors of compounds to mean-pooled token vectors when the two constituent words appear in separate sentences, we find that the Transformer-based language models that best represent the semantics of noun-noun compounds also do so substantially better than in the control condition where the two constituent works are processed separately. Overall, our results shed light on the ability of Transformer-based language models to support compositional semantic processes in representing the meaning of noun-noun compounds.",
+    "citations": 7
+  },
+  {
+    "title": "Feature-Level Insights into Artificial Text Detection with Sparse Autoencoders",
+    "year": 2025,
+    "authors": "Kristian Kuznetsov, Laida Kushnareva, Polina Druzhinina, Anton Razzhigaev, Anastasia Voznyuk, Irina Piontkovskaya, Evgeny Burnaev, Serguei Barannikov",
+    "url": "https://api.semanticscholar.org/CorpusId:276781864",
+    "relevance": 3,
+    "abstract": "Artificial Text Detection (ATD) is becoming increasingly important with the rise of advanced Large Language Models (LLMs). Despite numerous efforts, no single algorithm performs consistently well across different types of unseen text or guarantees effective generalization to new LLMs. Interpretability plays a crucial role in achieving this goal. In this study, we enhance ATD interpretability by using Sparse Autoencoders (SAE) to extract features from Gemma-2-2b residual stream. We identify both interpretable and efficient features, analyzing their semantics and relevance through domain- and model-specific statistics, a steering approach, and manual or LLM-based interpretation. Our methods offer valuable insights into how texts from various models differ from human-written content. We show that modern LLMs have a distinct writing style, especially in information-dense domains, even though they can produce human-like outputs with personalized prompts.",
+    "citations": 7
+  },
+  {
+    "title": "Unsupervised Compositional Translation of Multiword Expressions",
+    "year": 2019,
+    "authors": "Pablo Gamallo, Marcos Garcia",
+    "url": "https://api.semanticscholar.org/CorpusId:199379753",
+    "relevance": 3,
+    "abstract": "This article describes a dependency-based strategy that uses compositional distributional semantics and cross-lingual word embeddings to translate multiword expressions (MWEs). Our unsupervised approach performs translation as a process of word contextualization by taking into account lexico-syntactic contexts and selectional preferences. This strategy is suited to translate phraseological combinations and phrases whose constituent words are lexically restricted by each other. Several experiments in adjective-noun and verb-object compounds show that mutual contextualization (co-compositionality) clearly outperforms other compositional methods. The paper also contributes with a new freely available dataset of English-Spanish MWEs used to validate the proposed compositional strategy.",
+    "citations": 6
+  },
+  {
+    "title": "Do Character-Level Neural Network Language Models Capture Knowledge of Multiword Expression Compositionality?",
+    "year": 2018,
+    "authors": "Ali Hakimi Parizi, Paul Cook",
+    "url": "https://www.semanticscholar.org/paper/b124d7f1ca51bdb634e42704327300ea6fb4cd44",
+    "relevance": 3,
+    "abstract": "",
+    "citations": 6
+  },
+  {
+    "title": "Dense SAE Latents Are Features, Not Bugs",
+    "year": 2025,
+    "authors": "Xiaoqing Sun, Alessandro Stolfo, Joshua Engels, Ben Wu, Senthooran Rajamanoharan, Mrinmaya Sachan, Max Tegmark",
+    "url": "https://api.semanticscholar.org/CorpusId:279448027",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders (SAEs) are designed to extract interpretable features from language models by enforcing a sparsity constraint. Ideally, training an SAE would yield latents that are both sparse and semantically meaningful. However, many SAE latents activate frequently (i.e., are \\emph{dense}), raising concerns that they may be undesirable artifacts of the training procedure. In this work, we systematically investigate the geometry, function, and origin of dense latents and show that they are not only persistent but often reflect meaningful model representations. We first demonstrate that dense latents tend to form antipodal pairs that reconstruct specific directions in the residual stream, and that ablating their subspace suppresses the emergence of new dense features in retrained SAEs -- suggesting that high density features are an intrinsic property of the residual space. We then introduce a taxonomy of dense latents, identifying classes tied to position tracking, context binding, entropy regulation, letter-specific output signals, part-of-speech, and principal component reconstruction. Finally, we analyze how these features evolve across layers, revealing a shift from structural features in early layers, to semantic features in mid layers, and finally to output-oriented signals in the last layers of the model. Our findings indicate that dense latents serve functional roles in language model computation and should not be dismissed as training noise.",
+    "citations": 6
+  },
+  {
+    "title": "Do Sparse Autoencoders Generalize? A Case Study of Answerability",
+    "year": 2025,
+    "authors": "Lovis Heindrich, Philip Torr, Fazl Barez, Veronika Thost",
+    "url": "https://www.semanticscholar.org/paper/fb66116071367a0ebbc747c418dbb0d93d07dfc9",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders (SAEs) have emerged as a promising approach in language model interpretability, offering unsupervised extraction of sparse features. For interpretability methods to succeed, they must identify abstract features across domains, and these features can often manifest differently in each context. We examine this through\"answerability\"- a model's ability to recognize answerable questions. We extensively evaluate SAE feature generalization across diverse, partly self-constructed answerability datasets for Gemma 2 SAEs. Our analysis reveals that residual stream probes outperform SAE features within domains, but generalization performance differs sharply. SAE features show inconsistent out-of-domain transfer, with performance varying from almost random to outperforming residual stream probes. Overall, this demonstrates the need for robust evaluation methods and quantitative approaches to predict feature generalization in SAE-based interpretability.",
+    "citations": 6
+  },
+  {
+    "title": "OrtSAE: Orthogonal Sparse Autoencoders Uncover Atomic Features",
+    "year": 2025,
+    "authors": "Anton Korznikov, Andrey V. Galichin, Alexey Dontsov, Oleg Y. Rogov, Elena Tutubalina, Ivan V. Oseledets",
+    "url": "https://www.semanticscholar.org/paper/3b184e1b692a11af7cf52931021daad6ab69d8d8",
+    "relevance": 3,
+    "abstract": "Sparse autoencoders (SAEs) are a technique for sparse decomposition of neural network activations into human-interpretable features. However, current SAEs suffer from feature absorption, where specialized features capture instances of general features creating representation holes, and feature composition, where independent features merge into composite representations. In this work, we introduce Orthogonal SAE (OrtSAE), a novel approach aimed to mitigate these issues by enforcing orthogonality between the learned features. By implementing a new training procedure that penalizes high pairwise cosine similarity between SAE features, OrtSAE promotes the development of disentangled features while scaling linearly with the SAE size, avoiding significant computational overhead. We train OrtSAE across different models and layers and compare it with other methods. We find that OrtSAE discovers 9% more distinct features, reduces feature absorption (by 65%) and composition (by 15%), improves performance on spurious correlation removal (+6%), and achieves on-par performance for other downstream tasks compared to traditional SAEs.",
+    "citations": 2
+  },
+  {
+    "title": "How do Transformer Embeddings Represent Compositions? A Functional Analysis",
+    "year": 2025,
+    "authors": "Aishik Nagar, I. Rawal, Mansi Dhanania, Cheston Tan",
+    "url": "https://api.semanticscholar.org/CorpusId:279075928",
+    "relevance": 3,
+    "abstract": "Compositionality is a key aspect of human intelligence, essential for reasoning and generalization. While transformer-based models have become the de facto standard for many language modeling tasks, little is known about how they represent compound words, and whether these representations are compositional. In this study, we test compositionality in Mistral, OpenAI Large, and Google embedding models, and compare them with BERT. First, we evaluate compositionality in the representations by examining six diverse models of compositionality (addition, multiplication, dilation, regression, etc.). We find that ridge regression, albeit linear, best accounts for compositionality. Surprisingly, we find that the classic vector addition model performs almost as well as any other model. Next, we verify that most embedding models are highly compositional, while BERT shows much poorer compositionality. We verify and visualize our findings with a synthetic dataset consisting of fully transparent adjective-noun compositions. Overall, we present a thorough investigation of compositionality.",
+    "citations": 1
+  },
+  {
+    "title": "Investigating Idiomaticity in Word Representations",
+    "year": 2024,
+    "authors": "Wei He, Tiago Kramer Vieira, Marcos Garc\u00eda, Carolina Scarton, M. Idiart, Aline Villavicencio",
+    "url": "https://www.semanticscholar.org/paper/cb083696abb8979d8c3d1183ee9389d7af462d2c",
+    "relevance": 3,
+    "abstract": "\n Idiomatic expressions are an integral part of human languages, often used to express complex ideas in compressed or conventional ways (e.g. eager beaver as a keen and enthusiastic person). However, their interpretations may not be straightforwardly linked to the meanings of their individual components in isolation and this may have an impact for compositional approaches. In this paper, we investigate to what extent word representation models are able to go beyond compositional word combinations and capture multiword expression idiomaticity and some of the expected properties related to idiomatic meanings. We focus on noun compounds of varying levels of idiomaticity in two languages (English and Portuguese), presenting a dataset of minimal pairs containing human idiomaticity judgments for each noun compound at both type and token levels, their paraphrases and their occurrences in naturalistic and sense-neutral contexts, totalling 32,200 sentences. We propose this set of minimal pairs for evaluating how well a model captures idiomatic meanings, and define a set of fine-grained metrics of Affinity and Scaled Similarity, to determine how sensitive the models are to perturbations that may lead to changes in idiomaticity. Affinity is a comparative measure of the similarity between an experimental item, a target and a potential distractor, and Scaled Similarity incorporates a rescaling factor to magnify the meaningful similarities within the spaces defined by each specific model. The results obtained with a variety of representative and widely used models indicate that, despite superficial indications to the contrary in the form of high similarities, idiomaticity is not yet accurately represented in current models. Moreover, the performance of models with different levels of contextualisation suggests that their ability to capture context is not yet able to go beyond more superficial lexical clues provided by the words and to actually incorporate the relevant semantic clues needed for idiomaticity. By proposing model-agnostic measures for assessing the ability of models to capture idiomaticity, this paper contributes to determining limitations in the handling of non-compositional structures, which is one of the directions that needs to be considered for more natural, accurate and robust language understanding. The source code and additional materials related to this paper are available at our GitHub repository.",
+    "citations": 1
+  },
+  {
+    "title": "Transferring Linear Features Across Language Models With Model Stitching",
+    "year": 2025,
+    "authors": "Alan Chen, Jack Merullo, Alessandro Stolfo, Ellie Pavlick",
+    "url": "https://api.semanticscholar.org/CorpusId:279251259",
+    "relevance": 3,
+    "abstract": "In this work, we demonstrate that affine mappings between residual streams of language models is a cheap way to effectively transfer represented features between models. We apply this technique to transfer the weights of Sparse Autoencoders (SAEs) between models of different sizes to compare their representations. We find that small and large models learn similar representation spaces, which motivates training expensive components like SAEs on a smaller model and transferring to a larger model at a FLOPs savings. In particular, using a small-to-large transferred SAE as initialization can lead to 50% cheaper training runs when training SAEs on larger models. Next, we show that transferred probes and steering vectors can effectively recover ground truth performance. Finally, we dive deeper into feature-level transferability, finding that semantic and structural features transfer noticeably differently while specific classes of functional features have their roles faithfully mapped. Overall, our findings illustrate similarities and differences in the linear representation spaces of small and large models and demonstrate a method for improving the training efficiency of SAEs.",
+    "citations": 1
+  },
+  {
+    "title": "Factual Self-Awareness in Language Models: Representation, Robustness, and Scaling",
+    "year": 2025,
+    "authors": "Hovhannes Tamoyan, Subhabrata Dutta, Iryna Gurevych",
+    "url": "https://www.semanticscholar.org/paper/5778bd480af49144fb0a8bc177e13409e95dac47",
+    "relevance": 3,
+    "abstract": "Factual incorrectness in generated content is one of the primary concerns in ubiquitous deployment of large language models (LLMs). Prior findings suggest LLMs can (sometimes) detect factual incorrectness in their generated content (i.e., fact-checking post-generation). In this work, we provide evidence supporting the presence of LLMs' internal compass that dictate the correctness of factual recall at the time of generation. We demonstrate that for a given subject entity and a relation, LLMs internally encode linear features in the Transformer's residual stream that dictate whether it will be able to recall the correct attribute (that forms a valid entity-relation-attribute triplet). This self-awareness signal is robust to minor formatting variations. We investigate the effects of context perturbation via different example selection strategies. Scaling experiments across model sizes and training dynamics highlight that self-awareness emerges rapidly during training and peaks in intermediate layers. These findings uncover intrinsic self-monitoring capabilities within LLMs, contributing to their interpretability and reliability.",
+    "citations": 1
+  },
+  {
+    "title": "Sparsification and Reconstruction from the Perspective of Representation Geometry",
+    "year": 2025,
+    "authors": "Wenjie Sun, Bingzhe Wu, Zhile Yang, Chengke Wu",
+    "url": "https://api.semanticscholar.org/CorpusId:278959774",
+    "relevance": 3,
+    "abstract": "Sparse Autoencoders (SAEs) have emerged as a predominant tool in mechanistic interpretability, aiming to identify interpretable monosemantic features. However, how does sparse encoding organize the representations of activation vector from language models? What is the relationship between this organizational paradigm and feature disentanglement as well as reconstruction performance? To address these questions, we propose the SAEMA, which validates the stratified structure of the representation by observing the variability of the rank of the symmetric semipositive definite (SSPD) matrix corresponding to the modal tensor unfolded along the latent tensor with the level of noise added to the residual stream. To systematically investigate how sparse encoding alters representational structures, we define local and global representations, demonstrating that they amplify inter-feature distinctions by merging similar semantic features and introducing additional dimensionality. Furthermore, we intervene the global representation from an optimization perspective, proving a significant causal relationship between their separability and the reconstruction performance. This study explains the principles of sparsity from the perspective of representational geometry and demonstrates the impact of changes in representational structure on reconstruction performance. Particularly emphasizes the necessity of understanding representations and incorporating representational constraints, providing empirical references for developing new interpretable tools and improving SAEs. The code is available at \\hyperlink{https://github.com/wenjie1835/SAERepGeo}{https://github.com/wenjie1835/SAERepGeo}.",
+    "citations": 0
+  },
+  {
+    "title": "Analysis of Variational Sparse Autoencoders",
+    "year": 2025,
+    "authors": "Zachary Baker, Yuxiao Li",
+    "url": "https://api.semanticscholar.org/CorpusId:281676369",
+    "relevance": 3,
+    "abstract": "Sparse Autoencoders (SAEs) have emerged as a promising approach for interpreting neural network representations by learning sparse, human-interpretable features from dense activations. We investigate whether incorporating variational methods into SAE architectures can improve feature organization and interpretability. We introduce the Variational Sparse Autoencoder (vSAE), which replaces deterministic ReLU gating with stochastic sampling from learned Gaussian posteriors and incorporates KL divergence regularization toward a standard normal prior. Our hypothesis is that this probabilistic sampling creates dispersive pressure, causing features to organize more coherently in the latent space while avoiding overlap. We evaluate a TopK vSAE against a standard TopK SAE on Pythia-70M transformer residual stream activations using comprehensive benchmarks including SAE Bench, individual feature interpretability analysis, and global latent space visualization through t-SNE. The vSAE underperforms standard SAE across core evaluation metrics, though excels at feature independence and ablation metrics. The KL divergence term creates excessive regularization pressure that substantially reduces the fraction of living features, leading to observed performance degradation. While vSAE features demonstrate improved robustness, they exhibit many more dead features than baseline. Our findings suggest that naive application of variational methods to SAEs does not improve feature organization or interpretability.",
+    "citations": 0
+  },
+  {
+    "title": "Time-Aware Feature Selection: Adaptive Temporal Masking for Stable Sparse Autoencoder Training",
+    "year": 2025,
+    "authors": "T. E. Li, Junyu Ren",
+    "url": "https://www.semanticscholar.org/paper/c89bf8b8c0b1f1bfc1dbb44c73f4c9d429ba8e83",
+    "relevance": 3,
+    "abstract": "Understanding the internal representations of large language models is crucial for ensuring their reliability and safety, with sparse autoencoders (SAEs) emerging as a promising interpretability approach. However, current SAE training methods face feature absorption, where features (or neurons) are absorbed into each other to minimize $L_1$ penalty, making it difficult to consistently identify and analyze model behaviors. We introduce Adaptive Temporal Masking (ATM), a novel training approach that dynamically adjusts feature selection by tracking activation magnitudes, frequencies, and reconstruction contributions to compute importance scores that evolve over time. ATM applies a probabilistic masking mechanism based on statistical thresholding of these importance scores, creating a more natural feature selection process. Through extensive experiments on the Gemma-2-2b model, we demonstrate that ATM achieves substantially lower absorption scores compared to existing methods like TopK and JumpReLU SAEs, while maintaining excellent reconstruction quality. These results establish ATM as a principled solution for learning stable, interpretable features in neural networks, providing a foundation for more reliable model analysis.",
+    "citations": 0
+  },
+  {
+    "title": "Linear socio-demographic representations emerge in Large Language Models from indirect cues",
+    "year": 2025,
+    "authors": "Paul Bouchaud, Pedro Ramaciotti",
+    "url": "https://www.semanticscholar.org/paper/2d850838ba054945d7b65588ee016b2fd51aa4ee",
+    "relevance": 3,
+    "abstract": "We investigate how LLMs encode sociodemographic attributes of human conversational partners inferred from indirect cues such as names and occupations. We show that LLMs develop linear representations of user demographics within activation space, wherein stereotypically associated attributes are encoded along interpretable geometric directions. We first probe residual streams across layers of four open transformer-based LLMs (Magistral 24B, Qwen3 14B, GPT-OSS 20B, OLMo2-1B) prompted with explicit demographic disclosure. We show that the same probes predict demographics from implicit cues: names activate census-aligned gender and race representations, while occupations trigger representations correlated with real-world workforce statistics. These linear representations allow us to explain demographic inferences implicitly formed by LLMs during conversation. We demonstrate that these implicit demographic representations actively shape downstream behavior, such as career recommendations. Our study further highlights that models that pass bias benchmark tests may still harbor and leverage implicit biases, with implications for fairness when applied at scale.",
+    "citations": 0
+  },
+  {
+    "title": "Probing BERT for German Compound Semantics",
+    "year": 2025,
+    "authors": "Filip Mileti'c, Aaron Schmid, Sabine Schulte im Walde",
+    "url": "https://api.semanticscholar.org/CorpusId:278769263",
+    "relevance": 3,
+    "abstract": "This paper investigates the extent to which pretrained German BERT encodes knowledge of noun compound semantics. We comprehensively vary combinations of target tokens, layers, and cased vs. uncased models, and evaluate them by predicting the compositionality of 868 gold standard compounds. Looking at representational patterns within the transformer architecture, we observe trends comparable to equivalent prior work on English, with compositionality information most easily recoverable in the early layers. However, our strongest results clearly lag behind those reported for English, suggesting an inherently more difficult task in German. This may be due to the higher productivity of compounding in German than in English and the associated increase in constituent-level ambiguity, including in our target compound set.",
+    "citations": 0
+  }
+]

@@ -19,7 +19,7 @@ and the general workflow, ALWAYS follow the user&#39;s instructions.
 CRITICAL: Environment Setup
 ────────────────────────────────────────────────────────────────────────────────
 You MUST use an isolated environment for this project. DO NOT use the
-idea-explorer environment or any existing system environment.
+neurico environment or any existing system environment.
 
 REQUIRED STEPS (in order):
 
@@ -52,7 +52,7 @@ REQUIRED STEPS (in order):
    EOF
 
    CRITICAL: This ensures uv won't search parent directories for pyproject.toml
-   and contaminate the idea-explorer environment!
+   and contaminate the neurico environment!
 
 3. Activate the environment:
    source .venv/bin/activate
@@ -84,7 +84,7 @@ REQUIRED STEPS (in order):
    - This ensures reproducibility of the research environment
 
 WHY: Using an isolated environment ensures:
-- No pollution of the idea-explorer environment
+- No pollution of the neurico environment
 - Fast package installation with uv (10-100x faster than pip)
 - Automatic dependency tracking with pyproject.toml
 - Clean, reproducible research setup
@@ -221,14 +221,15 @@ Nlp
 
 ## HYPOTHESIS / RESEARCH QUESTION
 
-In large language models, specific compound concepts such as &#39;washing machine&#39; may not be represented by a unique direction or nearly orthogonal direction in the residual stream; instead, the model may store the concept of &#39;washing&#39; and rely on context to increase the likelihood of &#39;machine&#39; following it.
+In large language models, there are too many referenceable concepts for each to have a unique or nearly orthogonal direction in the residual stream. This research investigates whether specific compound concepts like &#39;washing machine&#39; are explicitly represented, or if only components such as &#39;washing&#39; are stored and the presence of &#39;machine&#39; increases the likelihood of the compound concept.
 
 
 ## BACKGROUND
 
 ### User-Provided Instructions and Context:
 
-&gt;&gt;&gt; There are too many referenceable things for each to have a direction, or even a &#39;nearly orthogonal&#39; direction in the residual stream. Where is &#39;washing machine&#39; stored in LLMs? Or is just &#39;washing&#39; stored and then it&#39;s assumed that machine becomes more likely? &lt;&lt;&lt;
+&gt;&gt;&gt; There are too many referenceable things for each to have a direction, or even a &#39;nearly orthogonal&#39; direction in the residual stream. Where is &#39;washing machine&#39; stored in LLMs? Or is just &#39;washing&#39; stored and then it&#39;s assumed that machine becomes more likely?
+ &lt;&lt;&lt;
 
 (Note: Follow any specific instructions above with high priority)
 
@@ -1638,14 +1639,14 @@ CRITICAL REMINDERS:
 
 WORKSPACE DIRECTORY AND DIRECTORY SAFETY:
 ────────────────────────────────────────────────────────────────────────────────
-You are running in the project workspace directory: /data/hypogenicai/workspaces/llm-washing-machine-claude
+You are running in the project workspace directory: /workspaces/llm-washing-machine-claude
 
 WORKING DIRECTORY VERIFICATION:
 Before creating or writing ANY files, ALWAYS verify you are in the correct directory:
 
 1. Run `pwd` to check your current directory
-2. You should be in: /data/hypogenicai/workspaces/llm-washing-machine-claude
-3. If you're somewhere else, run: cd /data/hypogenicai/workspaces/llm-washing-machine-claude
+2. You should be in: /workspaces/llm-washing-machine-claude
+3. If you're somewhere else, run: cd /workspaces/llm-washing-machine-claude
 
 MANDATORY VERIFICATION POINTS - Run `pwd` and verify location:
 ✓ Before creating any new directories (mkdir results, mkdir figures, etc.)
