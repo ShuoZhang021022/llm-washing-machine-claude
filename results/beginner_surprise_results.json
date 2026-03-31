@@ -1,0 +1,2985 @@
+[
+  {
+    "compound": "washing machine",
+    "modifier": "washing",
+    "head": "machine",
+    "my_guess": "strong",
+    "model_guess": "medium",
+    "verdict": "overestimated",
+    "avg_rank": 290.5,
+    "best_rank": 1,
+    "avg_prob": 0.417408,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The washing",
+        "rank": 1,
+        "prob": 0.730247,
+        "top5": [
+          {
+            "token": "machine",
+            "prob": 0.730247
+          },
+          {
+            "token": "machines",
+            "prob": 0.046999
+          },
+          {
+            "token": "-",
+            "prob": 0.02725
+          },
+          {
+            "token": "ton",
+            "prob": 0.024812
+          },
+          {
+            "token": "of",
+            "prob": 0.015536
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a washing",
+        "rank": 1,
+        "prob": 0.937114,
+        "top5": [
+          {
+            "token": "machine",
+            "prob": 0.937114
+          },
+          {
+            "token": "-",
+            "prob": 0.005496
+          },
+          {
+            "token": "powder",
+            "prob": 0.003051
+          },
+          {
+            "token": "ton",
+            "prob": 0.002883
+          },
+          {
+            "token": "kit",
+            "prob": 0.002851
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a washing in the",
+        "rank": 53,
+        "prob": 0.002176,
+        "top5": [
+          {
+            "token": "sink",
+            "prob": 0.21456
+          },
+          {
+            "token": "kitchen",
+            "prob": 0.035807
+          },
+          {
+            "token": "shower",
+            "prob": 0.024411
+          },
+          {
+            "token": "fridge",
+            "prob": 0.023908
+          },
+          {
+            "token": "oven",
+            "prob": 0.019912
+          }
+        ]
+      },
+      {
+        "prompt": "There is a washing near the",
+        "rank": 1107,
+        "prob": 9.5e-05,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.064599
+          },
+          {
+            "token": "end",
+            "prob": 0.038256
+          },
+          {
+            "token": "shore",
+            "prob": 0.02639
+          },
+          {
+            "token": "bottom",
+            "prob": 0.024951
+          },
+          {
+            "token": "edge",
+            "prob": 0.023947
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "swimming pool",
+    "modifier": "swimming",
+    "head": "pool",
+    "my_guess": "strong",
+    "model_guess": "strong",
+    "verdict": "matched",
+    "avg_rank": 11.75,
+    "best_rank": 1,
+    "avg_prob": 0.319417,
+    "top5_hits": 3,
+    "top10_hits": 3,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The swimming",
+        "rank": 1,
+        "prob": 0.489987,
+        "top5": [
+          {
+            "token": "pool",
+            "prob": 0.489987
+          },
+          {
+            "token": "pools",
+            "prob": 0.021214
+          },
+          {
+            "token": "team",
+            "prob": 0.019726
+          },
+          {
+            "token": "hole",
+            "prob": 0.013963
+          },
+          {
+            "token": "-",
+            "prob": 0.012166
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a swimming",
+        "rank": 1,
+        "prob": 0.727653,
+        "top5": [
+          {
+            "token": "pool",
+            "prob": 0.727653
+          },
+          {
+            "token": "suit",
+            "prob": 0.090409
+          },
+          {
+            "token": "costume",
+            "prob": 0.012957
+          },
+          {
+            "token": "-",
+            "prob": 0.0088
+          },
+          {
+            "token": "dress",
+            "prob": 0.005225
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a swimming in the",
+        "rank": 1,
+        "prob": 0.057503,
+        "top5": [
+          {
+            "token": "pool",
+            "prob": 0.057503
+          },
+          {
+            "token": "water",
+            "prob": 0.051075
+          },
+          {
+            "token": "lake",
+            "prob": 0.039822
+          },
+          {
+            "token": "river",
+            "prob": 0.037758
+          },
+          {
+            "token": "ocean",
+            "prob": 0.036679
+          }
+        ]
+      },
+      {
+        "prompt": "There is a swimming near the",
+        "rank": 44,
+        "prob": 0.002526,
+        "top5": [
+          {
+            "token": "shore",
+            "prob": 0.041412
+          },
+          {
+            "token": "edge",
+            "prob": 0.031483
+          },
+          {
+            "token": "beach",
+            "prob": 0.025533
+          },
+          {
+            "token": "entrance",
+            "prob": 0.025365
+          },
+          {
+            "token": "end",
+            "prob": 0.019065
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "hot dog",
+    "modifier": "hot",
+    "head": "dog",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 205,
+    "best_rank": 1,
+    "avg_prob": 0.071117,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The hot",
+        "rank": 3,
+        "prob": 0.043264,
+        "top5": [
+          {
+            "token": "new",
+            "prob": 0.04977
+          },
+          {
+            "token": "topic",
+            "prob": 0.04881
+          },
+          {
+            "token": "dog",
+            "prob": 0.043264
+          },
+          {
+            "token": "-",
+            "prob": 0.04033
+          },
+          {
+            "token": "spot",
+            "prob": 0.036335
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a hot",
+        "rank": 1,
+        "prob": 0.240807,
+        "top5": [
+          {
+            "token": "dog",
+            "prob": 0.240807
+          },
+          {
+            "token": "tub",
+            "prob": 0.133931
+          },
+          {
+            "token": "pink",
+            "prob": 0.082699
+          },
+          {
+            "token": "rod",
+            "prob": 0.029716
+          },
+          {
+            "token": "chocolate",
+            "prob": 0.02442
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a hot in the",
+        "rank": 343,
+        "prob": 0.000298,
+        "top5": [
+          {
+            "token": "oven",
+            "prob": 0.10907
+          },
+          {
+            "token": "morning",
+            "prob": 0.064334
+          },
+          {
+            "token": "fridge",
+            "prob": 0.0351
+          },
+          {
+            "token": "air",
+            "prob": 0.034907
+          },
+          {
+            "token": "freezer",
+            "prob": 0.022284
+          }
+        ]
+      },
+      {
+        "prompt": "There is a hot near the",
+        "rank": 473,
+        "prob": 9.9e-05,
+        "top5": [
+          {
+            "token": "end",
+            "prob": 0.292446
+          },
+          {
+            "token": "top",
+            "prob": 0.147021
+          },
+          {
+            "token": "bottom",
+            "prob": 0.047143
+          },
+          {
+            "token": "center",
+            "prob": 0.034971
+          },
+          {
+            "token": "moment",
+            "prob": 0.031633
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "guinea pig",
+    "modifier": "guinea",
+    "head": "pig",
+    "my_guess": "weak",
+    "status": "skipped_tokenization"
+  },
+  {
+    "compound": "coffee table",
+    "modifier": "coffee",
+    "head": "table",
+    "my_guess": "weak",
+    "model_guess": "medium",
+    "verdict": "surprise",
+    "avg_rank": 62,
+    "best_rank": 6,
+    "avg_prob": 0.016709,
+    "top5_hits": 0,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The coffee",
+        "rank": 7,
+        "prob": 0.021624,
+        "top5": [
+          {
+            "token": "shop",
+            "prob": 0.092509
+          },
+          {
+            "token": "-",
+            "prob": 0.043872
+          },
+          {
+            "token": "is",
+            "prob": 0.035683
+          },
+          {
+            "token": "maker",
+            "prob": 0.032137
+          },
+          {
+            "token": "industry",
+            "prob": 0.025314
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a coffee",
+        "rank": 6,
+        "prob": 0.042854,
+        "top5": [
+          {
+            "token": "mug",
+            "prob": 0.120649
+          },
+          {
+            "token": "and",
+            "prob": 0.088351
+          },
+          {
+            "token": "shop",
+            "prob": 0.061762
+          },
+          {
+            "token": "in",
+            "prob": 0.049139
+          },
+          {
+            "token": "cup",
+            "prob": 0.045125
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a coffee in the",
+        "rank": 159,
+        "prob": 0.000777,
+        "top5": [
+          {
+            "token": "fridge",
+            "prob": 0.050934
+          },
+          {
+            "token": "kitchen",
+            "prob": 0.037925
+          },
+          {
+            "token": "corner",
+            "prob": 0.034828
+          },
+          {
+            "token": "back",
+            "prob": 0.030535
+          },
+          {
+            "token": "coffee",
+            "prob": 0.026539
+          }
+        ]
+      },
+      {
+        "prompt": "There is a coffee near the",
+        "rank": 76,
+        "prob": 0.00158,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.041652
+          },
+          {
+            "token": "end",
+            "prob": 0.035148
+          },
+          {
+            "token": "corner",
+            "prob": 0.026764
+          },
+          {
+            "token": "front",
+            "prob": 0.023719
+          },
+          {
+            "token": "intersection",
+            "prob": 0.016423
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "parking lot",
+    "modifier": "parking",
+    "head": "lot",
+    "my_guess": "strong",
+    "model_guess": "medium",
+    "verdict": "overestimated",
+    "avg_rank": 47.75,
+    "best_rank": 1,
+    "avg_prob": 0.158019,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The parking",
+        "rank": 1,
+        "prob": 0.352265,
+        "top5": [
+          {
+            "token": "lot",
+            "prob": 0.352265
+          },
+          {
+            "token": "garage",
+            "prob": 0.067711
+          },
+          {
+            "token": "meter",
+            "prob": 0.035959
+          },
+          {
+            "token": "lots",
+            "prob": 0.029042
+          },
+          {
+            "token": "space",
+            "prob": 0.027787
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a parking",
+        "rank": 2,
+        "prob": 0.269791,
+        "top5": [
+          {
+            "token": "space",
+            "prob": 0.325491
+          },
+          {
+            "token": "lot",
+            "prob": 0.269791
+          },
+          {
+            "token": "ticket",
+            "prob": 0.102589
+          },
+          {
+            "token": "spot",
+            "prob": 0.096055
+          },
+          {
+            "token": "permit",
+            "prob": 0.03312
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a parking in the",
+        "rank": 15,
+        "prob": 0.00929,
+        "top5": [
+          {
+            "token": "parking",
+            "prob": 0.143546
+          },
+          {
+            "token": "back",
+            "prob": 0.072612
+          },
+          {
+            "token": "middle",
+            "prob": 0.044851
+          },
+          {
+            "token": "driveway",
+            "prob": 0.026634
+          },
+          {
+            "token": "park",
+            "prob": 0.024603
+          }
+        ]
+      },
+      {
+        "prompt": "There is a parking near the",
+        "rank": 173,
+        "prob": 0.000728,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.065568
+          },
+          {
+            "token": "intersection",
+            "prob": 0.049472
+          },
+          {
+            "token": "front",
+            "prob": 0.018303
+          },
+          {
+            "token": "parking",
+            "prob": 0.017196
+          },
+          {
+            "token": "corner",
+            "prob": 0.012542
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "living room",
+    "modifier": "living",
+    "head": "room",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 447,
+    "best_rank": 1,
+    "avg_prob": 0.15805,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The living",
+        "rank": 1,
+        "prob": 0.312657,
+        "top5": [
+          {
+            "token": "room",
+            "prob": 0.312657
+          },
+          {
+            "token": "-",
+            "prob": 0.027371
+          },
+          {
+            "token": "wage",
+            "prob": 0.023764
+          },
+          {
+            "token": "world",
+            "prob": 0.020951
+          },
+          {
+            "token": "rooms",
+            "prob": 0.020287
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a living",
+        "rank": 1,
+        "prob": 0.318339,
+        "top5": [
+          {
+            "token": "room",
+            "prob": 0.318339
+          },
+          {
+            "token": "in",
+            "prob": 0.050944
+          },
+          {
+            "token": ",",
+            "prob": 0.042354
+          },
+          {
+            "token": "on",
+            "prob": 0.033764
+          },
+          {
+            "token": "wage",
+            "prob": 0.024407
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a living in the",
+        "rank": 122,
+        "prob": 0.001146,
+        "top5": [
+          {
+            "token": "world",
+            "prob": 0.026185
+          },
+          {
+            "token": "woods",
+            "prob": 0.023159
+          },
+          {
+            "token": "forest",
+            "prob": 0.012479
+          },
+          {
+            "token": "jungle",
+            "prob": 0.0121
+          },
+          {
+            "token": "shadow",
+            "prob": 0.012021
+          }
+        ]
+      },
+      {
+        "prompt": "There is a living near the",
+        "rank": 1664,
+        "prob": 5.9e-05,
+        "top5": [
+          {
+            "token": "edge",
+            "prob": 0.075072
+          },
+          {
+            "token": "end",
+            "prob": 0.041436
+          },
+          {
+            "token": "center",
+            "prob": 0.035805
+          },
+          {
+            "token": "border",
+            "prob": 0.023458
+          },
+          {
+            "token": "top",
+            "prob": 0.019772
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "mountain cabin",
+    "modifier": "mountain",
+    "head": "cabin",
+    "my_guess": "weak",
+    "model_guess": "weak",
+    "verdict": "matched",
+    "avg_rank": 216.5,
+    "best_rank": 3,
+    "avg_prob": 0.006989,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The mountain",
+        "rank": 104,
+        "prob": 0.000925,
+        "top5": [
+          {
+            "token": "of",
+            "prob": 0.133764
+          },
+          {
+            "token": "is",
+            "prob": 0.059227
+          },
+          {
+            "token": "lion",
+            "prob": 0.038643
+          },
+          {
+            "token": "range",
+            "prob": 0.033396
+          },
+          {
+            "token": "bike",
+            "prob": 0.032988
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a mountain",
+        "rank": 3,
+        "prob": 0.026452,
+        "top5": [
+          {
+            "token": "bike",
+            "prob": 0.351166
+          },
+          {
+            "token": "of",
+            "prob": 0.175035
+          },
+          {
+            "token": "cabin",
+            "prob": 0.026452
+          },
+          {
+            "token": "house",
+            "prob": 0.023697
+          },
+          {
+            "token": "home",
+            "prob": 0.018747
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a mountain in the",
+        "rank": 532,
+        "prob": 7.9e-05,
+        "top5": [
+          {
+            "token": "distance",
+            "prob": 0.353323
+          },
+          {
+            "token": "sky",
+            "prob": 0.105148
+          },
+          {
+            "token": "background",
+            "prob": 0.069895
+          },
+          {
+            "token": "middle",
+            "prob": 0.055583
+          },
+          {
+            "token": "mountains",
+            "prob": 0.017703
+          }
+        ]
+      },
+      {
+        "prompt": "There is a mountain near the",
+        "rank": 227,
+        "prob": 0.0005,
+        "top5": [
+          {
+            "token": "village",
+            "prob": 0.032776
+          },
+          {
+            "token": "top",
+            "prob": 0.028972
+          },
+          {
+            "token": "town",
+            "prob": 0.027644
+          },
+          {
+            "token": "summit",
+            "prob": 0.027338
+          },
+          {
+            "token": "edge",
+            "prob": 0.026329
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "paper bag",
+    "modifier": "paper",
+    "head": "bag",
+    "my_guess": "medium",
+    "model_guess": "weak",
+    "verdict": "overestimated",
+    "avg_rank": 2384.75,
+    "best_rank": 1,
+    "avg_prob": 0.031121,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The paper",
+        "rank": 3621,
+        "prob": 4e-06,
+        "top5": [
+          {
+            "token": ",",
+            "prob": 0.087748
+          },
+          {
+            "token": "'s",
+            "prob": 0.072972
+          },
+          {
+            "token": "was",
+            "prob": 0.062967
+          },
+          {
+            "token": "is",
+            "prob": 0.059392
+          },
+          {
+            "token": "also",
+            "prob": 0.033941
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a paper",
+        "rank": 1,
+        "prob": 0.12441,
+        "top5": [
+          {
+            "token": "bag",
+            "prob": 0.12441
+          },
+          {
+            "token": "towel",
+            "prob": 0.074579
+          },
+          {
+            "token": "weight",
+            "prob": 0.033963
+          },
+          {
+            "token": "-",
+            "prob": 0.030664
+          },
+          {
+            "token": "clip",
+            "prob": 0.030249
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a paper in the",
+        "rank": 1435,
+        "prob": 6.4e-05,
+        "top5": [
+          {
+            "token": "New",
+            "prob": 0.048568
+          },
+          {
+            "token": "journal",
+            "prob": 0.035515
+          },
+          {
+            "token": "paper",
+            "prob": 0.035325
+          },
+          {
+            "token": "press",
+            "prob": 0.019867
+          },
+          {
+            "token": "Journal",
+            "prob": 0.0188
+          }
+        ]
+      },
+      {
+        "prompt": "There is a paper near the",
+        "rank": 4482,
+        "prob": 6e-06,
+        "top5": [
+          {
+            "token": "end",
+            "prob": 0.357641
+          },
+          {
+            "token": "top",
+            "prob": 0.170988
+          },
+          {
+            "token": "bottom",
+            "prob": 0.093786
+          },
+          {
+            "token": "beginning",
+            "prob": 0.055141
+          },
+          {
+            "token": "start",
+            "prob": 0.016824
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "alarm clock",
+    "modifier": "alarm",
+    "head": "clock",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 117,
+    "best_rank": 1,
+    "avg_prob": 0.164224,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The alarm",
+        "rank": 1,
+        "prob": 0.209673,
+        "top5": [
+          {
+            "token": "clock",
+            "prob": 0.209673
+          },
+          {
+            "token": "bells",
+            "prob": 0.119177
+          },
+          {
+            "token": "ingly",
+            "prob": 0.055243
+          },
+          {
+            "token": "ist",
+            "prob": 0.048941
+          },
+          {
+            "token": "was",
+            "prob": 0.047183
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a alarm",
+        "rank": 1,
+        "prob": 0.446158,
+        "top5": [
+          {
+            "token": "clock",
+            "prob": 0.446158
+          },
+          {
+            "token": "and",
+            "prob": 0.072048
+          },
+          {
+            "token": "for",
+            "prob": 0.063629
+          },
+          {
+            "token": "to",
+            "prob": 0.051085
+          },
+          {
+            "token": "system",
+            "prob": 0.037972
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a alarm in the",
+        "rank": 172,
+        "prob": 0.000661,
+        "top5": [
+          {
+            "token": "kitchen",
+            "prob": 0.054746
+          },
+          {
+            "token": "back",
+            "prob": 0.03132
+          },
+          {
+            "token": "hallway",
+            "prob": 0.028612
+          },
+          {
+            "token": "window",
+            "prob": 0.02387
+          },
+          {
+            "token": "middle",
+            "prob": 0.02241
+          }
+        ]
+      },
+      {
+        "prompt": "There is a alarm near the",
+        "rank": 294,
+        "prob": 0.000404,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.104159
+          },
+          {
+            "token": "end",
+            "prob": 0.03719
+          },
+          {
+            "token": "top",
+            "prob": 0.036833
+          },
+          {
+            "token": "front",
+            "prob": 0.021466
+          },
+          {
+            "token": "corner",
+            "prob": 0.0191
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "baseball game",
+    "modifier": "baseball",
+    "head": "game",
+    "my_guess": "strong",
+    "model_guess": "weak",
+    "verdict": "overestimated",
+    "avg_rank": 27.25,
+    "best_rank": 11,
+    "avg_prob": 0.007238,
+    "top5_hits": 0,
+    "top10_hits": 0,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The baseball",
+        "rank": 11,
+        "prob": 0.009428,
+        "top5": [
+          {
+            "token": "team",
+            "prob": 0.163295
+          },
+          {
+            "token": "world",
+            "prob": 0.074474
+          },
+          {
+            "token": "season",
+            "prob": 0.057983
+          },
+          {
+            "token": "-",
+            "prob": 0.037391
+          },
+          {
+            "token": "s",
+            "prob": 0.018563
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a baseball",
+        "rank": 11,
+        "prob": 0.013392,
+        "top5": [
+          {
+            "token": "bat",
+            "prob": 0.33121
+          },
+          {
+            "token": "cap",
+            "prob": 0.094056
+          },
+          {
+            "token": "glove",
+            "prob": 0.052189
+          },
+          {
+            "token": "diamond",
+            "prob": 0.051594
+          },
+          {
+            "token": "hat",
+            "prob": 0.050362
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a baseball in the",
+        "rank": 54,
+        "prob": 0.003047,
+        "top5": [
+          {
+            "token": "backyard",
+            "prob": 0.048406
+          },
+          {
+            "token": "yard",
+            "prob": 0.046089
+          },
+          {
+            "token": "parking",
+            "prob": 0.044949
+          },
+          {
+            "token": "driveway",
+            "prob": 0.029799
+          },
+          {
+            "token": "stands",
+            "prob": 0.027417
+          }
+        ]
+      },
+      {
+        "prompt": "There is a baseball near the",
+        "rank": 33,
+        "prob": 0.003084,
+        "top5": [
+          {
+            "token": "corner",
+            "prob": 0.079019
+          },
+          {
+            "token": "end",
+            "prob": 0.077277
+          },
+          {
+            "token": "edge",
+            "prob": 0.025876
+          },
+          {
+            "token": "bottom",
+            "prob": 0.023279
+          },
+          {
+            "token": "intersection",
+            "prob": 0.018976
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "garden hose",
+    "modifier": "garden",
+    "head": "hose",
+    "my_guess": "weak",
+    "model_guess": "medium",
+    "verdict": "surprise",
+    "avg_rank": 4697.5,
+    "best_rank": 7,
+    "avg_prob": 0.01196,
+    "top5_hits": 0,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The garden",
+        "rank": 8,
+        "prob": 0.015797,
+        "top5": [
+          {
+            "token": "is",
+            "prob": 0.126256
+          },
+          {
+            "token": "of",
+            "prob": 0.098534
+          },
+          {
+            "token": "was",
+            "prob": 0.026435
+          },
+          {
+            "token": "-",
+            "prob": 0.024372
+          },
+          {
+            "token": "has",
+            "prob": 0.022114
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a garden",
+        "rank": 7,
+        "prob": 0.032031,
+        "top5": [
+          {
+            "token": "in",
+            "prob": 0.091001
+          },
+          {
+            "token": "and",
+            "prob": 0.064938
+          },
+          {
+            "token": ",",
+            "prob": 0.051779
+          },
+          {
+            "token": "for",
+            "prob": 0.050863
+          },
+          {
+            "token": "of",
+            "prob": 0.045734
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a garden in the",
+        "rank": 6970,
+        "prob": 6e-06,
+        "top5": [
+          {
+            "token": "middle",
+            "prob": 0.072831
+          },
+          {
+            "token": "back",
+            "prob": 0.040839
+          },
+          {
+            "token": "woods",
+            "prob": 0.035715
+          },
+          {
+            "token": "garden",
+            "prob": 0.033375
+          },
+          {
+            "token": "backyard",
+            "prob": 0.032529
+          }
+        ]
+      },
+      {
+        "prompt": "There is a garden near the",
+        "rank": 11805,
+        "prob": 4e-06,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.03465
+          },
+          {
+            "token": "intersection",
+            "prob": 0.012691
+          },
+          {
+            "token": "end",
+            "prob": 0.011534
+          },
+          {
+            "token": "river",
+            "prob": 0.011219
+          },
+          {
+            "token": "city",
+            "prob": 0.011205
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "bus stop",
+    "modifier": "bus",
+    "head": "stop",
+    "my_guess": "strong",
+    "model_guess": "weak",
+    "verdict": "overestimated",
+    "avg_rank": 241,
+    "best_rank": 4,
+    "avg_prob": 0.008766,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The bus",
+        "rank": 4,
+        "prob": 0.029601,
+        "top5": [
+          {
+            "token": "was",
+            "prob": 0.09706
+          },
+          {
+            "token": "driver",
+            "prob": 0.076224
+          },
+          {
+            "token": "is",
+            "prob": 0.057538
+          },
+          {
+            "token": "stop",
+            "prob": 0.029601
+          },
+          {
+            "token": "that",
+            "prob": 0.027475
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a bus",
+        "rank": 20,
+        "prob": 0.004484,
+        "top5": [
+          {
+            "token": "ticket",
+            "prob": 0.321811
+          },
+          {
+            "token": "from",
+            "prob": 0.100204
+          },
+          {
+            "token": "for",
+            "prob": 0.054407
+          },
+          {
+            "token": "and",
+            "prob": 0.054237
+          },
+          {
+            "token": ",",
+            "prob": 0.049959
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a bus in the",
+        "rank": 792,
+        "prob": 9.1e-05,
+        "top5": [
+          {
+            "token": "middle",
+            "prob": 0.124724
+          },
+          {
+            "token": "area",
+            "prob": 0.055583
+          },
+          {
+            "token": "parking",
+            "prob": 0.053388
+          },
+          {
+            "token": "city",
+            "prob": 0.041284
+          },
+          {
+            "token": "morning",
+            "prob": 0.033059
+          }
+        ]
+      },
+      {
+        "prompt": "There is a bus near the",
+        "rank": 148,
+        "prob": 0.000888,
+        "top5": [
+          {
+            "token": "airport",
+            "prob": 0.039466
+          },
+          {
+            "token": "entrance",
+            "prob": 0.031431
+          },
+          {
+            "token": "intersection",
+            "prob": 0.029321
+          },
+          {
+            "token": "end",
+            "prob": 0.015889
+          },
+          {
+            "token": "city",
+            "prob": 0.014783
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "cell phone",
+    "modifier": "cell",
+    "head": "phone",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 124.25,
+    "best_rank": 1,
+    "avg_prob": 0.310085,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The cell",
+        "rank": 1,
+        "prob": 0.297883,
+        "top5": [
+          {
+            "token": "phone",
+            "prob": 0.297883
+          },
+          {
+            "token": "-",
+            "prob": 0.042435
+          },
+          {
+            "token": "phones",
+            "prob": 0.039965
+          },
+          {
+            "token": "is",
+            "prob": 0.039926
+          },
+          {
+            "token": "phones",
+            "prob": 0.02826
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a cell",
+        "rank": 1,
+        "prob": 0.94111,
+        "top5": [
+          {
+            "token": "phone",
+            "prob": 0.94111
+          },
+          {
+            "token": "oph",
+            "prob": 0.006501
+          },
+          {
+            "token": "phone",
+            "prob": 0.005499
+          },
+          {
+            "token": "-",
+            "prob": 0.005208
+          },
+          {
+            "token": "tower",
+            "prob": 0.004114
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a cell in the",
+        "rank": 127,
+        "prob": 0.000991,
+        "top5": [
+          {
+            "token": "back",
+            "prob": 0.04656
+          },
+          {
+            "token": "middle",
+            "prob": 0.041706
+          },
+          {
+            "token": "basement",
+            "prob": 0.036231
+          },
+          {
+            "token": "hospital",
+            "prob": 0.022323
+          },
+          {
+            "token": "hallway",
+            "prob": 0.021774
+          }
+        ]
+      },
+      {
+        "prompt": "There is a cell near the",
+        "rank": 368,
+        "prob": 0.000357,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.037409
+          },
+          {
+            "token": "top",
+            "prob": 0.027386
+          },
+          {
+            "token": "center",
+            "prob": 0.02662
+          },
+          {
+            "token": "end",
+            "prob": 0.02514
+          },
+          {
+            "token": "edge",
+            "prob": 0.016633
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "tea cup",
+    "modifier": "tea",
+    "head": "cup",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 92.75,
+    "best_rank": 9,
+    "avg_prob": 0.010206,
+    "top5_hits": 0,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The tea",
+        "rank": 24,
+        "prob": 0.004229,
+        "top5": [
+          {
+            "token": "party",
+            "prob": 0.142979
+          },
+          {
+            "token": "leaves",
+            "prob": 0.059714
+          },
+          {
+            "token": "-",
+            "prob": 0.047632
+          },
+          {
+            "token": "is",
+            "prob": 0.047356
+          },
+          {
+            "token": "tree",
+            "prob": 0.030418
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a tea",
+        "rank": 9,
+        "prob": 0.022134,
+        "top5": [
+          {
+            "token": "bag",
+            "prob": 0.060098
+          },
+          {
+            "token": "set",
+            "prob": 0.058318
+          },
+          {
+            "token": "and",
+            "prob": 0.052679
+          },
+          {
+            "token": "for",
+            "prob": 0.040566
+          },
+          {
+            "token": "in",
+            "prob": 0.037044
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a tea in the",
+        "rank": 9,
+        "prob": 0.014074,
+        "top5": [
+          {
+            "token": "kitchen",
+            "prob": 0.03984
+          },
+          {
+            "token": "corner",
+            "prob": 0.030445
+          },
+          {
+            "token": "garden",
+            "prob": 0.02878
+          },
+          {
+            "token": "fridge",
+            "prob": 0.026639
+          },
+          {
+            "token": "back",
+            "prob": 0.022599
+          }
+        ]
+      },
+      {
+        "prompt": "There is a tea near the",
+        "rank": 329,
+        "prob": 0.000386,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.054366
+          },
+          {
+            "token": "end",
+            "prob": 0.036161
+          },
+          {
+            "token": "front",
+            "prob": 0.018697
+          },
+          {
+            "token": "top",
+            "prob": 0.015531
+          },
+          {
+            "token": "corner",
+            "prob": 0.015035
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "office chair",
+    "modifier": "office",
+    "head": "chair",
+    "my_guess": "weak",
+    "model_guess": "weak",
+    "verdict": "matched",
+    "avg_rank": 1496.75,
+    "best_rank": 3,
+    "avg_prob": 0.014864,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The office",
+        "rank": 40,
+        "prob": 0.000829,
+        "top5": [
+          {
+            "token": "of",
+            "prob": 0.65542
+          },
+          {
+            "token": "is",
+            "prob": 0.02481
+          },
+          {
+            "token": "has",
+            "prob": 0.018062
+          },
+          {
+            "token": "was",
+            "prob": 0.015418
+          },
+          {
+            "token": "that",
+            "prob": 0.013031
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a office",
+        "rank": 3,
+        "prob": 0.058553,
+        "top5": [
+          {
+            "token": "in",
+            "prob": 0.132968
+          },
+          {
+            "token": "building",
+            "prob": 0.068514
+          },
+          {
+            "token": "chair",
+            "prob": 0.058553
+          },
+          {
+            "token": "space",
+            "prob": 0.053092
+          },
+          {
+            "token": "suite",
+            "prob": 0.052347
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a office in the",
+        "rank": 3892,
+        "prob": 1.9e-05,
+        "top5": [
+          {
+            "token": "middle",
+            "prob": 0.094206
+          },
+          {
+            "token": "city",
+            "prob": 0.033
+          },
+          {
+            "token": "back",
+            "prob": 0.023676
+          },
+          {
+            "token": "parking",
+            "prob": 0.015932
+          },
+          {
+            "token": "area",
+            "prob": 0.013192
+          }
+        ]
+      },
+      {
+        "prompt": "There is a office near the",
+        "rank": 2052,
+        "prob": 5.7e-05,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.052345
+          },
+          {
+            "token": "front",
+            "prob": 0.023975
+          },
+          {
+            "token": "airport",
+            "prob": 0.019238
+          },
+          {
+            "token": "office",
+            "prob": 0.014842
+          },
+          {
+            "token": "corner",
+            "prob": 0.0145
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "winter coat",
+    "modifier": "winter",
+    "head": "coat",
+    "my_guess": "medium",
+    "model_guess": "weak",
+    "verdict": "overestimated",
+    "avg_rank": 2714.25,
+    "best_rank": 1,
+    "avg_prob": 0.124546,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The winter",
+        "rank": 49,
+        "prob": 0.001596,
+        "top5": [
+          {
+            "token": "of",
+            "prob": 0.127605
+          },
+          {
+            "token": "is",
+            "prob": 0.099054
+          },
+          {
+            "token": "weather",
+            "prob": 0.040861
+          },
+          {
+            "token": "season",
+            "prob": 0.039506
+          },
+          {
+            "token": "storm",
+            "prob": 0.034099
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a winter",
+        "rank": 1,
+        "prob": 0.496569,
+        "top5": [
+          {
+            "token": "coat",
+            "prob": 0.496569
+          },
+          {
+            "token": "jacket",
+            "prob": 0.070347
+          },
+          {
+            "token": "dress",
+            "prob": 0.041854
+          },
+          {
+            "token": "hat",
+            "prob": 0.032258
+          },
+          {
+            "token": "sweater",
+            "prob": 0.019126
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a winter in the",
+        "rank": 4770,
+        "prob": 1.5e-05,
+        "top5": [
+          {
+            "token": "mountains",
+            "prob": 0.020691
+          },
+          {
+            "token": "past",
+            "prob": 0.019683
+          },
+          {
+            "token": "sky",
+            "prob": 0.019649
+          },
+          {
+            "token": "city",
+            "prob": 0.01674
+          },
+          {
+            "token": "woods",
+            "prob": 0.014081
+          }
+        ]
+      },
+      {
+        "prompt": "There is a winter near the",
+        "rank": 6037,
+        "prob": 5e-06,
+        "top5": [
+          {
+            "token": "end",
+            "prob": 0.207299
+          },
+          {
+            "token": "edge",
+            "prob": 0.040136
+          },
+          {
+            "token": "horizon",
+            "prob": 0.035783
+          },
+          {
+            "token": "coast",
+            "prob": 0.031782
+          },
+          {
+            "token": "border",
+            "prob": 0.02944
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "police station",
+    "modifier": "police",
+    "head": "station",
+    "my_guess": "strong",
+    "model_guess": "weak",
+    "verdict": "overestimated",
+    "avg_rank": 42.5,
+    "best_rank": 10,
+    "avg_prob": 0.005736,
+    "top5_hits": 0,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The police",
+        "rank": 41,
+        "prob": 0.002618,
+        "top5": [
+          {
+            "token": "chief",
+            "prob": 0.109434
+          },
+          {
+            "token": "have",
+            "prob": 0.090574
+          },
+          {
+            "token": "are",
+            "prob": 0.06591
+          },
+          {
+            "token": "officer",
+            "prob": 0.038404
+          },
+          {
+            "token": "said",
+            "prob": 0.034504
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a police",
+        "rank": 10,
+        "prob": 0.014576,
+        "top5": [
+          {
+            "token": "car",
+            "prob": 0.362855
+          },
+          {
+            "token": "cruiser",
+            "prob": 0.10922
+          },
+          {
+            "token": "van",
+            "prob": 0.048236
+          },
+          {
+            "token": "vehicle",
+            "prob": 0.030014
+          },
+          {
+            "token": "officer",
+            "prob": 0.025694
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a police in the",
+        "rank": 93,
+        "prob": 0.001287,
+        "top5": [
+          {
+            "token": "area",
+            "prob": 0.070137
+          },
+          {
+            "token": "street",
+            "prob": 0.064462
+          },
+          {
+            "token": "middle",
+            "prob": 0.057765
+          },
+          {
+            "token": "parking",
+            "prob": 0.044414
+          },
+          {
+            "token": "background",
+            "prob": 0.02179
+          }
+        ]
+      },
+      {
+        "prompt": "There is a police near the",
+        "rank": 26,
+        "prob": 0.004461,
+        "top5": [
+          {
+            "token": "scene",
+            "prob": 0.095431
+          },
+          {
+            "token": "entrance",
+            "prob": 0.033967
+          },
+          {
+            "token": "intersection",
+            "prob": 0.02703
+          },
+          {
+            "token": "site",
+            "prob": 0.021866
+          },
+          {
+            "token": "front",
+            "prob": 0.014837
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "train station",
+    "modifier": "train",
+    "head": "station",
+    "my_guess": "strong",
+    "model_guess": "medium",
+    "verdict": "overestimated",
+    "avg_rank": 17.5,
+    "best_rank": 1,
+    "avg_prob": 0.021949,
+    "top5_hits": 1,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The train",
+        "rank": 9,
+        "prob": 0.018786,
+        "top5": [
+          {
+            "token": "was",
+            "prob": 0.099305
+          },
+          {
+            "token": "is",
+            "prob": 0.053435
+          },
+          {
+            "token": "has",
+            "prob": 0.03984
+          },
+          {
+            "token": "ee",
+            "prob": 0.030222
+          },
+          {
+            "token": "had",
+            "prob": 0.026105
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a train",
+        "rank": 34,
+        "prob": 0.002015,
+        "top5": [
+          {
+            "token": "ticket",
+            "prob": 0.365105
+          },
+          {
+            "token": "from",
+            "prob": 0.085454
+          },
+          {
+            "token": "to",
+            "prob": 0.081036
+          },
+          {
+            "token": "for",
+            "prob": 0.053725
+          },
+          {
+            "token": ",",
+            "prob": 0.041238
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a train in the",
+        "rank": 26,
+        "prob": 0.004731,
+        "top5": [
+          {
+            "token": "middle",
+            "prob": 0.103549
+          },
+          {
+            "token": "distance",
+            "prob": 0.094435
+          },
+          {
+            "token": "morning",
+            "prob": 0.052266
+          },
+          {
+            "token": "background",
+            "prob": 0.05219
+          },
+          {
+            "token": "sky",
+            "prob": 0.029005
+          }
+        ]
+      },
+      {
+        "prompt": "There is a train near the",
+        "rank": 1,
+        "prob": 0.062263,
+        "top5": [
+          {
+            "token": "station",
+            "prob": 0.062263
+          },
+          {
+            "token": "train",
+            "prob": 0.035942
+          },
+          {
+            "token": "end",
+            "prob": 0.028136
+          },
+          {
+            "token": "entrance",
+            "prob": 0.026348
+          },
+          {
+            "token": "airport",
+            "prob": 0.025568
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "dining room",
+    "modifier": "dining",
+    "head": "room",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 215.75,
+    "best_rank": 1,
+    "avg_prob": 0.271,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The dining",
+        "rank": 1,
+        "prob": 0.320669,
+        "top5": [
+          {
+            "token": "room",
+            "prob": 0.320669
+          },
+          {
+            "token": "hall",
+            "prob": 0.15347
+          },
+          {
+            "token": "scene",
+            "prob": 0.043131
+          },
+          {
+            "token": "-",
+            "prob": 0.040189
+          },
+          {
+            "token": "and",
+            "prob": 0.035044
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a dining",
+        "rank": 1,
+        "prob": 0.759873,
+        "top5": [
+          {
+            "token": "room",
+            "prob": 0.759873
+          },
+          {
+            "token": "table",
+            "prob": 0.069767
+          },
+          {
+            "token": "-",
+            "prob": 0.038669
+          },
+          {
+            "token": "hall",
+            "prob": 0.007329
+          },
+          {
+            "token": "area",
+            "prob": 0.005263
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a dining in the",
+        "rank": 35,
+        "prob": 0.003287,
+        "top5": [
+          {
+            "token": "restaurant",
+            "prob": 0.031499
+          },
+          {
+            "token": "dining",
+            "prob": 0.026845
+          },
+          {
+            "token": "back",
+            "prob": 0.024194
+          },
+          {
+            "token": "kitchen",
+            "prob": 0.021416
+          },
+          {
+            "token": "same",
+            "prob": 0.014954
+          }
+        ]
+      },
+      {
+        "prompt": "There is a dining near the",
+        "rank": 826,
+        "prob": 0.000172,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.035104
+          },
+          {
+            "token": "end",
+            "prob": 0.016277
+          },
+          {
+            "token": "front",
+            "prob": 0.015349
+          },
+          {
+            "token": "intersection",
+            "prob": 0.012657
+          },
+          {
+            "token": "corner",
+            "prob": 0.012066
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "water bottle",
+    "modifier": "water",
+    "head": "bottle",
+    "my_guess": "medium",
+    "model_guess": "weak",
+    "verdict": "overestimated",
+    "avg_rank": 578.75,
+    "best_rank": 1,
+    "avg_prob": 0.097284,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The water",
+        "rank": 44,
+        "prob": 0.002773,
+        "top5": [
+          {
+            "token": "is",
+            "prob": 0.073045
+          },
+          {
+            "token": "in",
+            "prob": 0.044365
+          },
+          {
+            "token": "quality",
+            "prob": 0.032053
+          },
+          {
+            "token": "level",
+            "prob": 0.025731
+          },
+          {
+            "token": "supply",
+            "prob": 0.024336
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a water",
+        "rank": 1,
+        "prob": 0.382713,
+        "top5": [
+          {
+            "token": "bottle",
+            "prob": 0.382713
+          },
+          {
+            "token": "heater",
+            "prob": 0.093556
+          },
+          {
+            "token": "melon",
+            "prob": 0.079937
+          },
+          {
+            "token": "-",
+            "prob": 0.028453
+          },
+          {
+            "token": "pump",
+            "prob": 0.025565
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a water in the",
+        "rank": 42,
+        "prob": 0.003604,
+        "top5": [
+          {
+            "token": "water",
+            "prob": 0.038532
+          },
+          {
+            "token": "sink",
+            "prob": 0.031205
+          },
+          {
+            "token": "middle",
+            "prob": 0.020691
+          },
+          {
+            "token": "kitchen",
+            "prob": 0.019987
+          },
+          {
+            "token": "river",
+            "prob": 0.019844
+          }
+        ]
+      },
+      {
+        "prompt": "There is a water near the",
+        "rank": 2228,
+        "prob": 4.5e-05,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.038119
+          },
+          {
+            "token": "shore",
+            "prob": 0.037226
+          },
+          {
+            "token": "edge",
+            "prob": 0.025237
+          },
+          {
+            "token": "river",
+            "prob": 0.023863
+          },
+          {
+            "token": "end",
+            "prob": 0.022674
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "movie theater",
+    "modifier": "movie",
+    "head": "theater",
+    "my_guess": "medium",
+    "model_guess": "medium",
+    "verdict": "matched",
+    "avg_rank": 22.75,
+    "best_rank": 1,
+    "avg_prob": 0.034245,
+    "top5_hits": 2,
+    "top10_hits": 2,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The movie",
+        "rank": 60,
+        "prob": 0.002071,
+        "top5": [
+          {
+            "token": "is",
+            "prob": 0.113655
+          },
+          {
+            "token": "was",
+            "prob": 0.057648
+          },
+          {
+            "token": ",",
+            "prob": 0.056173
+          },
+          {
+            "token": "'s",
+            "prob": 0.053991
+          },
+          {
+            "token": "will",
+            "prob": 0.03257
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a movie",
+        "rank": 2,
+        "prob": 0.084631,
+        "top5": [
+          {
+            "token": "ticket",
+            "prob": 0.138047
+          },
+          {
+            "token": "theater",
+            "prob": 0.084631
+          },
+          {
+            "token": "in",
+            "prob": 0.057756
+          },
+          {
+            "token": ",",
+            "prob": 0.046407
+          },
+          {
+            "token": "poster",
+            "prob": 0.038875
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a movie in the",
+        "rank": 1,
+        "prob": 0.047903,
+        "top5": [
+          {
+            "token": "theater",
+            "prob": 0.047903
+          },
+          {
+            "token": "back",
+            "prob": 0.047682
+          },
+          {
+            "token": "morning",
+            "prob": 0.029119
+          },
+          {
+            "token": "library",
+            "prob": 0.026556
+          },
+          {
+            "token": "cinema",
+            "prob": 0.025938
+          }
+        ]
+      },
+      {
+        "prompt": "There is a movie near the",
+        "rank": 28,
+        "prob": 0.002375,
+        "top5": [
+          {
+            "token": "end",
+            "prob": 0.43473
+          },
+          {
+            "token": "top",
+            "prob": 0.059733
+          },
+          {
+            "token": "corner",
+            "prob": 0.039995
+          },
+          {
+            "token": "beginning",
+            "prob": 0.031702
+          },
+          {
+            "token": "center",
+            "prob": 0.027
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "grocery store",
+    "modifier": "grocery",
+    "head": "store",
+    "my_guess": "strong",
+    "model_guess": "strong",
+    "verdict": "matched",
+    "avg_rank": 12.75,
+    "best_rank": 1,
+    "avg_prob": 0.254223,
+    "top5_hits": 3,
+    "top10_hits": 3,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The grocery",
+        "rank": 1,
+        "prob": 0.54578,
+        "top5": [
+          {
+            "token": "store",
+            "prob": 0.54578
+          },
+          {
+            "token": "chain",
+            "prob": 0.10197
+          },
+          {
+            "token": "industry",
+            "prob": 0.028975
+          },
+          {
+            "token": "giant",
+            "prob": 0.024061
+          },
+          {
+            "token": "-",
+            "prob": 0.019254
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a grocery",
+        "rank": 1,
+        "prob": 0.381012,
+        "top5": [
+          {
+            "token": "store",
+            "prob": 0.381012
+          },
+          {
+            "token": "bag",
+            "prob": 0.234531
+          },
+          {
+            "token": "cart",
+            "prob": 0.038759
+          },
+          {
+            "token": "-",
+            "prob": 0.0189
+          },
+          {
+            "token": "truck",
+            "prob": 0.018263
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a grocery in the",
+        "rank": 1,
+        "prob": 0.087647,
+        "top5": [
+          {
+            "token": "store",
+            "prob": 0.087647
+          },
+          {
+            "token": "parking",
+            "prob": 0.056408
+          },
+          {
+            "token": "back",
+            "prob": 0.053557
+          },
+          {
+            "token": "grocery",
+            "prob": 0.051505
+          },
+          {
+            "token": "supermarket",
+            "prob": 0.035334
+          }
+        ]
+      },
+      {
+        "prompt": "There is a grocery near the",
+        "rank": 48,
+        "prob": 0.002455,
+        "top5": [
+          {
+            "token": "intersection",
+            "prob": 0.047373
+          },
+          {
+            "token": "corner",
+            "prob": 0.036343
+          },
+          {
+            "token": "entrance",
+            "prob": 0.031061
+          },
+          {
+            "token": "airport",
+            "prob": 0.019391
+          },
+          {
+            "token": "end",
+            "prob": 0.016613
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "flower pot",
+    "modifier": "flower",
+    "head": "pot",
+    "my_guess": "weak",
+    "model_guess": "weak",
+    "verdict": "matched",
+    "avg_rank": 142,
+    "best_rank": 1,
+    "avg_prob": 0.02519,
+    "top5_hits": 1,
+    "top10_hits": 1,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The flower",
+        "rank": 15,
+        "prob": 0.008795,
+        "top5": [
+          {
+            "token": "is",
+            "prob": 0.096937
+          },
+          {
+            "token": "of",
+            "prob": 0.059427
+          },
+          {
+            "token": "-",
+            "prob": 0.036215
+          },
+          {
+            "token": "was",
+            "prob": 0.030182
+          },
+          {
+            "token": ",",
+            "prob": 0.024767
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a flower",
+        "rank": 1,
+        "prob": 0.090939,
+        "top5": [
+          {
+            "token": "pot",
+            "prob": 0.090939
+          },
+          {
+            "token": "from",
+            "prob": 0.041687
+          },
+          {
+            "token": "pot",
+            "prob": 0.04071
+          },
+          {
+            "token": "for",
+            "prob": 0.039217
+          },
+          {
+            "token": "and",
+            "prob": 0.035801
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a flower in the",
+        "rank": 186,
+        "prob": 0.0007,
+        "top5": [
+          {
+            "token": "garden",
+            "prob": 0.09414
+          },
+          {
+            "token": "corner",
+            "prob": 0.035
+          },
+          {
+            "token": "sky",
+            "prob": 0.033835
+          },
+          {
+            "token": "middle",
+            "prob": 0.032946
+          },
+          {
+            "token": "window",
+            "prob": 0.029332
+          }
+        ]
+      },
+      {
+        "prompt": "There is a flower near the",
+        "rank": 366,
+        "prob": 0.000326,
+        "top5": [
+          {
+            "token": "entrance",
+            "prob": 0.093338
+          },
+          {
+            "token": "top",
+            "prob": 0.031671
+          },
+          {
+            "token": "end",
+            "prob": 0.030133
+          },
+          {
+            "token": "center",
+            "prob": 0.021732
+          },
+          {
+            "token": "front",
+            "prob": 0.016083
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "compound": "car door",
+    "modifier": "car",
+    "head": "door",
+    "my_guess": "weak",
+    "model_guess": "weak",
+    "verdict": "matched",
+    "avg_rank": 233.25,
+    "best_rank": 38,
+    "avg_prob": 0.001111,
+    "top5_hits": 0,
+    "top10_hits": 0,
+    "status": "ok",
+    "prompt_details": [
+      {
+        "prompt": "The car",
+        "rank": 116,
+        "prob": 0.000888,
+        "top5": [
+          {
+            "token": "was",
+            "prob": 0.181112
+          },
+          {
+            "token": "is",
+            "prob": 0.089167
+          },
+          {
+            "token": "'s",
+            "prob": 0.062263
+          },
+          {
+            "token": "that",
+            "prob": 0.035281
+          },
+          {
+            "token": "has",
+            "prob": 0.029124
+          }
+        ]
+      },
+      {
+        "prompt": "She bought a car",
+        "rank": 310,
+        "prob": 5.7e-05,
+        "top5": [
+          {
+            "token": "and",
+            "prob": 0.138267
+          },
+          {
+            "token": ",",
+            "prob": 0.137176
+          },
+          {
+            "token": "for",
+            "prob": 0.099963
+          },
+          {
+            "token": "in",
+            "prob": 0.073584
+          },
+          {
+            "token": "from",
+            "prob": 0.064952
+          }
+        ]
+      },
+      {
+        "prompt": "I saw a car in the",
+        "rank": 469,
+        "prob": 0.000127,
+        "top5": [
+          {
+            "token": "driveway",
+            "prob": 0.127566
+          },
+          {
+            "token": "parking",
+            "prob": 0.114823
+          },
+          {
+            "token": "street",
+            "prob": 0.088199
+          },
+          {
+            "token": "middle",
+            "prob": 0.043675
+          },
+          {
+            "token": "back",
+            "prob": 0.032175
+          }
+        ]
+      },
+      {
+        "prompt": "There is a car near the",
+        "rank": 38,
+        "prob": 0.003371,
+        "top5": [
+          {
+            "token": "intersection",
+            "prob": 0.04593
+          },
+          {
+            "token": "entrance",
+            "prob": 0.04067
+          },
+          {
+            "token": "end",
+            "prob": 0.024708
+          },
+          {
+            "token": "front",
+            "prob": 0.019303
+          },
+          {
+            "token": "scene",
+            "prob": 0.017339
+          }
+        ]
+      }
+    ]
+  }
+]
