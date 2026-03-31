@@ -5,7 +5,7 @@
     {"compound": "hot dog", "components": ["hot", "dog"], "my_guess": "medium"},
     {"compound": "guinea pig", "components": ["guinea", "pig"], "my_guess": "weak"},
     {"compound": "coffee table", "components": ["coffee", "table"], "my_guess": "weak"},
-    {"compound": "parking lot", "components": ["parking", "lot"], "my_guess": "medium"},
+    {"compound": "parking lot", "components": ["parking", "lot"], "my_guess": "strong"},
     {"compound": "living room", "components": ["living", "room"], "my_guess": "medium"},
     {"compound": "mountain cabin", "components": ["mountain", "cabin"], "my_guess": "weak"},
     {"compound": "paper bag", "components": ["paper", "bag"], "my_guess": "medium"},
@@ -14,7 +14,7 @@
     {"compound": "garden hose", "components": ["garden", "hose"], "my_guess": "weak"},
     {"compound": "bus stop", "components": ["bus", "stop"], "my_guess": "strong"},
     {"compound": "cell phone", "components": ["cell", "phone"], "my_guess": "medium"},
-    {"compound": "tea cup", "components": ["tea", "cup"], "my_guess": "weak"},
+    {"compound": "tea cup", "components": ["tea", "cup"], "my_guess": "medium"},
     {"compound": "office chair", "components": ["office", "chair"], "my_guess": "weak"},
     {"compound": "winter coat", "components": ["winter", "coat"], "my_guess": "medium"},
     {"compound": "police station", "components": ["police", "station"], "my_guess": "strong"},
@@ -24,6 +24,6 @@
     {"compound": "movie theater", "components": ["movie", "theater"], "my_guess": "medium"},
     {"compound": "grocery store", "components": ["grocery", "store"], "my_guess": "strong"},
     {"compound": "flower pot", "components": ["flower", "pot"], "my_guess": "weak"},
-    {"compound": "car door", "components": ["car", "door"], "my_guess": "strong"}
+    {"compound": "car door", "components": ["car", "door"], "my_guess": "weak"}
   ]
 }
